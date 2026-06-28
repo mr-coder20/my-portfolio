@@ -3,364 +3,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amirhossein Ghafari | Senior Android Architect</title>
+    <title>Amirhossein Ghafari | Senior Android Architect & Security Researcher</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Vazirmatn:wght@100;400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Vazirmatn:wght@300;500;700;900&display=swap');
         
         :root { 
             --primary: #3b82f6; 
-            --bg: #020617; 
-            --glow-color: rgba(59, 130, 246, 0.1);
+            --bg: #030712; 
         }
         
         body { 
             font-family: 'Plus Jakarta Sans', 'Vazirmatn', sans-serif; 
             background-color: var(--bg); 
-            color: #f1f5f9; 
+            color: #f3f4f6; 
             scroll-behavior: smooth;
             overflow-x: hidden;
-            transition: background-color 0.5s ease;
-            font-size: clamp(14px, 1vw, 18px);
         }
 
-        h1 { font-size: clamp(2.5rem, 8vw, 9rem) !important; line-height: 1; }
-        h2 { font-size: clamp(2rem, 5vw, 5rem) !important; }
-        .hero-sub { font-size: clamp(1.1rem, 2vw, 1.875rem) !important; }
-
+        /* Liquid & Glass Morphism Custom Styles */
         .glass-card {
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(17, 24, 39, 0.55);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-            height: 100%;
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-8px) scale(1.01);
-            background: rgba(30, 41, 59, 0.7);
-            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.5);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-6px);
+            background: rgba(31, 41, 55, 0.65);
+            box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.2);
         }
 
-        .lang-fa { display: none; text-align: right; direction: rtl; }
-        .rtl { direction: rtl; }
+        /* Neumorphism For Soft Interactive Nodes */
+        .neu-node {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 1px 1px 2px rgba(255,255,255,0.05), inset -1px -1px 2px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+        }
+        .neu-node:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+            background: rgba(59, 130, 246, 0.1);
+        }
 
-        .glow-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.15), transparent 70%),
-                        radial-gradient(circle at 0% 100%, rgba(37, 99, 235, 0.1), transparent 50%);
+        /* Liquid-morphism Background Orbs */
+        .liquid-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
             z-index: -1;
+            mix-blend-mode: screen;
+            opacity: 0.4;
+            animation: float 12s infinite alternate ease-in-out;
         }
 
-        .skill-node {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            padding: clamp(8px, 1vw, 12px) clamp(12px, 1.5vw, 20px); 
-            border-radius: 12px; 
-            transition: 0.3s;
-            font-size: clamp(0.75rem, 1vw, 1rem);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .skill-node:hover { border-color: var(--primary); background: rgba(59, 130, 246, 0.1); }
-
-        .tech-tag { 
-            font-size: clamp(9px, 0.8vw, 11px); 
-            font-weight: 800; 
-            letter-spacing: 2px; 
-            text-transform: uppercase; 
+        @keyframes float {
+            0% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(40px, 60px) scale(1.2); }
+            100% { transform: translate(-20px, -40px) scale(0.9); }
         }
 
-        @media (max-width: 640px) {
-            .glass-card { padding: 1.25rem !important; border-radius: 1.5rem !important; }
-            .section { margin-top: 4rem; margin-bottom: 4rem; }
-        }
+        /* Bilingual Toggle Logic */
+        .lang-en { display: block; }
+        .lang-fa { display: none; }
+        body.rtl .lang-en { display: none; }
+        body.rtl .lang-fa { display: block; }
+        body.rtl { direction: rtl; text-align: right; }
 
-        .section { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .section { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
         .section.in-view { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="antialiased">
 
-    <div class="glow-bg"></div>
+    <!-- Liquid Background Morphism -->
+    <div class="liquid-orb bg-blue-600 w-96 h-96 top-[-10%] left-[-10%]"></div>
+    <div class="liquid-orb bg-indigo-800 w-[500px] h-[500px] bottom-[-10%] right-[-10%] animation-delay-2000"></div>
+    <div class="liquid-orb bg-emerald-600 w-80 h-80 top-[40%] right-[20%] opacity-20"></div>
 
+    <!-- Language Switcher -->
     <div class="fixed top-6 right-6 z-50">
-        <button onclick="toggleLang()" class="glass-card px-5 py-2 md:px-8 md:py-3 rounded-2xl font-black border-blue-500/20 text-blue-400 hover:scale-105 active:scale-95 transition-all shadow-2xl backdrop-blur-3xl">
+        <button onclick="toggleLang()" class="glass-card px-6 py-2.5 rounded-2xl font-black border-blue-500/30 text-blue-400 hover:scale-105 active:scale-95 transition-all">
              <span id="lang-btn">FA</span>
         </button>
     </div>
 
-    <header class="min-h-screen flex items-center justify-center px-4 text-center">
-        <div class="max-w-5xl w-full">
+    <!-- Hero / Header Section -->
+    <header class="min-h-screen flex items-center justify-center px-4 text-center relative">
+        <div class="max-w-4xl w-full space-y-8">
+            <div class="relative inline-block mb-4">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=150&h=150&q=80" alt="Amirhossein Ghafari" class="w-32 h-32 rounded-full mx-auto border-2 border-blue-500/40 p-1.5 backdrop-blur-md shadow-2xl">
+                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-500 opacity-20 blur animate-pulse"></div>
+            </div>
+
             <div class="lang-en">
-                <h1 class="font-black tracking-tighter mb-6 bg-gradient-to-b from-white to-blue-900 bg-clip-text text-transparent">
-                    Amirhossein<br>Ghafari
+                <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-4 bg-gradient-to-r from-white via-slate-200 to-blue-500 bg-clip-text text-transparent">
+                    Amirhossein Ghafari
                 </h1>
-                <p class="hero-sub text-slate-400 font-extralight max-w-3xl mx-auto mb-12">
-                    Architecting <span class="text-white font-semibold">Future-Ready Mobile Systems</span> & <br>Exploring the Edge of <span class="text-red-500 font-semibold">Cyber Security</span>.
+                <p class="text-xl md:text-2xl text-blue-400 font-medium mb-6">Senior Android Architect & Security Researcher</p>
+                <p class="text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                    Architecting secure, resilient mobile infrastructures and reverse-engineering complex systems. Specialized in Android internals, Red Team security operations, and modern declarative development.
                 </p>
             </div>
             
             <div class="lang-fa">
-                <h1 class="font-black tracking-tighter mb-6 bg-gradient-to-b from-white to-blue-900 bg-clip-text text-transparent">
-                    امیرحسین<br>غفاری
+                <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-4 bg-gradient-to-r from-white via-slate-200 to-blue-500 bg-clip-text text-transparent">
+                    امیرحسین غفاری
                 </h1>
-                <p class="hero-sub text-slate-400 font-extralight max-w-3xl mx-auto mb-12 leading-relaxed">
-                    معماری <span class="text-white font-semibold">سیستم‌های موبایل آماده آینده</span> و <br>کاوش در مرزهای <span class="text-red-500 font-semibold">امنیت سایبری</span>.
+                <p class="text-xl md:text-2xl text-blue-400 font-medium mb-6">معمار ارشد اندروید و پژوهشگر امنیت سایبری</p>
+                <p class="text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                    طراح و معمار سیستم‌های پیشرفته و امن موبایل، متخصص در مهندسی معکوس، عملیات تیم قرمز (Red Team) و توسعه مدرن اندروید.
                 </p>
             </div>
 
-            <div class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
-                <a href="https://github.com/mr-coder20" class="glass-card px-8 py-4 md:px-12 md:py-5 rounded-3xl font-bold flex items-center justify-center gap-3 hover:text-blue-400 transition-all">
-                    <i class="fab fa-github text-xl md:text-2xl"></i> GITHUB
+            <!-- Action Buttons / Quick Contact -->
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="https://github.com/mr-coder20" target="_blank" class="glass-card px-6 py-3.5 rounded-2xl font-bold flex items-center gap-3 text-sm hover:text-blue-400">
+                    <i class="fab fa-github text-xl"></i> GITHUB
                 </a>
-                <a href="https://t.me/a_god_3_6_9" class="bg-blue-600 px-8 py-4 md:px-12 md:py-5 rounded-3xl font-bold flex items-center justify-center gap-3 hover:bg-blue-500 shadow-2xl shadow-blue-500/40 transition-all">
-                    <i class="fab fa-telegram-plane text-xl md:text-2xl"></i> <span class="lang-en">CONNECT</span><span class="lang-fa">ارتباط با من</span>
+                <a href="mailto:amirhosseinghafari31@gmail.com" class="glass-card px-6 py-3.5 rounded-2xl font-bold flex items-center gap-3 text-sm hover:text-emerald-400">
+                    <i class="fas fa-envelope text-xl"></i> EMAIL
+                </a>
+                <a href="https://t.me/a_god_3_6_9" target="_blank" class="bg-blue-600/90 hover:bg-blue-600 px-6 py-3.5 rounded-2xl font-bold flex items-center gap-3 text-sm shadow-xl shadow-blue-500/20 transition-all">
+                    <i class="fab fa-telegram-plane text-xl"></i> 
+                    <span class="lang-en">CONNECT</span><span class="lang-fa">ارتباط با من</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 md:px-6 pb-20 md:pb-40 space-y-24 md:space-y-48">
+    <!-- Main Content Grid -->
+    <main class="max-w-6xl mx-auto px-4 md:px-6 pb-32 space-y-32">
 
+        <!-- Experience Section -->
         <section class="section">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-4">
-                <div class="lang-en text-left">
-                    <span class="tech-tag text-blue-400">Primary Domain</span>
-                    <h2 class="font-black mt-2">Android Architecture</h2>
+            <div class="mb-12 border-b border-white/5 pb-4">
+                <div class="lang-en">
+                    <span class="text-xs uppercase font-black tracking-widest text-blue-500">Professional Track</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-1 text-white">Work Experience</h2>
                 </div>
-                <div class="lang-fa text-right w-full">
-                    <span class="tech-tag text-blue-400">حوزه تخصصی اصلی</span>
-                    <h2 class="font-black mt-2">معماری اندروید</h2>
+                <div class="lang-fa">
+                    <span class="text-xs uppercase font-black tracking-widest text-blue-500">مسیر حرفه‌ای</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-1 text-white">سوابق شغلی</h2>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
-                
-                <div class="md:col-span-8 glass-card p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border-l-4 md:border-l-8 border-blue-600">
-                    <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-10 text-white flex items-center gap-4">
-                        <i class="fas fa-microchip text-blue-500"></i>
-                        <span class="lang-en">Architecture & Foundations</span>
-                        <span class="lang-fa">معماری و پایه‌ها</span>
+            <div class="space-y-6">
+                <!-- Job 1: Snapp -->
+                <div class="glass-card p-6 md:p-8 rounded-3xl border-l-4 border-blue-500">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="lang-en">Mobile Security Researcher</span>
+                                <span class="lang-fa">پژوهشگر امنیت موبایل</span>
+                                <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">Snapp</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-1"><i class="fas fa-map-marker-alt mr-1"></i> Tehran, Iran</p>
+                        </div>
+                        <span class="text-xs font-mono bg-white/5 px-3 py-1.5 rounded-xl text-slate-300">2023 - 2023</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside opacity-90">
+                        <li class="lang-en">Analyzed API endpoints, user authentication flows, and token lifecycle management (JWT).</li>
+                        <li class="lang-en">Developed automated Android analysis scripts to inspect real-time application behavior.</li>
+                        <li class="lang-fa">تحلیل و بررسی کامل پایداری احراز هویت کاربران، ساختار توکن‌ها (JWT) و ریکوئست‌های وب و اپلیکیشن.</li>
+                        <li class="lang-fa">توسعه ابزارهای اختصاصی اندروید جهت پایش و آنالیز رفتار مشکوک اپلیکیشن در سطح محلی.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4 pt-3 border-t border-white/5">
+                        <span class="text-[11px] font-mono bg-white/5 px-2.5 py-1 rounded-md text-blue-300">Kotlin</span>
+                        <span class="text-[11px] font-mono bg-white/5 px-2.5 py-1 rounded-md text-blue-300">JWT</span>
+                        <span class="text-[11px] font-mono bg-white/5 px-2.5 py-1 rounded-md text-blue-300">REST API</span>
+                        <span class="text-[11px] font-mono bg-white/5 px-2.5 py-1 rounded-md text-blue-300">WebView Security</span>
+                    </div>
+                </div>
+
+                <!-- Job 2: Rayan Pardaz -->
+                <div class="glass-card p-6 md:p-8 rounded-3xl border-l-4 border-indigo-500">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="lang-en">Android Developer</span>
+                                <span class="lang-fa">برنامه‌نویس اندروید</span>
+                                <span class="text-xs bg-indigo-500/20 text-indigo-400 px-2.5 py-1 rounded-md font-semibold">Rayan Pardaz</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-1"><i class="fas fa-map-marker-alt mr-1"></i> Alborz, Karaj</p>
+                        </div>
+                        <span class="text-xs font-mono bg-white/5 px-3 py-1.5 rounded-xl text-slate-300">2024 - 2024</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside opacity-90">
+                        <li class="lang-en">Engineered highly optimized Real-Time location tracking systems utilizing Foreground Services.</li>
+                        <li class="lang-en">Optimized background battery consumption policies and managed system-wide tracking permissions.</li>
+                        <li class="lang-fa">طراحی و توسعه ماژول ردیابی آنی (Real-Time) موقعیت مکانی ویزیتورها با پایداری بالا روی سیستم‌عامل.</li>
+                        <li class="lang-fa">بهینه‌سازی حداکثری مصرف باتری در پس‌زمینه با بهره‌گیری از Background Services و مدیریت دقیق دسترسی‌ها.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4 pt-3 border-t border-white/5">
+                        <span class="text-[11px] font-mono bg-white/5 px-2.5 py-1 rounded-md text-indigo-300">Kotlin</span>
+                        <span class="text-[11px] font-mono bg-white/5 px-2.5 py-1 rounded-md text-indigo-300">Foreground Services</span>
+                        <span class="text-[11px] font-mono bg-white/5 px-2.5 py-1 rounded-md text-indigo-300">Google Location Services</span>
+                    </div>
+                </div>
+
+                <!-- Job 3: Faragand -->
+                <div class="glass-card p-6 md:p-8 rounded-3xl border-l-4 border-emerald-500">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="lang-en">Android Dev & Security Associate</span>
+                                <span class="lang-fa">توسعه‌دهنده اندروید و همکار امنیتی</span>
+                                <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2.5 py-1 rounded-md font-semibold">Faragand</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-1"><i class="fas fa-map-marker-alt mr-1"></i> Fars, Shiraz</p>
+                        </div>
+                        <span class="text-xs font-mono bg-white/5 px-3 py-1.5 rounded-xl text-slate-300">2025 - 2025</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside opacity-90">
+                        <li class="lang-en">Built lightweight customized WebView architectures with strict local Session management hooks.</li>
+                        <li class="lang-en">Conducted technical vulnerability assessments on core WordPress production architectures.</li>
+                        <li class="lang-fa">توسعه کلاینت‌های چابک هیبرید اندروید (WebView Engine) همراه با ایمن‌سازی دقیق Sessionها.</li>
+                        <li class="lang-fa">مشارکت در تست نفوذ زیرساخت وب‌سایت و پلتفرم اصلی شرکت (مبتنی بر وردپرس) و رفع آسیب‌پذیری‌های کانفیگ.</li>
+                    </ul>
+                </ul>
+                </div>
+
+                <!-- Job 4: Delijap -->
+                <div class="glass-card p-6 md:p-8 rounded-3xl border-l-4 border-red-500">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="lang-en">Mobile App Pentester</span>
+                                <span class="lang-fa">کارشناس امنیت موبایل</span>
+                                <span class="text-xs bg-red-500/20 text-red-400 px-2.5 py-1 rounded-md font-semibold">Delijap</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-1"><i class="fas fa-map-marker-alt mr-1"></i> Markazi, Delijan</p>
+                        </div>
+                        <span class="text-xs font-mono bg-white/5 px-3 py-1.5 rounded-xl text-slate-300">2021 - 2021</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside opacity-90">
+                        <li class="lang-en">Executed deep runtime instrumentation attacks and memory tampering using Frida hooks.</li>
+                        <li class="lang-en">Discovered critical access control bypass flaws and authored production-grade compliance reports.</li>
+                        <li class="lang-fa">تست نفوذ بلادرنگ با هوکینگ از طریق فریدا (Frida Runtime Manipulation) و پایش ترافیک API.</li>
+                        <li class="lang-fa">شناسایی ضعف‌های بحرانی احراز هویت در سمت سرور و توسعه اسکریپت‌های پایتون جهت خودکارسازی تست‌ها.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skill Grid Section -->
+        <section class="section">
+            <div class="mb-12 border-b border-white/5 pb-4">
+                <div class="lang-en">
+                    <span class="text-xs uppercase font-black tracking-widest text-blue-500">Core Expertise</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-1 text-white">Skills & Matrix</h2>
+                </div>
+                <div class="lang-fa">
+                    <span class="text-xs uppercase font-black tracking-widest text-blue-500">ماتریس توانمندی‌ها</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-1 text-white">مهارت‌ها و فناوری‌ها</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Development -->
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-3">
+                        <i class="fas fa-code text-blue-500"></i>
+                        <span class="lang-en">Software Engineering</span><span class="lang-fa">مهندسی نرم‌افزار</span>
                     </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="space-y-3">
-                            <div class="skill-node font-bold text-blue-400">Kotlin / Java</div>
-                            <div class="skill-node">KMP (Multiplatform)</div>
-                            <div class="skill-node">MVVM / MVP Pattern</div>
-                            <div class="skill-node">Clean Architecture</div>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="skill-node font-black text-white italic">SOLID Principles</div>
-                            <div class="skill-node">DI (Hilt / Dagger)</div>
-                            <div class="skill-node">Modularization</div>
-                            <div class="skill-node">Design Patterns</div>
-                        </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Kotlin / Java</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Jetpack Compose</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">MVVM / Clean Arch</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Room DB / DataStore</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Coroutines & Flow</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Dagger / Hilt DI</span>
                     </div>
                 </div>
 
-                <div class="md:col-span-4 glass-card p-6 md:p-10 rounded-[2rem] md:rounded-[3.5rem]">
-                    <h3 class="text-lg md:text-xl font-bold mb-6 md:mb-8 text-slate-400 lang-en italic">Development Kit</h3>
-                    <h3 class="text-lg md:text-xl font-bold mb-6 md:mb-8 text-slate-400 lang-fa italic">کیت توسعه</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-1 gap-6">
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-terminal text-blue-500 text-lg"></i>
-                            <div><p class="font-bold text-sm md:text-base">Android Studio</p><p class="text-[9px] text-slate-500 uppercase">Primary IDE</p></div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-tools text-blue-500 text-lg"></i>
-                            <div><p class="font-bold text-sm md:text-base">Gradle</p><p class="text-[9px] text-slate-500 uppercase">Build System</p></div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-box text-blue-500 text-lg"></i>
-                            <div><p class="font-bold text-sm md:text-base">Android SDK</p><p class="text-[9px] text-slate-500 uppercase">Core Framework</p></div>
-                        </div>
+                <!-- Card 2: Security & Red Team -->
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-3">
+                        <i class="fas fa-shield-alt text-red-500"></i>
+                        <span class="lang-en">Red Team Operations</span><span class="lang-fa">تیم قرمز و امنیت</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Frida Hooking</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Reverse Engineering</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">OWASP Mobile Top 10</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Burp Suite Pro</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">VAPT Methodology</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">SSL Pinning Bypass</span>
                     </div>
                 </div>
 
-                <div class="md:col-span-6 glass-card p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] bg-gradient-to-br from-blue-600/10 to-transparent">
-                    <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-white lang-en">UI Engine</h3>
-                    <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-white lang-fa">موتور رابط کاربری</h3>
-                    <div class="p-4 md:p-6 bg-blue-600/20 border border-blue-500/30 rounded-2xl md:rounded-3xl mb-4">
-                        <p class="text-blue-400 font-black text-xl md:text-2xl tracking-tight">Jetpack Compose</p>
-                        <p class="text-[10px] text-blue-300/60 uppercase font-bold mt-1">Declarative UI Expert</p>
-                    </div>
-                    <div class="skill-node">
-                        <p class="font-bold text-slate-400">Classic XML Layouts</p>
-                    </div>
-                </div>
-
-                <div class="md:col-span-6 glass-card p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border-r-4 md:border-r-8 border-indigo-600">
-                    <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-white lang-en">Reactive & Data</h3>
-                    <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-white lang-fa">داده و پردازش واکنشی</h3>
-                    <div class="grid grid-cols-2 gap-3 md:gap-4">
-                        <div class="skill-node font-bold text-indigo-400">Coroutines / Flow</div>
-                        <div class="skill-node">RxJava</div>
-                        <div class="skill-node">Room DB</div>
-                        <div class="skill-node">DataStore</div>
-                    </div>
-                </div>
-
-                <div class="md:col-span-12 glass-card p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem]">
-                    <h3 class="text-[10px] md:text-xl font-bold mb-8 md:mb-12 text-center text-slate-500 uppercase tracking-widest lang-en">Communication & Lifecycle</h3>
-                    <h3 class="text-[10px] md:text-xl font-bold mb-8 md:mb-12 text-center text-slate-500 uppercase tracking-widest lang-fa">ارتباطات و چرخه حیات</h3>
-                    <div class="grid grid-cols-[repeat(auto-fit,minmax(110px,1fr))] gap-6 justify-items-center">
-                        <div class="flex flex-col items-center text-center">
-                            <div class="aspect-square w-12 md:w-20 mb-3 rounded-2xl bg-blue-600/10 flex items-center justify-center border border-blue-500/10">
-                                <i class="fas fa-cloud text-blue-500 text-lg md:text-3xl"></i>
-                            </div>
-                            <p class="text-blue-500 font-black text-xs md:text-xl">Retrofit</p>
-                        </div>
-                        <div class="flex flex-col items-center text-center">
-                            <div class="aspect-square w-12 md:w-20 mb-3 rounded-2xl bg-blue-600/10 flex items-center justify-center border border-blue-500/10">
-                                <i class="fas fa-route text-blue-500 text-lg md:text-3xl"></i>
-                            </div>
-                            <p class="text-blue-500 font-black text-xs md:text-xl">Navigation</p>
-                        </div>
-                        <div class="flex flex-col items-center text-center">
-                            <div class="aspect-square w-12 md:w-20 mb-3 rounded-2xl bg-blue-600/10 flex items-center justify-center border border-blue-500/10">
-                                <i class="fas fa-tasks text-blue-500 text-lg md:text-3xl"></i>
-                            </div>
-                            <p class="text-blue-500 font-black text-xs md:text-xl">WorkManager</p>
-                        </div>
-                        <div class="flex flex-col items-center text-center">
-                            <div class="aspect-square w-12 md:w-20 mb-3 rounded-2xl bg-blue-600/10 flex items-center justify-center border border-blue-500/10">
-                                <i class="fas fa-stream text-blue-500 text-lg md:text-3xl"></i>
-                            </div>
-                            <p class="text-blue-500 font-black text-xs md:text-xl">Paging 3</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:col-span-6 glass-card p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border-b-4 border-orange-600">
-                    <h3 class="text-orange-500 font-bold mb-6 lang-en italic">Firebase Ecosystem</h3>
-                    <h3 class="text-orange-500 font-bold mb-6 lang-fa italic">اکوسیستم فایربیس</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                        <span class="skill-node text-[10px] md:text-xs font-bold">FCM</span>
-                        <span class="skill-node text-[10px] md:text-xs font-bold">Crashlytics</span>
-                        <span class="skill-node text-[10px] md:text-xs font-bold">Analytics</span>
-                        <span class="skill-node text-[10px] md:text-xs font-bold">Performance</span>
-                        <span class="skill-node text-[10px] md:text-xs col-span-2">Auth / Firestore</span>
-                    </div>
-                </div>
-
-                <div class="md:col-span-6 glass-card p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border-b-4 border-emerald-600">
-                    <h3 class="text-emerald-500 font-bold mb-6 lang-en italic">Advanced Optimization</h3>
-                    <h3 class="text-emerald-500 font-bold mb-6 lang-fa italic">بهینه‌سازی پیشرفته</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[10px] md:text-[11px] font-bold">
-                        <span class="skill-node">Multithreading</span>
-                        <span class="skill-node">Memory Leaks</span>
-                        <span class="skill-node">Unit/UI Testing</span>
-                        <span class="skill-node bg-white/10 text-white">CI/CD Pipeline</span>
+                <!-- Card 3: Systems & Networks -->
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-3">
+                        <i class="fas fa-network-wired text-emerald-500"></i>
+                        <span class="lang-en">Systems & Infra</span><span class="lang-fa">زیرساخت و شبکه</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Linux (LPIC-1)</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">MikroTik MTCNA</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">VMware ESXi</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Active Directory</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Cisco VLANs</span>
+                        <span class="neu-node px-3 py-1.5 rounded-xl text-xs font-semibold">Nmap Advanced Scan</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Academic & Certifications Section -->
         <section class="section">
-            <div class="mb-10 md:mb-16 lang-en">
-                <span class="tech-tag text-emerald-500">Infrastructures</span>
-                <h2 class="font-black mt-2">Systems & Networking</h2>
-            </div>
-            <div class="mb-10 md:mb-16 lang-fa text-right">
-                <span class="tech-tag text-emerald-500">زیرساخت‌ها</span>
-                <h2 class="font-black mt-2">سیستم و شبکه</h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
-                <div class="glass-card p-6 md:p-10 rounded-[2rem] border-b-4 border-emerald-500">
-                    <i class="fas fa-network-wired text-2xl md:text-3xl text-emerald-500 mb-4"></i>
-                    <p class="font-black text-sm md:text-xl">Network+</p>
+            <div class="mb-12 border-b border-white/5 pb-4">
+                <div class="lang-en">
+                    <span class="text-xs uppercase font-black tracking-widest text-blue-500">Qualifications</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-1 text-white">Education & Bootcamps</h2>
                 </div>
-                <div class="glass-card p-6 md:p-10 rounded-[2rem] border-b-4 border-red-500">
-                    <i class="fas fa-shield-virus text-2xl md:text-3xl text-red-500 mb-4"></i>
-                    <p class="font-black text-sm md:text-xl">Security+</p>
+                <div class="lang-fa">
+                    <span class="text-xs uppercase font-black tracking-widest text-blue-500">مدارک و شایستگی‌ها</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-1 text-white">تحصیلات و دوره‌ها</h2>
                 </div>
-                <div class="glass-card p-6 md:p-10 rounded-[2rem] border-b-4 border-blue-500">
-                    <i class="fab fa-microsoft text-2xl md:text-3xl text-blue-500 mb-4"></i>
-                    <p class="font-black text-sm md:text-xl">Microsoft</p>
-                </div>
-                <div class="glass-card p-6 md:p-10 rounded-[2rem] border-b-4 border-yellow-600">
-                    <i class="fab fa-linux text-2xl md:text-3xl text-yellow-600 mb-4"></i>
-                    <p class="font-black text-sm md:text-xl">LPIC / Linux</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="mb-10 md:mb-16 lang-en">
-                <span class="tech-tag text-red-600">Red Team Operations</span>
-                <h2 class="font-black mt-2">Cyber Security</h2>
-            </div>
-            <div class="mb-10 md:mb-16 lang-fa text-right">
-                <span class="tech-tag text-red-600">عملیات تیم قرمز</span>
-                <h2 class="font-black mt-2">امنیت سایبری</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <div class="glass-card p-8 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border-t-2 border-red-900">
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 lang-en">Web Security</h3>
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 lang-fa">امنیت وب</h3>
-                    <p class="text-xs md:text-sm text-slate-500 leading-relaxed">OWASP Top 10, Burp Suite Pro, SQLi, VAPT Methodology.</p>
-                </div>
-                <div class="glass-card p-8 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border-t-2 border-red-900">
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 lang-en">Network Sec</h3>
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 lang-fa">امنیت شبکه</h3>
-                    <p class="text-xs md:text-sm text-slate-500 leading-relaxed">MITM Attacks, Wireshark, Nmap, Metasploit Framework.</p>
-                </div>
-                <div class="glass-card p-8 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border-t-2 border-red-900">
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 lang-en">Android Sec</h3>
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 lang-fa">امنیت اندروید</h3>
-                    <p class="text-xs md:text-sm text-slate-500 leading-relaxed">Frida Hooking, Reverse Engineering, SSL Bypass, Smali Patching.</p>
-                    <a href="https://youtube.com/playlist?list=PLapyEjhLwGlSaB2HO41TjU0HcFfKeOzR1" class="mt-6 w-full text-center inline-block glass-card px-4 py-3 rounded-xl font-bold text-red-400 hover:text-red-300 transition-all">
-                        <i class="fab fa-youtube text-lg mr-2"></i> <span class="lang-en text-xs">Security Tutorials</span><span class="lang-fa text-xs">آموزش‌های امنیتی</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="mb-10 md:mb-16 lang-en">
-                <span class="tech-tag text-blue-500">Academic Journey</span>
-                <h2 class="font-black mt-2">Education</h2>
-            </div>
-            <div class="mb-10 md:mb-16 lang-fa text-right">
-                <span class="tech-tag text-blue-500">مسیر آکادمیک</span>
-                <h2 class="font-black mt-2">تحصیلات</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                <div class="glass-card p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] border-l-4 border-blue-600">
-                    <div class="flex justify-between items-start mb-6">
-                        <i class="fas fa-graduation-cap text-3xl md:text-4xl text-blue-600"></i>
-                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-[10px] md:text-sm font-bold italic">GPA: 16.00</span>
-                    </div>
-                    <div class="lang-en">
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Bachelor of Software Engineering</h3>
-                        <p class="text-sm md:text-base text-slate-400">Rajaee University of Kashan</p>
-                    </div>
-                    <div class="lang-fa">
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">کارشناسی مهندسی نرم‌افزار</h3>
-                        <p class="text-sm md:text-base text-slate-400 font-medium">دانشگاه شهید رجایی کاشان</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Academic -->
+                <div class="space-y-4">
+                    <div class="glass-card p-6 rounded-3xl flex gap-4 items-center">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl shrink-0">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono text-blue-400">2022 - 2024</span>
+                            <h4 class="font-bold text-white text-base lang-en">Bachelor of Software Engineering</h4>
+                            <h4 class="font-bold text-white text-base lang-fa">کارشناسی مهندسی نرم‌افزار</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Rajaee University of Kashan (GPA: 16.00)</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="glass-card p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] border-l-4 border-blue-400">
-                    <div class="flex justify-between items-start mb-6">
-                        <i class="fas fa-certificate text-3xl md:text-4xl text-blue-400"></i>
-                        <span class="px-3 py-1 bg-blue-400/20 text-blue-300 rounded-full text-[10px] md:text-sm font-bold italic">GPA: 16.50</span>
-                    </div>
-                    <div class="lang-en">
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Associate of Software Engineering</h3>
-                        <p class="text-sm md:text-base text-slate-400">Soroush University of Isfahan</p>
-                    </div>
-                    <div class="lang-fa">
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">کاردانی مهندسی نرم‌افزار</h3>
-                        <p class="text-sm md:text-base text-slate-400 font-medium">دانشگاه سروش اصفهان</p>
+                <!-- Certifications Quick Matrix -->
+                <div class="glass-card p-6 rounded-3xl">
+                    <h4 class="font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-certificate text-emerald-500"></i>
+                        <span class="lang-en">Verified Technical Bootcamps</span><span class="lang-fa">دوره‌های تخصصی طی شده</span>
+                    </h4>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 font-mono">
+                        <div>✔ Android Advanced Dev</div>
+                        <div>✔ Mobile Bug Bounty</div>
+                        <div>✔ Network+ & Security+</div>
+                        <div>✔ VMware Virtualization</div>
+                        <div>✔ Cisco CCNA Training</div>
+                        <div>✔ MCSA & LPIC-1 Linux</div>
                     </div>
                 </div>
             </div>
@@ -368,43 +366,41 @@
 
     </main>
 
-    <footer class="py-16 border-t border-white/5 bg-black/40 text-center relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-black italic tracking-tighter text-white mb-4">AG<span class="text-blue-600">.</span></h2>
-            <p class="text-slate-600 text-[8px] md:text-[10px] uppercase tracking-[0.5em] lang-en">Advanced Mobile Systems & Security | 2026</p>
-            <p class="text-slate-600 text-[8px] md:text-[10px] uppercase tracking-[0.5em] lang-fa">سیستم‌های پیشرفته موبایل و امنیت | ۱۴۰۴</p>
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-black/40 text-center relative backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 space-y-2">
+            <h2 class="text-2xl font-black italic tracking-tighter text-white">AG<span class="text-blue-500">.</span></h2>
+            <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em] lang-en">Advanced Mobile Infrastructures & Cyber Security | 2026</p>
+            <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em] lang-fa">طراحی سیستم‌های پیشرفته موبایل و امنیت سایبری | ۱۴۰۵</p>
         </div>
     </footer>
 
+    <!-- Logic Controller -->
     <script>
         let currentLang = 'en';
         function toggleLang() {
-            const langEn = document.querySelectorAll('.lang-en');
-            const langFa = document.querySelectorAll('.lang-fa');
+            const body = document.body;
             const langBtn = document.getElementById('lang-btn');
-
-            if (currentLang === 'en') {
-                langEn.forEach(el => el.style.display = 'none');
-                langFa.forEach(el => el.style.display = 'block');
+            
+            body.classList.toggle('rtl');
+            
+            if (body.classList.contains('rtl')) {
                 langBtn.innerText = 'EN';
                 currentLang = 'fa';
-                document.body.classList.add('rtl');
             } else {
-                langEn.forEach(el => el.style.display = 'block');
-                langFa.forEach(el => el.style.display = 'none');
                 langBtn.innerText = 'FA';
                 currentLang = 'en';
-                document.body.classList.remove('rtl');
             }
         }
 
+        // Viewport Reveal Animation Engine
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
                 }
             });
-        }, { threshold: 0.05 });
+        }, { threshold: 0.08 });
 
         document.querySelectorAll('.section').forEach(section => {
             observer.observe(section);
