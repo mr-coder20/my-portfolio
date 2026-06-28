@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" id="html-tag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amirhossein Ghafari | Portfolio & Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Vazirmatn:wght@300;500;700;900&display=swap');
+        
+        :root { --primary: #3b82f6; --bg: #030712; }
+        body { font-family: 'Plus Jakarta Sans', 'Vazirmatn', sans-serif; background-color: var(--bg); color: #f3f4f6; scroll-behavior: smooth; overflow-x: hidden; }
+        .glass-card { background: rgba(17, 24, 39, 0.6); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glass-card:hover { border-color: rgba(59, 130, 246, 0.35); transform: translateY(-3px); }
+        .liquid-orb { position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; mix-blend-mode: screen; opacity: 0.35; animation: floatOrb 16s infinite alternate ease-in-out; }
+        @keyframes floatOrb { 0% { transform: translate(0px, 0px) scale(1); } 50% { transform: translate(40px, 60px) scale(1.1); } 100% { transform: translate(-20px, -40px) scale(0.9); } }
+        .lang-en { display: block; } .lang-fa { display: none; }
+        body.rtl .lang-en { display: none; } body.rtl .lang-fa { display: block; }
+        body.rtl { direction: rtl; text-align: right; }
+        .section { opacity: 0; transform: translateY(25px); transition: all 0.6s ease-out; }
+        .section.in-view { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="liquid-orb bg-emerald-900 w-96 h-96 top-[-10%] right-[-5%]"></div>
+    <div class="liquid-orb bg-blue-900 w-[500px] h-[500px] bottom-[-10%] left-[-10%]"></div>
+
+    <!-- Language Selector Floating Button -->
+    <div class="fixed top-6 right-6 z-50">
+        <button onclick="toggleLang()" class="glass-card px-5 py-2.5 rounded-2xl font-black border-blue-500/30 text-blue-400 text-xs">
+             <span id="lang-btn">FA</span>
+        </button>
+    </div>
+
+    <!-- Navigation Bar Bar -->
+    <nav class="max-w-5xl mx-auto px-6 py-6 flex justify-between items-center">
+        <a href="index.html" class="glass-card px-4 py-2 rounded-xl text-xs font-bold text-blue-400 hover:scale-105 transition-all">
+            <i class="fas fa-arrow-left mr-1 rtl:hidden"></i>
+            <span class="lang-en">← Back to Main</span>
+            <span class="lang-fa">بازگشت به خانه →</span>
+        </a>
+        <span class="text-xs font-mono text-slate-500">PORTFOLIO HUB</span>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 md:px-6 pb-24 space-y-12 mt-6">
+
+        <!-- Section 1: Android Production & Distribution -->
+        <section class="section space-y-4">
+            <h2 class="text-xl font-black text-emerald-400 border-b border-white/5 pb-2">
+                <i class="fab fa-android mr-2"></i><span class="lang-en">Android App Repositories & Publishing</span><span class="lang-fa">پروژه‌ها و انتشار اندروید</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="glass-card p-5 rounded-2xl border-l-2 border-emerald-500">
+                    <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded font-mono">1403 • RAYAN PARDAZ</span>[cite: 1]
+                    <h3 class="font-bold text-white text-sm mt-2 lang-en">Real-Time Tracker App</h3>
+                    <h3 class="font-bold text-white text-sm mt-2 lang-fa">اپلیکیشن ردیابی آنی ویزیتورها</h3>
+                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                        <span class="lang-en">Developed a background tracking framework using Foreground Services and Google Location Services, optimized for minimum battery drainage.</span>[cite: 1]
+                        <span class="lang-fa">پیاده‌سازی ماژول ردیابی موقعیت مکانی به صورت Real-Time با استفاده از Foreground Service و بهینه‌سازی مصرف باتری دستگاه.</span>[cite: 1]
+                    </p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border-l-2 border-emerald-500">
+                    <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded font-mono">1402 • SNAPP</span>[cite: 1]
+                    <h3 class="font-bold text-white text-sm mt-2 lang-en">Internal Behavior Analysis Tools</h3>
+                    <h3 class="font-bold text-white text-sm mt-2 lang-fa">ابزارهای تحلیل رفتار محلی اپلیکیشن</h3>
+                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                        <span class="lang-en">Coded lightweight custom analysis tools in Kotlin to capture memory signatures and inspect REST API data transfer health.</span>[cite: 1]
+                        <span class="lang-fa">توسعه ابزارهای جانبی اندرویدی با کاتلین جهت مانیتورینگ محلی ریکوئست‌های API و ساختارهای WebView.</span>[cite: 1]
+                    </p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border-l-2 border-emerald-500 col-span-1 md:col-span-2 bg-emerald-500/5">
+                    <h3 class="font-bold text-white text-sm lang-en">15+ Open Source GitHub Repositories</h3>
+                    <h3 class="font-bold text-white text-sm lang-fa">بیش از ۱۵ پروژه متن‌باز فعال در گیت‌هاب</h3>
+                    <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                        <span class="lang-en">Maintained various architectures covering local file systems, e-commerce integrations, map location matrices, custom audio players, and Python scripting workflows for cryptographic hashing.</span>[cite: 1]
+                        <span class="lang-fa">توسعه و نگهداری کدهای متن‌باز اندرویدی در حوزه‌های پخش موسیقی، نقشه‌برداری، فروشگاهی، مدیریت فایل و اسکریپت‌های پایتون رمزنگاری.</span>[cite: 1]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Security Assessment Audits -->
+        <section class="section space-y-4">
+            <h2 class="text-xl font-black text-red-400 border-b border-white/5 pb-2">
+                <i class="fas fa-shield-alt mr-2"></i><span class="lang-en">Vulnerability Assessments & Pentsing</span><span class="lang-fa">ارزیابی‌های امنیتی و تست نفوذ</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="glass-card p-5 rounded-2xl border-l-2 border-red-500">
+                    <span class="text-[10px] bg-red-500/10 text-red-400 px-2 py-0.5 rounded font-mono">1403 • FARSH SIZAN</span>[cite: 1]
+                    <h3 class="font-bold text-white text-sm mt-2 lang-en">Network Service & Port Auditing</h3>
+                    <h3 class="font-bold text-white text-sm mt-2 lang-fa">ارزیابی پورت‌ها و سرویس‌های فعال سرور</h3>
+                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                        <span class="lang-en">Utilized Nmap architectures to map infrastructure open ports, analyzing active Windows Server configurations for security compliance reports.</span>[cite: 1]
+                        <span class="lang-fa">شناسایی پورت‌ها و ارزیابی امنیتی سرورهای ویندوزی شبکه با Nmap و استخراج آسیب‌پذیری‌های فعال جهت پیکربندی اصلاحی.</span>[cite: 1]
+                    </p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border-l-2 border-red-500">
+                    <span class="text-[10px] bg-red-500/10 text-red-400 px-2 py-0.5 rounded font-mono">1400 • DELIJAP</span>[cite: 1]
+                    <h3 class="font-bold text-white text-sm mt-2 lang-en">API Data & Auth Tampering</h3>
+                    <h3 class="font-bold text-white text-sm mt-2 lang-fa">تست آسیب‌پذیری لایه احراز هویت API</h3>
+                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                        <span class="lang-en">Conducted deep integration validation using Frida runtime instrumentation hooking and traffic interceptor tools to inspect backend broken token routes.</span>[cite: 1]
+                        <span class="lang-fa">ارزیابی امنیتی و ردگیری توکن‌های دسترسی معایب احراز هویت وب‌سرویس‌ها با اسکریپت‌های هوکینگ Frida.</span>[cite: 1]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Help Desk & Legacy Systems -->
+        <section class="section space-y-4">
+            <h2 class="text-xl font-black text-blue-400 border-b border-white/5 pb-2">
+                <i class="fas fa-network-wired mr-2"></i><span class="lang-en">IT Support & Legacy Infrastructure</span><span class="lang-fa">پشتیبانی IT و تجربیات کارگاهی زیرساخت</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="glass-card p-5 rounded-2xl border-l-2 border-blue-500">
+                    <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded font-mono">1400 • SAINA CO.</span>[cite: 1]
+                    <h3 class="font-bold text-white text-sm mt-2 lang-en">Active Directory & Virtualization Setup</h3>
+                    <h3 class="font-bold text-white text-sm mt-2 lang-fa">مدیریت سرورها و ماشین‌های مجازی</h3>
+                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                        <span class="lang-en">Managed standard Windows Server tasks, DHCP setups, user directory access controls, and VMware ESXi infrastructure assignments.</span>[cite: 1]
+                        <span class="lang-fa">راه‌اندازی سرویس‌های پایه اکتیو دایرکتوری، DHCP و کار با محیط مجازی‌سازی VMware ESXi جهت ساخت ماشین‌های مجازی سرویس‌ها.</span>[cite: 1]
+                    </p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border-l-2 border-blue-500">
+                    <span class="text-[10px] bg-white/5 text-slate-400 px-2 py-0.5 rounded font-mono">1400 • PROJECT BASED</span>[cite: 1]
+                    <h3 class="font-bold text-white text-sm mt-2 lang-en">CCTV Network Configuration</h3>
+                    <h3 class="font-bold text-white text-sm mt-2 lang-fa">تکنسین سیستم‌های حفاظتی و مداربسته</h3>
+                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                        <span class="lang-en">Handled raw composite power/network cabling layers for IP/Analog units, NVR formatting, and setting up mobile video relays.</span>[cite: 1]
+                        <span class="lang-fa">کابل‌کشی کابل‌های شبکه و برق دوربین‌های امنیتی Dahua/Hikvision، فرمت هارد دیسک و پیکربندی انتقال تصویر روی گوشی.</span>[cite: 1]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function toggleLang() {
+            const body = document.body;
+            const langBtn = document.getElementById('lang-btn');
+            body.classList.toggle('rtl');
+            langBtn.innerText = body.classList.contains('rtl') ? 'EN' : 'FA';
+        }
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('in-view');
+            });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.section').forEach(s => revealObserver.observe(s));
+    </script>
+</body>
+</html>
