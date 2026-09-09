@@ -1,291 +1,132 @@
-<!DOCTYPE html>
-<html lang="en" id="html-tag">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amirhossein Ghafari | Cyber Identity Hub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Vazirmatn:wght@300;500;700;900&display=swap');
-        
-        :root { 
-            --bg: #02040a; 
-        }
-        
-        body { 
-            font-family: 'Plus Jakarta Sans', 'Vazirmatn', sans-serif; 
-            background-color: var(--bg); 
-            color: #f3f4f6; 
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Amirhossein Ghafari — Software Engineer & Cybersecurity</title>
+<meta name="description" content="Amirhossein Ghafari — Software Engineering, Multiplatform Development, Cybersecurity, Network & Infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7fb;--surface:#fff;--surface2:#f0f3f8;--text:#101522;--muted:#657083;--line:#e3e7ee;--accent:#635bff;--accent2:#00a8ff;--good:#19a974;--shadow:0 18px 55px #1b274014;--radius:22px}body.dark{--bg:#080a0f;--surface:#10131a;--surface2:#161a23;--text:#f5f7fb;--muted:#99a3b5;--line:#252b38;--accent:#8b7cff;--accent2:#31c8ff;--good:#4ade9a;--shadow:0 25px 70px #0008}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Inter,sans-serif;transition:.3s;background-image:radial-gradient(circle at 8% 5%,color-mix(in srgb,var(--accent) 8%,transparent),transparent 24%),radial-gradient(circle at 92% 18%,color-mix(in srgb,var(--accent2) 7%,transparent),transparent 25%)}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:auto}.mono{font-family:'JetBrains Mono',monospace;direction:ltr}.topbar{position:sticky;top:14px;z-index:50;margin:14px auto 0;width:min(1120px,calc(100% - 32px));background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;padding:10px 12px}.brand{font-weight:800;letter-spacing:-.03em}.brand span{color:var(--accent)}.nav{display:flex;gap:6px;align-items:center}.nav a{font-size:13px;color:var(--muted);padding:9px 11px;border-radius:10px}.nav a:hover{background:var(--surface2);color:var(--text)}button{font:inherit}.control{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:10px;padding:8px 11px;cursor:pointer;font-size:12px}.hero{padding:105px 0 80px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em}.dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 0 5px color-mix(in srgb,var(--good) 12%,transparent)}h1{font-size:clamp(42px,7vw,82px);line-height:.98;letter-spacing:-.065em;margin:20px 0 18px}h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}.lead{font-size:18px;line-height:1.95;color:var(--muted);max-width:700px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.btn{padding:12px 17px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:13px}.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}.btn.secondary{background:var(--surface)}.profile-card{position:relative;background:linear-gradient(145deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:30px;padding:26px;box-shadow:var(--shadow);overflow:hidden}.profile-card:before{content:'';position:absolute;width:220px;height:220px;border-radius:50%;background:var(--accent);filter:blur(70px);opacity:.15;right:-70px;top:-80px}.avatar{width:90px;height:90px;border-radius:24px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:white;font-size:30px;font-weight:800;margin-bottom:22px}.profile-card h3{margin:0 0 5px;font-size:22px}.profile-card p{color:var(--muted);line-height:1.8;margin:0 0 20px}.status{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}.section{padding:70px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}.section-kicker{font:11px 'JetBrains Mono';color:var(--accent);letter-spacing:.08em;text-transform:uppercase}.section h2{font-size:clamp(28px,4vw,42px);margin:7px 0 0;letter-spacing:-.04em}.section-intro{color:var(--muted);max-width:550px;line-height:1.8}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 8px 30px #00000008;transition:transform .25s,border .25s}.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}.icon{font:600 12px 'JetBrains Mono';color:var(--accent);margin-bottom:22px}.card h3{margin:0 0 9px;font-size:17px}.card p{color:var(--muted);line-height:1.8;font-size:13px;margin:0}.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.skill-box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}.skill-title{display:flex;justify-content:space-between;font-weight:700;margin-bottom:13px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{font:11px 'JetBrains Mono';background:var(--surface2);border:1px solid var(--line);padding:7px 9px;border-radius:9px;color:var(--muted);direction:ltr}.timeline{display:grid;gap:12px}.job{display:grid;grid-template-columns:125px 1fr;gap:24px;padding:23px;background:var(--surface);border:1px solid var(--line);border-radius:18px}.year{font:12px 'JetBrains Mono';color:var(--accent);padding-top:3px}.job h3{margin:0;font-size:18px}.company{color:var(--muted);font-size:13px;margin:4px 0 12px}.job ul{margin:0;padding-right:18px;color:var(--muted);line-height:1.9;font-size:13px}.job li{margin:4px 0}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.project{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:23px}.project-top{display:flex;justify-content:space-between;gap:15px}.project h3{margin:0 0 8px}.project p{color:var(--muted);font-size:13px;line-height:1.8}.project .tags{margin-top:18px}.education{display:grid;grid-template-columns:1fr 1fr;gap:14px}.edu{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}.edu h3{margin:0 0 8px}.edu p{margin:4px 0;color:var(--muted);font-size:13px}.contact{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:28px;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{margin:0 0 8px}.contact p{margin:0;color:var(--muted)}footer{padding:35px 0 50px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px}.fade{opacity:0;transform:translateY(18px);transition:.7s}.fade.show{opacity:1;transform:none}@media(max-width:800px){.hero-grid,.cards,.skill-grid,.projects,.education{grid-template-columns:1fr}.hero{padding-top:70px}.profile-card{max-width:520px}.nav a{display:none}.topbar{position:sticky}.job{grid-template-columns:1fr;gap:7px}.contact{display:block}.contact .hero-actions{margin-top:20px}h1{font-size:52px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+<style>
+.lab-link{display:flex;align-items:center;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;font-weight:800;color:var(--text);transition:.25s}.lab-link:hover{color:var(--accent);transform:translateX(-3px)}.lab-link .arrow{margin-right:auto;color:var(--muted)}html[dir=ltr] .lab-link .arrow{margin-left:auto;margin-right:0}.social-icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--surface2);border:1px solid var(--line);font-size:14px;flex:0 0 32px}.telegram-icon{font-size:15px}.youtube-icon{font-size:12px}.github-icon{font-size:11px}.site-footer{padding:46px 0 28px;border-top:1px solid var(--line);background:color-mix(in srgb,var(--surface) 45%,transparent)}.footer-inner{display:grid;gap:28px}.footer-brand{display:flex;align-items:center;gap:14px}.footer-brand strong{font-size:28px;letter-spacing:-.08em;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}.footer-brand span{color:var(--muted);font-size:12px}.footer-socials{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.social-link{display:flex;align-items:center;justify-content:flex-start;gap:10px;padding:12px;border:1px solid var(--line);background:var(--surface);border-radius:14px;color:var(--muted);font-size:11px;font-weight:700;transition:.25s}.social-link:hover{transform:translateY(-3px);color:var(--text);border-color:color-mix(in srgb,var(--accent) 40%,var(--line));box-shadow:0 12px 28px #0000000b}.footer-bottom{padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:10px}@media(max-width:800px){.footer-socials{grid-template-columns:repeat(2,1fr)}.footer-socials .social-link:last-child{grid-column:1/-1}.footer-bottom{display:block;line-height:2}}
 
-        /* 2026 Next-Gen Cyber Glassmorphism */
-        .cyber-glass {
-            background: linear-gradient(135deg, rgba(10, 15, 30, 0.7), rgba(20, 25, 45, 0.4));
-            backdrop-filter: blur(25px) saturate(180%);
-            -webkit-backdrop-filter: blur(25px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255,255,255,0.1);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+.contact-links{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:24px}.contact-item{display:flex;align-items:center;gap:11px;min-width:0;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:var(--soft);transition:transform .2s ease,border-color .2s ease,background .2s ease}.contact-item:hover{transform:translateY(-2px);border-color:var(--muted);background:var(--panel)}.contact-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;font:700 11px/1 Manrope,Vazirmatn,sans-serif}.contact-item>span:last-child{display:flex;flex-direction:column;min-width:0;gap:3px}
+html[dir=ltr] .contact-item>span:last-child{align-items:flex-start;text-align:left}
+html[dir=rtl] .contact-item>span:last-child{align-items:flex-end;text-align:right}.contact-item small{font-size:10px;color:var(--muted);letter-spacing:.05em}.contact-item strong{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.phone-ltr{ /* follow the same layout as other contact-item elements (no container direction change) */ }
+.phone-ltr>span:last-child{direction:ltr;text-align:left}
+.phone-ltr strong, .phone-ltr .mono{direction:ltr;text-align:left;display:inline-block}
+.phone-ltr small{direction:rtl;text-align:left}@media(max-width:1050px){.contact-links{grid-template-columns:repeat(3,1fr)}}@media(max-width:720px){.contact-links{grid-template-columns:1fr 1fr}.contact-item{padding:12px}.contact-item strong{font-size:10px}}@media(max-width:430px){.contact-links{grid-template-columns:1fr}}
+</style>
+<style>
+/* Animations and polished transitions */
+:root{transition:color 360ms ease, background-color 480ms ease}
+body,.card,.profile-card,.contact-item,.topbar,.btn,.control{transition:background-color 420ms cubic-bezier(.2,.9,.2,1),color 360ms ease,border-color 360ms ease,box-shadow 420ms ease}
 
-        .cyber-glass:hover {
-            border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-8px) scale(1.01);
-            box-shadow: 0 30px 60px -10px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
-        }
+/* Language swap fallback animations */
+.lang-anim-out [data-fa][data-en]{opacity:0;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease}
+.lang-anim-in [data-fa][data-en]{opacity:1;transform:none;transition:opacity .28s ease,transform .28s ease}
 
-        /* Premium Aurora Liquid Orbs */
-        .aurora-orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(130px);
-            z-index: -1;
-            mix-blend-mode: screen;
-            opacity: 0.3;
-            animation: auroraMovement 22s infinite alternate ease-in-out;
-        }
-        
-        @keyframes auroraMovement {
-            0% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
-            50% { transform: translate(80px, 100px) scale(1.2) rotate(180deg); }
-            100% { transform: translate(-40px, -80px) scale(0.85) rotate(360deg); }
-        }
+/* Theme button micro-interaction */
+.control{will-change:transform}
+.control:active{transform:scale(.98) translateY(1px)}
+#theme{transition:transform .5s cubic-bezier(.2,.9,.2,1)}
+.theme-anim #theme{transform:rotate(20deg) scale(1.05)}
 
-        /* Interactive Neumorphic Tech Badge */
-        .tech-badge {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: inset 1px 1px 1px rgba(255,255,255,0.05), 0 4px 10px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-        }
-        .tech-badge:hover {
-            background: rgba(59, 130, 246, 0.15);
-            border-color: rgba(59, 130, 246, 0.4);
-            color: #fff;
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
-        }
+/* Avatar subtle breathing */
+@keyframes breathe{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+.avatar{animation:breathe 6s ease-in-out infinite}
 
-        /* Bilingual Smooth Control */
-        .lang-en { display: block; }
-        .lang-fa { display: none; }
-        body.rtl .lang-en { display: none; }
-        body.rtl .lang-fa { display: block; }
-        body.rtl { direction: rtl; text-align: right; }
+/* Accent gradient pulse */
+@keyframes accentPulse{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(18deg)}100%{filter:hue-rotate(0deg)}}
+.profile-card:before{transition:opacity .6s ease,transform .6s ease}
+body:not(.dark) .profile-card:before{animation:accentPulse 8s ease-in-out infinite}
 
-        .reveal-section { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal-section.in-view { opacity: 1; transform: translateY(0); }
-    </style>
-</head>
-<body class="antialiased">
+/* Respect reduced motion */
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after{animation:none!important;transition:none!important}
 
-    <!-- Fluid Aurora Morphism Engine Background -->
-    <div class="aurora-orb bg-gradient-to-tr from-blue-600 to-indigo-600 w-[500px] h-[500px] top-[-10%] left-[-10%]"></div>
-    <div class="aurora-orb bg-gradient-to-br from-emerald-600 to-cyan-700 w-[600px] h-[600px] bottom-[-15%] right-[-10%] animation-delay-4000"></div>
-    <div class="aurora-orb bg-gradient-to-tr from-red-900 via-purple-900 to-transparent w-96 h-96 top-[30%] right-[20%] opacity-20"></div>
+/* Focus outlines */
+a.social-link:focus, .contact-item:focus, .control:focus{outline:3px solid color-mix(in srgb,var(--accent) 16%,transparent);outline-offset:3px}
 
-    <!-- Language Selector Top Switcher -->
-    <div class="fixed top-6 right-6 z-50">
-        <button onclick="toggleLang()" class="cyber-glass px-6 py-2.5 rounded-2xl font-black text-blue-400 text-xs tracking-widest hover:scale-105 active:scale-95 transition-all">
-             <span id="lang-btn">FA</span>
-        </button>
-    </div>
+/* Contact item polish */
+.contact-icon{min-width:34px;display:grid;place-items:center}
+.contact-item{position:relative;overflow:hidden}
+.contact-item::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 0%,transparent 60%,color-mix(in srgb,var(--accent) 6%,transparent) 100%);opacity:0;transition:opacity .35s;pointer-events:none}
+.contact-item:hover::after{opacity:1}
 
-    <!-- HERO SECTION: Premium Digital Identity -->
-    <header class="min-h-screen flex items-center justify-center px-4 relative z-10">
-        <div class="max-w-4xl w-full text-center space-y-8">
-            
-            <!-- Sleek Avatar Glow Frame -->
-            <div class="relative inline-block">
-                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 via-indigo-600 to-emerald-500 blur-xl opacity-40 animate-pulse"></div>
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=200&h=200&q=80" alt="Amirhossein Ghafari" class="w-32 h-32 rounded-full mx-auto border-2 border-white/10 p-1.5 backdrop-blur-2xl shadow-3xl relative z-10 object-cover">
-            </div>
+</style>
+</head><body class="dark">
+<header class="topbar"><a class="brand" href="#top">AG<span>.</span></a><nav class="nav"><a href="#about" data-fa="معرفی" data-en="About">معرفی</a><a href="#skills" data-fa="مهارت‌ها" data-en="Skills">مهارت‌ها</a><a href="#experience" data-fa="سوابق" data-en="Experience">سوابق</a><a href="#projects" data-fa="پروژه‌ها" data-en="Projects">پروژه‌ها</a><a href="#contact" data-fa="تماس" data-en="Contact">تماس</a></nav><div><button class="control" id="lang">EN</button><button class="control" id="theme">☼</button></div></header>
+<main id="top"><section class="hero"><div class="container hero-grid"><div class="fade"><div class="eyebrow"><span class="dot"></span><span data-fa="مهندس نرم‌افزار چندسکویی · امنیت سایبری" data-en="Multiplatform Software Engineer · Cybersecurity">مهندس نرم‌افزار چندسکویی · امنیت سایبری</span></div><h1><span data-fa="امیرحسین" data-en="Amirhossein">امیرحسین</span><br><em data-fa="غفاری" data-en="Ghafari">غفاری</em></h1><p class="lead" data-fa="مهندس نرم‌افزار با تمرکز بر توسعه چندسکویی، امنیت موبایل و وب، امنیت API، شبکه و زیرساخت. علاقه‌مند به ساخت محصولات سریع، امن و قابل نگهداری با رویکرد مهندسی نرم‌افزار." data-en="Software engineer focused on multiplatform development, mobile & web security, API security, networking and infrastructure. I build fast, secure and maintainable products with an engineering mindset.">مهندس نرم‌افزار با تمرکز بر توسعه چندسکویی، امنیت موبایل و وب، امنیت API، شبکه و زیرساخت. علاقه‌مند به ساخت محصولات سریع، امن و قابل نگهداری با رویکرد مهندسی نرم‌افزار.</p><div class="hero-actions"><a class="btn primary" href="#contact" data-fa="ارتباط با من ↓" data-en="Contact me ↓">ارتباط با من ↓</a></div></div><aside class="profile-card fade"><div class="avatar">AG</div><h3>Software · Security · Infrastructure</h3><p data-fa="توسعه نرم‌افزار، ارزیابی امنیت، تحلیل API و کار با زیرساخت شبکه و سرور." data-en="Software development, security assessment, API analysis and network/server infrastructure.">توسعه نرم‌افزار، ارزیابی امنیت، تحلیل API و کار با زیرساخت شبکه و سرور.</p><div class="status"><span class="dot"></span><span data-fa="فعال و آماده همکاری پروژه‌ای" data-en="Available for project-based collaboration">فعال و آماده همکاری پروژه‌ای</span></div></aside></div></section>
+<section class="section" id="about"><div class="container"><div class="section-head"><div><div class="section-kicker">01 / PROFILE</div><h2 data-fa="چه چیزی ارائه می‌دهم؟" data-en="What I bring">چه چیزی ارائه می‌دهم؟</h2></div><p class="section-intro" data-fa="ترکیبی از توسعه نرم‌افزار، امنیت و زیرساخت برای حل مسئله از محصول تا لایه فنی پایین‌تر." data-en="A practical combination of software engineering, security and infrastructure — from product code to lower-level technical layers.">ترکیبی از توسعه نرم‌افزار، امنیت و زیرساخت برای حل مسئله از محصول تا لایه فنی پایین‌تر.</p></div><div class="cards"><article class="card fade"><div class="icon">01 / BUILD</div><h3 data-fa="توسعه چندسکویی" data-en="Multiplatform Development">توسعه چندسکویی</h3><p data-fa="Kotlin، Java و Jetpack Compose با تمرکز بر معماری، API، ذخیره‌سازی محلی و تجربه کاربری." data-en="Kotlin, Java and Jetpack Compose with focus on architecture, APIs, local storage and user experience.">Kotlin، Java و Jetpack Compose با تمرکز بر معماری، API، ذخیره‌سازی محلی و تجربه کاربری.</p></article><article class="card fade"><div class="icon">02 / SECURE</div><h3 data-fa="امنیت کاربردی" data-en="Applied Cybersecurity">امنیت کاربردی</h3><p data-fa="امنیت موبایل، API و وب، تحلیل ترافیک، ارزیابی آسیب‌پذیری، گزارش فنی و راهکار اصلاحی." data-en="Mobile, API and web security, traffic analysis, vulnerability assessment, technical reporting and remediation.">امنیت موبایل، API و وب، تحلیل ترافیک، ارزیابی آسیب‌پذیری، گزارش فنی و راهکار اصلاحی.</p></article><article class="card fade"><div class="icon">03 / OPERATE</div><h3 data-fa="شبکه و زیرساخت" data-en="Network & Infrastructure">شبکه و زیرساخت</h3><p data-fa="Linux، Windows Server، VMware، MikroTik، Nmap، Docker و مفاهیم مانیتورینگ و عملیات امنیتی." data-en="Linux, Windows Server, VMware, MikroTik, Nmap, Docker and security operations concepts.">Linux، Windows Server، VMware، MikroTik، Nmap، Docker و مفاهیم مانیتورینگ و عملیات امنیتی.</p></article></div></div></section>
+<section class="section" id="skills"><div class="container"><div class="section-head"><div><div class="section-kicker">02 / STACK</div><h2 data-fa="پشته فنی" data-en="Technical Stack">پشته فنی</h2></div></div><div class="skill-grid"><div class="skill-box fade"><div class="skill-title"><span data-fa="مهندسی نرم‌افزار" data-en="Software Engineering">مهندسی نرم‌افزار</span><span class="mono">CORE</span></div><div class="tags"><span class="tag">Kotlin</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Jetpack Compose</span><span class="tag">Compose Multiplatform</span><span class="tag">MVVM</span><span class="tag">REST API</span><span class="tag">Retrofit</span><span class="tag">Room</span><span class="tag">Coroutines / Flow</span><span class="tag">Firebase</span><span class="tag">Git / GitLab</span></div></div><div class="skill-box fade"><div class="skill-title"><span data-fa="امنیت سایبری" data-en="Cybersecurity">امنیت سایبری</span><span class="mono">SEC</span></div><div class="tags"><span class="tag">OWASP Mobile Top 10</span><span class="tag">API Security</span><span class="tag">Web Security</span><span class="tag">Bug Bounty</span><span class="tag">Frida</span><span class="tag">Nmap</span><span class="tag">Traffic Analysis</span><span class="tag">Vulnerability Assessment</span><span class="tag">Security Reporting</span><span class="tag">SOC Tier 1</span></div></div><div class="skill-box fade"><div class="skill-title"><span data-fa="شبکه و سرور" data-en="Network & Server">شبکه و سرور</span><span class="mono">NET</span></div><div class="tags"><span class="tag">TCP/IP</span><span class="tag">DNS / DHCP</span><span class="tag">VLAN</span><span class="tag">NAT</span><span class="tag">Firewall</span><span class="tag">MikroTik</span><span class="tag">Cisco</span><span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">Linux</span><span class="tag">VMware ESXi</span></div></div><div class="skill-box fade"><div class="skill-title"><span data-fa="DevOps و عملیات" data-en="DevOps & Operations">DevOps و عملیات</span><span class="mono">OPS</span></div><div class="tags"><span class="tag">Docker</span><span class="tag">Containerization</span><span class="tag">Git</span><span class="tag">Linux CLI</span><span class="tag">Monitoring</span><span class="tag">Logging</span><span class="tag">Release Management</span><span class="tag">Technical Documentation</span></div></div></div></div></section>
+<section class="section" id="experience"><div class="container"><div class="section-head"><div><div class="section-kicker">03 / EXPERIENCE</div><h2 data-fa="سوابق فعالیت حرفه‌ای" data-en="Professional Experience">سوابق فعالیت حرفه‌ای</h2></div></div><div class="timeline"><article class="job fade"><div class="year">۱۴۰۴ / 2025</div><div><h3 data-fa="توسعه‌دهنده اندروید و همکار امنیتی" data-en="Android Developer & Security Collaborator">توسعه‌دهنده اندروید و همکار امنیتی</h3><div class="company">فراگلد · شیراز</div><ul><li data-fa="توسعه و بهینه‌سازی اپلیکیشن سبک مبتنی بر WebView با Kotlin و مدیریت Session." data-en="Developed and optimized a lightweight Kotlin WebView application with session handling.">توسعه و بهینه‌سازی اپلیکیشن سبک مبتنی بر WebView با Kotlin و مدیریت Session.</li><li data-fa="همکاری در بررسی امنیت WordPress و زیرساخت و ارائه پیشنهادهای اصلاحی." data-en="Reviewed WordPress security and infrastructure and provided remediation recommendations.">همکاری در بررسی امنیت WordPress و زیرساخت و ارائه پیشنهادهای اصلاحی.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۳ / 2024</div><div><h3 data-fa="برنامه‌نویس" data-en="Software Developer">برنامه‌نویس</h3><div class="company">رایان‌پرداز · کرج</div><ul><li data-fa="توسعه اپلیکیشن Kotlin برای ردیابی موقعیت ویزیتورها و ارسال لحظه‌ای داده به سرور." data-en="Built a Kotlin application for visitor location tracking and real-time server transmission.">توسعه اپلیکیشن Kotlin برای ردیابی موقعیت ویزیتورها و ارسال لحظه‌ای داده به سرور.</li><li data-fa="کار با Location Services، Foreground Service، API و بهینه‌سازی باتری و عملکرد." data-en="Worked with Location Services, Foreground Services, APIs, battery and performance optimization.">کار با Location Services، Foreground Service، API و بهینه‌سازی باتری و عملکرد.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۳ / 2024</div><div><h3 data-fa="امنیت شبکه" data-en="Network Security">امنیت شبکه</h3><div class="company">فرش سیزان · کاشان</div><ul><li data-fa="ارزیابی امنیتی سرورها و سرویس‌های Windows و شناسایی پورت‌ها و سرویس‌های فعال با Nmap." data-en="Assessed Windows servers/services and enumerated active ports and services with Nmap.">ارزیابی امنیتی سرورها و سرویس‌های Windows و شناسایی پورت‌ها و سرویس‌های فعال با Nmap.</li><li data-fa="تحلیل پیکربندی، مستندسازی آسیب‌پذیری‌ها و ارائه پیشنهادهای اصلاحی در چارچوب مجاز." data-en="Analyzed configurations, documented vulnerabilities and proposed remediation within authorized scope.">تحلیل پیکربندی، مستندسازی آسیب‌پذیری‌ها و ارائه پیشنهادهای اصلاحی در چارچوب مجاز.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۲ / 2023</div><div><h3 data-fa="پژوهشگر امنیت موبایل" data-en="Mobile Security Researcher">پژوهشگر امنیت موبایل</h3><div class="company">اسنپ · تهران</div><ul><li data-fa="تحلیل ورود کاربران، API، تبادل اطلاعات و نحوه ذخیره و استفاده از توکن‌ها." data-en="Analyzed authentication flows, APIs, data exchange and token storage/use.">تحلیل ورود کاربران، API، تبادل اطلاعات و نحوه ذخیره و استفاده از توکن‌ها.</li><li data-fa="شناسایی ضعف‌های احراز هویت و تهیه گزارش فنی." data-en="Identified authentication weaknesses and prepared technical reports.">شناسایی ضعف‌های احراز هویت و تهیه گزارش فنی.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۰ / 2021</div><div><h3 data-fa="کارشناس پشتیبانی و امنیت شبکه" data-en="Network Support & Security Specialist">کارشناس پشتیبانی و امنیت شبکه</h3><div class="company">شرکت ساینا · تهران</div><ul><li data-fa="Windows Server، Active Directory، DHCP و مجازی‌سازی با VMware ESXi." data-en="Worked with Windows Server, Active Directory, DHCP and VMware ESXi virtualization.">Windows Server، Active Directory، DHCP و مجازی‌سازی با VMware ESXi.</li><li data-fa="پیکربندی اولیه MikroTik، NAT، Firewall، VLAN و امن‌سازی ترافیک." data-en="Configured MikroTik, NAT, firewall, VLANs and basic traffic hardening.">پیکربندی اولیه MikroTik، NAT، Firewall، VLAN و امن‌سازی ترافیک.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۰ / 2021</div><div><h3 data-fa="امنیت موبایل" data-en="Mobile Security">امنیت موبایل</h3><div class="company">دلیجاپ · دلیجان</div><ul><li data-fa="ارزیابی امنیت API موبایل با تحلیل ترافیک و Frida و توسعه اسکریپت Python." data-en="Assessed mobile APIs using traffic analysis, Frida and Python scripting.">ارزیابی امنیت API موبایل با تحلیل ترافیک و Frida و توسعه اسکریپت Python.</li><li data-fa="بررسی کنترل دسترسی، اعتبارسنجی و مستندسازی یافته‌ها." data-en="Reviewed access control and validation and documented findings.">بررسی کنترل دسترسی، اعتبارسنجی و مستندسازی یافته‌ها.</li></ul></div></article></div></div></section>
+<section class="section" id="projects"><div class="container"><div class="section-head"><div><div class="section-kicker">04 / SELECTED WORK</div><h2 data-fa="پروژه‌ها و فعالیت متن‌باز" data-en="Selected Projects & Open Source">پروژه‌ها و فعالیت متن‌باز</h2></div><p class="section-intro" data-fa="بیش از ۱۵ پروژه شخصی و متن‌باز با تمرکز بر Kotlin، Android، ابزارهای کاربردی و امنیت." data-en="15+ personal and open-source projects focused on Kotlin, Android, utilities and security.">بیش از ۱۵ پروژه شخصی و متن‌باز با تمرکز بر Kotlin، Android، ابزارهای کاربردی و امنیت.</p></div><div class="projects"><article class="project fade"><div class="project-top"><h3>Open Source Portfolio</h3><span class="mono">15+</span></div><p data-fa="توسعه و نگهداری پروژه‌های فروشگاهی، مدیریت فایل، نقشه، آزمون، موسیقی، فوتبال و ابزارهای کاربردی؛ همراه با مستندسازی و انتشار در GitHub." data-en="Built and maintained apps for e-commerce, file management, maps, quizzes, music, football and utilities, with documentation and GitHub releases.">توسعه و نگهداری پروژه‌های فروشگاهی، مدیریت فایل، نقشه، آزمون، موسیقی، فوتبال و ابزارهای کاربردی؛ همراه با مستندسازی و انتشار در GitHub.</p><div class="tags"><span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">MVVM</span><span class="tag">Retrofit</span><span class="tag">Room</span></div></article><article class="project fade"><div class="project-top"><h3>Security Engineering Lab</h3><span class="mono">SEC</span></div><p data-fa="تمرکز بر تحلیل API، امنیت موبایل و وب، شبکه، ارزیابی آسیب‌پذیری، ابزارسازی Python و مستندسازی یافته‌های امنیتی." data-en="Hands-on work around API analysis, mobile/web security, networking, vulnerability assessment, Python tooling and security reporting.">تمرکز بر تحلیل API، امنیت موبایل و وب، شبکه، ارزیابی آسیب‌پذیری، ابزارسازی Python و مستندسازی یافته‌های امنیتی.</p><div class="tags"><span class="tag">Python</span><span class="tag">Frida</span><span class="tag">Nmap</span><span class="tag">OWASP</span></div><a class="lab-link" href="https://www.youtube.com/@Noobs_Code" target="_blank" rel="noopener"><span class="social-icon youtube-icon">▶</span><span data-fa="کانال یوتیوب من" data-en="My YouTube Channel">کانال یوتیوب من</span><span class="arrow">↗</span></a></article></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><div class="section-kicker">05 / EDUCATION</div><h2 data-fa="تحصیلات و دوره‌ها" data-en="Education & Training">تحصیلات و دوره‌ها</h2></div></div><div class="education"><div class="edu fade"><h3 data-fa="کارشناسی کامپیوتر — نرم‌افزار" data-en="B.Sc. Computer Science / Software">کارشناسی کامپیوتر — نرم‌افزار</h3><p>آموزشکده فنی رجایی کاشان · ۱۴۰۱–۱۴۰۳</p><p data-fa="معدل: ۱۶" data-en="GPA: 16/20">معدل: ۱۶</p></div><div class="edu fade"><h3 data-fa="دوره‌های تخصصی" data-en="Professional Training">دوره‌های تخصصی</h3><p>Android Development · Android Security & Bug Bounty · Network+ · Security+ · A+ · VMware · MTCNA · CCNA · MCSA · LPIC-1 · Web Security</p></div></div></div></section>
+<section class="section" id="contact"><div class="container"><div class="contact fade"><div><h2 data-fa="بیایید چیزی حرفه‌ای بسازیم." data-en="Let’s build something great.">بیایید چیزی حرفه‌ای بسازیم.</h2><p data-fa="برای همکاری پروژه‌ای، توسعه نرم‌افزار، امنیت یا بررسی فنی در ارتباط باشید." data-en="Available for software development, security and technical project collaboration.">برای همکاری پروژه‌ای، توسعه نرم‌افزار، امنیت یا بررسی فنی در ارتباط باشید.</p></div><div class="contact-links"><a class="contact-item" href="mailto:amirhosseinghafari29@gmail.com"><span class="contact-icon">✉</span><span><small data-fa="ایمیل" data-en="Email">ایمیل</small><strong dir="ltr" class="mono">amirhosseinghafari29@gmail.com</strong></span></a><a class="contact-item phone-ltr" href="tel:+989934161983"><span class="contact-icon">☎</span><span><small data-fa="تلفن" data-en="Phone">تلفن</small><strong dir="ltr">+98 993 416 1983</strong></span></a><a class="contact-item" href="https://github.com/mr-coder20" target="_blank" rel="noopener"><span class="contact-icon">GH</span><span><small>GitHub</small><strong>mr-coder20</strong></span></a><a class="contact-item" href="https://t.me/a_god_3_6_9" target="_blank" rel="noopener"><span class="contact-icon">➤</span><span><small>Telegram</small><strong>@a_god_3_6_9</strong></span></a><a class="contact-item" href="https://www.youtube.com/@Noobs_Code" target="_blank" rel="noopener"><span class="contact-icon">▶</span><span><small>YouTube</small><strong>@Noobs_Code</strong></span></a></div></div></div></section></main>
+<footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><strong>AG.</strong><span data-fa="نرم‌افزار · امنیت · زیرساخت" data-en="Software · Security · Infrastructure">نرم‌افزار · امنیت · زیرساخت</span></div><div class="footer-bottom"><span>© 2026 Amirhossein Ghafari</span><span class="mono">SOFTWARE · SECURITY · INFRA</span></div></div></footer>
+<script>
+const body = document.body;
+const html = document.documentElement;
+const langBtn = document.getElementById('lang');
+const themeBtn = document.getElementById('theme');
+let lang = localStorage.getItem('cv-lang') || 'fa';
+let dark = localStorage.getItem('cv-theme') !== 'light';
 
-            <!-- Dynamic Titles -->
-            <div class="space-y-3">
-                <div class="lang-en">
-                    <h1 class="text-6xl md:text-8xl font-black tracking-tighter bg-gradient-to-b from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">
-                        Amirhossein Ghafari
-                    </h1>
-                    <p class="text-sm md:text-base text-blue-400 font-extrabold tracking-[0.3em] uppercase mt-2">Senior Android Developer • Network & Security Enthusiast</p>
-                </div>
-                <div class="lang-fa">
-                    <h1 class="text-5xl md:text-7xl font-black tracking-tight bg-gradient-to-b from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">
-                        امیرحسین غفاری
-                    </h1>
-                    <p class="text-base md:text-lg text-blue-400 font-black tracking-wide mt-2">برنامه‌نویس ارشد اندروید • آشنا به مباحث شبکه و امنیت سایبری</p>
-                </div>
-            </div>
+function setLangTexts(l){
+  document.querySelectorAll('[data-fa][data-en]').forEach(e=>e.textContent = e.dataset[l]);
+  langBtn.textContent = l === 'fa' ? 'EN' : 'FA';
+  document.title = l === 'fa' ? 'امیرحسین غفاری — مهندس نرم‌افزار و امنیت سایبری' : 'Amirhossein Ghafari — Software Engineer & Cybersecurity';
+}
 
-            <!-- Premium Quick Action Buttons (No Addresses/Messy Data) -->
-<!-- بخش دکمه‌های اصلاح شده - بدون برعکس شدن آیدی و شماره -->
-<div class="flex flex-wrap justify-center gap-4 pt-4">
-    <a href="tel:+989934161983" class="cyber-glass px-6 py-4 rounded-2xl font-bold flex items-center gap-3 text-xs hover:text-emerald-400" style="direction: ltr !important;">
-        <i class="fas fa-phone text-emerald-400 text-sm"></i> <span class="font-mono">+98 9934161983</span>
-    </a>
-    <a href="https://t.me/a_god_3_6_9" target="_blank" class="cyber-glass px-6 py-4 rounded-2xl font-bold flex items-center gap-3 text-xs hover:text-sky-400" style="direction: ltr !important;">
-        <i class="fab fa-telegram-plane text-sky-400 text-sm"></i> <span class="font-mono">@a_god_3_6_9</span>
-    </a>
-    <a href="https://github.com/mr-coder20" target="_blank" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:opacity-90 px-7 py-4 rounded-2xl font-black flex items-center gap-3 text-xs shadow-xl shadow-blue-500/20 transition-all">
-        <i class="fab fa-github text-sm"></i> GITHUB ECOSYSTEM
-    </a>
-</div>
-            
-        </div>
-    </header>
+function apply(animate = true){
+  html.lang = lang;
+  html.dir = lang === 'fa' ? 'rtl' : 'ltr';
+  body.classList.toggle('dark', dark);
 
-    <!-- CORE REVEAL MATRIX: Three Tech Columns -->
-    <main class="max-w-6xl mx-auto px-4 md:px-6 pb-32 space-y-24 relative z-10">
+  // Language transition: prefer View Transitions API when available
+  if(animate && document.startViewTransition){
+    try{
+      document.startViewTransition(()=>{
+        setLangTexts(lang);
+      });
+    }catch(e){
+      setLangTexts(lang);
+    }
+  }else if(animate){
+    html.classList.add('lang-anim-out');
+    setTimeout(()=>{
+      setLangTexts(lang);
+      html.classList.remove('lang-anim-out');
+      html.classList.add('lang-anim-in');
+      setTimeout(()=>html.classList.remove('lang-anim-in'),420);
+    },180);
+  }else{
+    setLangTexts(lang);
+  }
 
-        <!-- CORE SECTIONS MATRIX -->
-        <section class="reveal-section grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- COLUMN 1: PROGRAMMING MATRIX -->
-            <div class="cyber-glass p-8 rounded-[2.5rem] flex flex-col justify-between border-t-4 border-emerald-500/40">
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3 text-emerald-400 text-2xl font-black">
-                        <i class="fab fa-android"></i>
-                        <h3 class="text-xl font-bold"><span class="lang-en">Programming</span><span class="lang-fa">برنامه نویسی</span></h3>
-                    </div>
-                    <div class="text-xs md:text-sm text-slate-300 leading-relaxed font-light">
-                        <p class="lang-en">Specialized in raw native Android software engineering. Experienced in building robust scalable layers using Jetpack Compose, modular clean architecture structures, MVVM frameworks, Room local data pools, and highly responsive parallel flows via Coroutines.</p>
-                        <p class="lang-fa">توسعه تخصصی زیرساخت و مهندسی نرم‌افزار نیتیو اندروید. مسلط بر پیاده‌سازی رابط کاربری مدرن تعاملی با Jetpack Compose، مهندسی الگوهای معماری ماژولار Clean و MVVM، دیتابیس‌های لوکال و فرآیندهای واکنشی همگام با Coroutines.</p>
-                    </div>
-                </div>
+  // Theme micro animation
+  body.classList.add('theme-anim');
+  setTimeout(()=>body.classList.remove('theme-anim'),520);
+}
 
-                <div class="space-y-3 pt-6 border-t border-white/5 mt-6">
-                    <p class="text-[10px] text-emerald-400 font-bold uppercase tracking-widest"><span class="lang-en">Verified Core Skills</span><span class="lang-fa">تگ‌های توانمندی</span></p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Kotlin</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Java</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Python</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Jetpack Compose</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">MVVM / Clean</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Room DB</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Coroutines & Flow</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">SDLC Analysis</span>
-                    </div>
-                </div>
-            </div>
+langBtn.addEventListener('click',()=>{
+  lang = lang === 'fa' ? 'en' : 'fa';
+  localStorage.setItem('cv-lang', lang);
+  apply(true);
+});
 
-            <!-- COLUMN 2: NETWORKING MATRIX -->
-            <div class="cyber-glass p-8 rounded-[2.5rem] flex flex-col justify-between border-t-4 border-blue-500/40">
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3 text-blue-400 text-2xl font-black">
-                        <i class="fas fa-network-wired"></i>
-                        <h3 class="text-xl font-bold"><span class="lang-en">Networking</span><span class="lang-fa">مفاهیم شبکه</span></h3>
-                    </div>
-                    <div class="text-xs md:text-sm text-slate-300 leading-relaxed font-light">
-                        <p class="lang-en">Familiar with technical IT foundations and localized help desk administration. Knowledge covers operational fundamentals taught across Network+, Security+, and A+ curriculums, along with entry-level concepts of MikroTik router structures, Cisco switching VLAN frameworks, Windows Server configurations, and Linux automation.</p>
-                        <p class="lang-fa">آشنا با مبانی زیرساخت فناوری اطلاعات، سخت‌افزار و تکنسین سرویس‌های شبکه (Help Desk). مسلط بر مفاهیم پایه‌ای سرفصل‌های Network+ ،Security+ ،A+ و درک ساختار ابزارهای میکروتیک، سوئیچینگ سیسکو، مدیریت سرورهای مایکروسافت و لینوکس.</p>
-                    </div>
-                </div>
+themeBtn.addEventListener('click',()=>{
+  dark = !dark;
+  localStorage.setItem('cv-theme', dark ? 'dark' : 'light');
+  apply(true);
+});
 
-                <div class="space-y-3 pt-6 border-t border-white/5 mt-6">
-                    <p class="text-[10px] text-blue-400 font-bold uppercase tracking-widest"><span class="lang-en">Infrastructure Frameworks</span><span class="lang-fa">تگ‌های کارگاهی</span></p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Network+</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Security+</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">A+ Core</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">MikroTik (Basic)</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">CCNA Frameworks</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Windows Server</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">VMware ESXi</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Linux (LPIC-1)</span>
-                    </div>
-                </div>
-            </div>
+// reveal observer
+const obs = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('show')),{threshold:.08});
+document.querySelectorAll('.fade').forEach(e=>obs.observe(e));
 
-            <!-- COLUMN 3: CYBER SECURITY MATRIX -->
-            <div class="cyber-glass p-8 rounded-[2.5rem] flex flex-col justify-between border-t-4 border-red-500/40">
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3 text-red-400 text-2xl font-black">
-                        <i class="fas fa-user-secret"></i>
-                        <h3 class="text-xl font-bold"><span class="lang-en">Cyber Security</span><span class="lang-fa">امنیت سایبری</span></h3>
-                    </div>
-                    <div class="text-xs md:text-sm text-slate-300 leading-relaxed font-light">
-                        <p class="lang-en">Focused on offensive vulnerability identification and vulnerability assessment across Web, Network, and Mobile landscapes. Practiced in evaluating logic bugs under standard OWASP frameworks, utilizing Frida instrumentation hooks for memory inspection, network mapping scans via Nmap architectures, and technical compliance risk reporting.</p>
-                        <p class="lang-fa">تحلیل‌گر خطرات و امنیت در سه لایه جامع وب، شبکه و پلتفرم‌های موبایل. توانمند در ردیابی الگوهای نفوذ، ارزیابی حفره‌های منطقی بر اساس مدل‌های بین‌المللی OWASP Mobile Top 10، تزریق کد و بررسی ترافیک با Frida Hooks، تحلیل پورت با Nmap و مستندسازی آسیب‌پذیری‌ها.</p>
-                    </div>
-                </div>
+// respect reduced motion preference
+if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.documentElement.classList.add('reduce-motion');
+}
 
-                <div class="space-y-3 pt-6 border-t border-white/5 mt-6">
-                    <p class="text-[10px] text-red-400 font-bold uppercase tracking-widest"><span class="lang-en">Defensive Vectors</span><span class="lang-fa">تگ‌های امنیتی</span></p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">OWASP Mobile 10</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Web Pentesting</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Network Security</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Bug Bounty Hunting</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Frida Hooking</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">Nmap Advanced Scan</span>
-                        <span class="tech-badge px-2.5 py-1 rounded-xl text-[10px] font-mono">VAPT Documentation</span>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- SUB SYSTEM HUB: Academics & Media Channels -->
-        <section class="reveal-section grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <!-- Academic Institutional Matrix -->
-            <div class="cyber-glass p-6 rounded-3xl flex gap-5 items-center">
-                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-500/5 flex items-center justify-center text-blue-400 text-2xl shrink-0 border border-blue-500/20 shadow-inner">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="text-xs md:text-sm">
-                    <h4 class="font-bold text-white text-base lang-en">Rajaee Technical University of Kashan</h4>
-                    <h4 class="font-bold text-white text-base lang-fa">دانشکده فنی شهید رجایی کاشان</h4>
-                    <p class="text-slate-400 mt-1 font-light">Bachelor of Software Engineering (GPA: 16.00)[cite: 1]</p>
-                </div>
-            </div>
-
-            <!-- YouTube Corporate Broadcast Hub -->
-            <div class="cyber-glass p-6 rounded-3xl flex gap-5 items-center justify-between">
-                <div class="flex gap-5 items-center">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500/20 to-transparent flex items-center justify-center text-red-500 text-2xl shrink-0 border border-red-500/20 shadow-inner">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <div class="text-xs md:text-sm">
-                        <h4 class="font-bold text-white text-base lang-en">Noobs Code Engine</h4>
-                        <h4 class="font-bold text-white text-base lang-fa">کانال آموزشی Noobs Code</h4>
-                        <p class="text-slate-400 mt-1 font-light">Streaming advanced architecture & mobile analysis maps.[cite: 1]</p>
-                    </div>
-                </div>
-                <a href="https://www.youtube.com/@Noobs_Code" target="_blank" class="text-xs font-black text-red-400 hover:text-red-300 font-mono tracking-widest flex items-center gap-1.5 bg-red-500/10 px-4 py-2.5 rounded-xl border border-red-500/20 transition-all">
-                    LIVE STREAM <i class="fas fa-external-link-alt text-[9px]"></i>
-                </a>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- Sleek Industrial Footer -->
-    <footer class="py-10 border-t border-white/5 bg-black/60 text-center relative text-[10px] text-slate-500 font-mono tracking-[0.4em] uppercase">
-        <div>Amirhossein Ghafari © 2026 • Core Technical Node</div>
-    </footer>
-
-    <!-- Fluid Logic Controller Engine -->
-    <script>
-        function toggleLang() {
-            const body = document.body;
-            const langBtn = document.getElementById('lang-btn');
-            body.classList.toggle('rtl');
-            langBtn.innerText = body.classList.contains('rtl') ? 'EN' : 'FA';
-        }
-
-        // Precision Scroll Animation Driver
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('in-view');
-            });
-        }, { threshold: 0.05 });
-
-        document.querySelectorAll('.reveal-section').forEach(s => revealObserver.observe(s));
-    </script>
-
-</body>
-</html>
+// initial apply without animation to avoid the startup flicker
+apply(false);
+</script></body></html>
