@@ -1,132 +1,1744 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Amirhossein Ghafari — Software Engineer & Cybersecurity</title>
-<meta name="description" content="Amirhossein Ghafari — Software Engineering, Multiplatform Development, Cybersecurity, Network & Infrastructure.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#090a0d">
+<meta name="description" content="امیرحسین غفاری — مهندس نرم‌افزار چندسکویی، امنیت سایبری، شبکه و زیرساخت.">
+<meta name="author" content="Amirhossein Ghafari">
+<title>امیرحسین غفاری — مهندس نرم‌افزار و امنیت سایبری</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#f5f7fb;--surface:#fff;--surface2:#f0f3f8;--text:#101522;--muted:#657083;--line:#e3e7ee;--accent:#635bff;--accent2:#00a8ff;--good:#19a974;--shadow:0 18px 55px #1b274014;--radius:22px}body.dark{--bg:#080a0f;--surface:#10131a;--surface2:#161a23;--text:#f5f7fb;--muted:#99a3b5;--line:#252b38;--accent:#8b7cff;--accent2:#31c8ff;--good:#4ade9a;--shadow:0 25px 70px #0008}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Inter,sans-serif;transition:.3s;background-image:radial-gradient(circle at 8% 5%,color-mix(in srgb,var(--accent) 8%,transparent),transparent 24%),radial-gradient(circle at 92% 18%,color-mix(in srgb,var(--accent2) 7%,transparent),transparent 25%)}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:auto}.mono{font-family:'JetBrains Mono',monospace;direction:ltr}.topbar{position:sticky;top:14px;z-index:50;margin:14px auto 0;width:min(1120px,calc(100% - 32px));background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;padding:10px 12px}.brand{font-weight:800;letter-spacing:-.03em}.brand span{color:var(--accent)}.nav{display:flex;gap:6px;align-items:center}.nav a{font-size:13px;color:var(--muted);padding:9px 11px;border-radius:10px}.nav a:hover{background:var(--surface2);color:var(--text)}button{font:inherit}.control{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:10px;padding:8px 11px;cursor:pointer;font-size:12px}.hero{padding:105px 0 80px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em}.dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 0 5px color-mix(in srgb,var(--good) 12%,transparent)}h1{font-size:clamp(42px,7vw,82px);line-height:.98;letter-spacing:-.065em;margin:20px 0 18px}h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}.lead{font-size:18px;line-height:1.95;color:var(--muted);max-width:700px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.btn{padding:12px 17px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:13px}.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}.btn.secondary{background:var(--surface)}.profile-card{position:relative;background:linear-gradient(145deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:30px;padding:26px;box-shadow:var(--shadow);overflow:hidden}.profile-card:before{content:'';position:absolute;width:220px;height:220px;border-radius:50%;background:var(--accent);filter:blur(70px);opacity:.15;right:-70px;top:-80px}.avatar{width:90px;height:90px;border-radius:24px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:white;font-size:30px;font-weight:800;margin-bottom:22px}.profile-card h3{margin:0 0 5px;font-size:22px}.profile-card p{color:var(--muted);line-height:1.8;margin:0 0 20px}.status{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}.section{padding:70px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}.section-kicker{font:11px 'JetBrains Mono';color:var(--accent);letter-spacing:.08em;text-transform:uppercase}.section h2{font-size:clamp(28px,4vw,42px);margin:7px 0 0;letter-spacing:-.04em}.section-intro{color:var(--muted);max-width:550px;line-height:1.8}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 8px 30px #00000008;transition:transform .25s,border .25s}.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}.icon{font:600 12px 'JetBrains Mono';color:var(--accent);margin-bottom:22px}.card h3{margin:0 0 9px;font-size:17px}.card p{color:var(--muted);line-height:1.8;font-size:13px;margin:0}.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.skill-box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}.skill-title{display:flex;justify-content:space-between;font-weight:700;margin-bottom:13px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{font:11px 'JetBrains Mono';background:var(--surface2);border:1px solid var(--line);padding:7px 9px;border-radius:9px;color:var(--muted);direction:ltr}.timeline{display:grid;gap:12px}.job{display:grid;grid-template-columns:125px 1fr;gap:24px;padding:23px;background:var(--surface);border:1px solid var(--line);border-radius:18px}.year{font:12px 'JetBrains Mono';color:var(--accent);padding-top:3px}.job h3{margin:0;font-size:18px}.company{color:var(--muted);font-size:13px;margin:4px 0 12px}.job ul{margin:0;padding-right:18px;color:var(--muted);line-height:1.9;font-size:13px}.job li{margin:4px 0}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.project{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:23px}.project-top{display:flex;justify-content:space-between;gap:15px}.project h3{margin:0 0 8px}.project p{color:var(--muted);font-size:13px;line-height:1.8}.project .tags{margin-top:18px}.education{display:grid;grid-template-columns:1fr 1fr;gap:14px}.edu{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}.edu h3{margin:0 0 8px}.edu p{margin:4px 0;color:var(--muted);font-size:13px}.contact{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:28px;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{margin:0 0 8px}.contact p{margin:0;color:var(--muted)}footer{padding:35px 0 50px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px}.fade{opacity:0;transform:translateY(18px);transition:.7s}.fade.show{opacity:1;transform:none}@media(max-width:800px){.hero-grid,.cards,.skill-grid,.projects,.education{grid-template-columns:1fr}.hero{padding-top:70px}.profile-card{max-width:520px}.nav a{display:none}.topbar{position:sticky}.job{grid-template-columns:1fr;gap:7px}.contact{display:block}.contact .hero-actions{margin-top:20px}h1{font-size:52px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-</style>
-<style>
-.lab-link{display:flex;align-items:center;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;font-weight:800;color:var(--text);transition:.25s}.lab-link:hover{color:var(--accent);transform:translateX(-3px)}.lab-link .arrow{margin-right:auto;color:var(--muted)}html[dir=ltr] .lab-link .arrow{margin-left:auto;margin-right:0}.social-icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--surface2);border:1px solid var(--line);font-size:14px;flex:0 0 32px}.telegram-icon{font-size:15px}.youtube-icon{font-size:12px}.github-icon{font-size:11px}.site-footer{padding:46px 0 28px;border-top:1px solid var(--line);background:color-mix(in srgb,var(--surface) 45%,transparent)}.footer-inner{display:grid;gap:28px}.footer-brand{display:flex;align-items:center;gap:14px}.footer-brand strong{font-size:28px;letter-spacing:-.08em;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}.footer-brand span{color:var(--muted);font-size:12px}.footer-socials{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.social-link{display:flex;align-items:center;justify-content:flex-start;gap:10px;padding:12px;border:1px solid var(--line);background:var(--surface);border-radius:14px;color:var(--muted);font-size:11px;font-weight:700;transition:.25s}.social-link:hover{transform:translateY(-3px);color:var(--text);border-color:color-mix(in srgb,var(--accent) 40%,var(--line));box-shadow:0 12px 28px #0000000b}.footer-bottom{padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:10px}@media(max-width:800px){.footer-socials{grid-template-columns:repeat(2,1fr)}.footer-socials .social-link:last-child{grid-column:1/-1}.footer-bottom{display:block;line-height:2}}
+/* =========================================================
+   AMIRHOSSEIN GHAFARI — EDITORIAL / DIGITAL LAB PORTFOLIO
+   Clean single-file production build
+   ========================================================= */
 
-.contact-links{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:24px}.contact-item{display:flex;align-items:center;gap:11px;min-width:0;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:var(--soft);transition:transform .2s ease,border-color .2s ease,background .2s ease}.contact-item:hover{transform:translateY(-2px);border-color:var(--muted);background:var(--panel)}.contact-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;font:700 11px/1 Manrope,Vazirmatn,sans-serif}.contact-item>span:last-child{display:flex;flex-direction:column;min-width:0;gap:3px}
-html[dir=ltr] .contact-item>span:last-child{align-items:flex-start;text-align:left}
-html[dir=rtl] .contact-item>span:last-child{align-items:flex-end;text-align:right}.contact-item small{font-size:10px;color:var(--muted);letter-spacing:.05em}.contact-item strong{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.phone-ltr{ /* follow the same layout as other contact-item elements (no container direction change) */ }
-.phone-ltr>span:last-child{direction:ltr;text-align:left}
-.phone-ltr strong, .phone-ltr .mono{direction:ltr;text-align:left;display:inline-block}
-.phone-ltr small{direction:rtl;text-align:left}@media(max-width:1050px){.contact-links{grid-template-columns:repeat(3,1fr)}}@media(max-width:720px){.contact-links{grid-template-columns:1fr 1fr}.contact-item{padding:12px}.contact-item strong{font-size:10px}}@media(max-width:430px){.contact-links{grid-template-columns:1fr}}
-</style>
-<style>
-/* Animations and polished transitions */
-:root{transition:color 360ms ease, background-color 480ms ease}
-body,.card,.profile-card,.contact-item,.topbar,.btn,.control{transition:background-color 420ms cubic-bezier(.2,.9,.2,1),color 360ms ease,border-color 360ms ease,box-shadow 420ms ease}
-
-/* Language swap fallback animations */
-.lang-anim-out [data-fa][data-en]{opacity:0;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease}
-.lang-anim-in [data-fa][data-en]{opacity:1;transform:none;transition:opacity .28s ease,transform .28s ease}
-
-/* Theme button micro-interaction */
-.control{will-change:transform}
-.control:active{transform:scale(.98) translateY(1px)}
-#theme{transition:transform .5s cubic-bezier(.2,.9,.2,1)}
-.theme-anim #theme{transform:rotate(20deg) scale(1.05)}
-
-/* Avatar subtle breathing */
-@keyframes breathe{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
-.avatar{animation:breathe 6s ease-in-out infinite}
-
-/* Accent gradient pulse */
-@keyframes accentPulse{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(18deg)}100%{filter:hue-rotate(0deg)}}
-.profile-card:before{transition:opacity .6s ease,transform .6s ease}
-body:not(.dark) .profile-card:before{animation:accentPulse 8s ease-in-out infinite}
-
-/* Respect reduced motion */
-.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after{animation:none!important;transition:none!important}
-
-/* Focus outlines */
-a.social-link:focus, .contact-item:focus, .control:focus{outline:3px solid color-mix(in srgb,var(--accent) 16%,transparent);outline-offset:3px}
-
-/* Contact item polish */
-.contact-icon{min-width:34px;display:grid;place-items:center}
-.contact-item{position:relative;overflow:hidden}
-.contact-item::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 0%,transparent 60%,color-mix(in srgb,var(--accent) 6%,transparent) 100%);opacity:0;transition:opacity .35s;pointer-events:none}
-.contact-item:hover::after{opacity:1}
-
-</style>
-</head><body class="dark">
-<header class="topbar"><a class="brand" href="#top">AG<span>.</span></a><nav class="nav"><a href="#about" data-fa="معرفی" data-en="About">معرفی</a><a href="#skills" data-fa="مهارت‌ها" data-en="Skills">مهارت‌ها</a><a href="#experience" data-fa="سوابق" data-en="Experience">سوابق</a><a href="#projects" data-fa="پروژه‌ها" data-en="Projects">پروژه‌ها</a><a href="#contact" data-fa="تماس" data-en="Contact">تماس</a></nav><div><button class="control" id="lang">EN</button><button class="control" id="theme">☼</button></div></header>
-<main id="top"><section class="hero"><div class="container hero-grid"><div class="fade"><div class="eyebrow"><span class="dot"></span><span data-fa="مهندس نرم‌افزار چندسکویی · امنیت سایبری" data-en="Multiplatform Software Engineer · Cybersecurity">مهندس نرم‌افزار چندسکویی · امنیت سایبری</span></div><h1><span data-fa="امیرحسین" data-en="Amirhossein">امیرحسین</span><br><em data-fa="غفاری" data-en="Ghafari">غفاری</em></h1><p class="lead" data-fa="مهندس نرم‌افزار با تمرکز بر توسعه چندسکویی، امنیت موبایل و وب، امنیت API، شبکه و زیرساخت. علاقه‌مند به ساخت محصولات سریع، امن و قابل نگهداری با رویکرد مهندسی نرم‌افزار." data-en="Software engineer focused on multiplatform development, mobile & web security, API security, networking and infrastructure. I build fast, secure and maintainable products with an engineering mindset.">مهندس نرم‌افزار با تمرکز بر توسعه چندسکویی، امنیت موبایل و وب، امنیت API، شبکه و زیرساخت. علاقه‌مند به ساخت محصولات سریع، امن و قابل نگهداری با رویکرد مهندسی نرم‌افزار.</p><div class="hero-actions"><a class="btn primary" href="#contact" data-fa="ارتباط با من ↓" data-en="Contact me ↓">ارتباط با من ↓</a></div></div><aside class="profile-card fade"><div class="avatar">AG</div><h3>Software · Security · Infrastructure</h3><p data-fa="توسعه نرم‌افزار، ارزیابی امنیت، تحلیل API و کار با زیرساخت شبکه و سرور." data-en="Software development, security assessment, API analysis and network/server infrastructure.">توسعه نرم‌افزار، ارزیابی امنیت، تحلیل API و کار با زیرساخت شبکه و سرور.</p><div class="status"><span class="dot"></span><span data-fa="فعال و آماده همکاری پروژه‌ای" data-en="Available for project-based collaboration">فعال و آماده همکاری پروژه‌ای</span></div></aside></div></section>
-<section class="section" id="about"><div class="container"><div class="section-head"><div><div class="section-kicker">01 / PROFILE</div><h2 data-fa="چه چیزی ارائه می‌دهم؟" data-en="What I bring">چه چیزی ارائه می‌دهم؟</h2></div><p class="section-intro" data-fa="ترکیبی از توسعه نرم‌افزار، امنیت و زیرساخت برای حل مسئله از محصول تا لایه فنی پایین‌تر." data-en="A practical combination of software engineering, security and infrastructure — from product code to lower-level technical layers.">ترکیبی از توسعه نرم‌افزار، امنیت و زیرساخت برای حل مسئله از محصول تا لایه فنی پایین‌تر.</p></div><div class="cards"><article class="card fade"><div class="icon">01 / BUILD</div><h3 data-fa="توسعه چندسکویی" data-en="Multiplatform Development">توسعه چندسکویی</h3><p data-fa="Kotlin، Java و Jetpack Compose با تمرکز بر معماری، API، ذخیره‌سازی محلی و تجربه کاربری." data-en="Kotlin, Java and Jetpack Compose with focus on architecture, APIs, local storage and user experience.">Kotlin، Java و Jetpack Compose با تمرکز بر معماری، API، ذخیره‌سازی محلی و تجربه کاربری.</p></article><article class="card fade"><div class="icon">02 / SECURE</div><h3 data-fa="امنیت کاربردی" data-en="Applied Cybersecurity">امنیت کاربردی</h3><p data-fa="امنیت موبایل، API و وب، تحلیل ترافیک، ارزیابی آسیب‌پذیری، گزارش فنی و راهکار اصلاحی." data-en="Mobile, API and web security, traffic analysis, vulnerability assessment, technical reporting and remediation.">امنیت موبایل، API و وب، تحلیل ترافیک، ارزیابی آسیب‌پذیری، گزارش فنی و راهکار اصلاحی.</p></article><article class="card fade"><div class="icon">03 / OPERATE</div><h3 data-fa="شبکه و زیرساخت" data-en="Network & Infrastructure">شبکه و زیرساخت</h3><p data-fa="Linux، Windows Server، VMware، MikroTik، Nmap، Docker و مفاهیم مانیتورینگ و عملیات امنیتی." data-en="Linux, Windows Server, VMware, MikroTik, Nmap, Docker and security operations concepts.">Linux، Windows Server، VMware، MikroTik، Nmap، Docker و مفاهیم مانیتورینگ و عملیات امنیتی.</p></article></div></div></section>
-<section class="section" id="skills"><div class="container"><div class="section-head"><div><div class="section-kicker">02 / STACK</div><h2 data-fa="پشته فنی" data-en="Technical Stack">پشته فنی</h2></div></div><div class="skill-grid"><div class="skill-box fade"><div class="skill-title"><span data-fa="مهندسی نرم‌افزار" data-en="Software Engineering">مهندسی نرم‌افزار</span><span class="mono">CORE</span></div><div class="tags"><span class="tag">Kotlin</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Jetpack Compose</span><span class="tag">Compose Multiplatform</span><span class="tag">MVVM</span><span class="tag">REST API</span><span class="tag">Retrofit</span><span class="tag">Room</span><span class="tag">Coroutines / Flow</span><span class="tag">Firebase</span><span class="tag">Git / GitLab</span></div></div><div class="skill-box fade"><div class="skill-title"><span data-fa="امنیت سایبری" data-en="Cybersecurity">امنیت سایبری</span><span class="mono">SEC</span></div><div class="tags"><span class="tag">OWASP Mobile Top 10</span><span class="tag">API Security</span><span class="tag">Web Security</span><span class="tag">Bug Bounty</span><span class="tag">Frida</span><span class="tag">Nmap</span><span class="tag">Traffic Analysis</span><span class="tag">Vulnerability Assessment</span><span class="tag">Security Reporting</span><span class="tag">SOC Tier 1</span></div></div><div class="skill-box fade"><div class="skill-title"><span data-fa="شبکه و سرور" data-en="Network & Server">شبکه و سرور</span><span class="mono">NET</span></div><div class="tags"><span class="tag">TCP/IP</span><span class="tag">DNS / DHCP</span><span class="tag">VLAN</span><span class="tag">NAT</span><span class="tag">Firewall</span><span class="tag">MikroTik</span><span class="tag">Cisco</span><span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">Linux</span><span class="tag">VMware ESXi</span></div></div><div class="skill-box fade"><div class="skill-title"><span data-fa="DevOps و عملیات" data-en="DevOps & Operations">DevOps و عملیات</span><span class="mono">OPS</span></div><div class="tags"><span class="tag">Docker</span><span class="tag">Containerization</span><span class="tag">Git</span><span class="tag">Linux CLI</span><span class="tag">Monitoring</span><span class="tag">Logging</span><span class="tag">Release Management</span><span class="tag">Technical Documentation</span></div></div></div></div></section>
-<section class="section" id="experience"><div class="container"><div class="section-head"><div><div class="section-kicker">03 / EXPERIENCE</div><h2 data-fa="سوابق فعالیت حرفه‌ای" data-en="Professional Experience">سوابق فعالیت حرفه‌ای</h2></div></div><div class="timeline"><article class="job fade"><div class="year">۱۴۰۴ / 2025</div><div><h3 data-fa="توسعه‌دهنده اندروید و همکار امنیتی" data-en="Android Developer & Security Collaborator">توسعه‌دهنده اندروید و همکار امنیتی</h3><div class="company">فراگلد · شیراز</div><ul><li data-fa="توسعه و بهینه‌سازی اپلیکیشن سبک مبتنی بر WebView با Kotlin و مدیریت Session." data-en="Developed and optimized a lightweight Kotlin WebView application with session handling.">توسعه و بهینه‌سازی اپلیکیشن سبک مبتنی بر WebView با Kotlin و مدیریت Session.</li><li data-fa="همکاری در بررسی امنیت WordPress و زیرساخت و ارائه پیشنهادهای اصلاحی." data-en="Reviewed WordPress security and infrastructure and provided remediation recommendations.">همکاری در بررسی امنیت WordPress و زیرساخت و ارائه پیشنهادهای اصلاحی.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۳ / 2024</div><div><h3 data-fa="برنامه‌نویس" data-en="Software Developer">برنامه‌نویس</h3><div class="company">رایان‌پرداز · کرج</div><ul><li data-fa="توسعه اپلیکیشن Kotlin برای ردیابی موقعیت ویزیتورها و ارسال لحظه‌ای داده به سرور." data-en="Built a Kotlin application for visitor location tracking and real-time server transmission.">توسعه اپلیکیشن Kotlin برای ردیابی موقعیت ویزیتورها و ارسال لحظه‌ای داده به سرور.</li><li data-fa="کار با Location Services، Foreground Service، API و بهینه‌سازی باتری و عملکرد." data-en="Worked with Location Services, Foreground Services, APIs, battery and performance optimization.">کار با Location Services، Foreground Service، API و بهینه‌سازی باتری و عملکرد.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۳ / 2024</div><div><h3 data-fa="امنیت شبکه" data-en="Network Security">امنیت شبکه</h3><div class="company">فرش سیزان · کاشان</div><ul><li data-fa="ارزیابی امنیتی سرورها و سرویس‌های Windows و شناسایی پورت‌ها و سرویس‌های فعال با Nmap." data-en="Assessed Windows servers/services and enumerated active ports and services with Nmap.">ارزیابی امنیتی سرورها و سرویس‌های Windows و شناسایی پورت‌ها و سرویس‌های فعال با Nmap.</li><li data-fa="تحلیل پیکربندی، مستندسازی آسیب‌پذیری‌ها و ارائه پیشنهادهای اصلاحی در چارچوب مجاز." data-en="Analyzed configurations, documented vulnerabilities and proposed remediation within authorized scope.">تحلیل پیکربندی، مستندسازی آسیب‌پذیری‌ها و ارائه پیشنهادهای اصلاحی در چارچوب مجاز.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۲ / 2023</div><div><h3 data-fa="پژوهشگر امنیت موبایل" data-en="Mobile Security Researcher">پژوهشگر امنیت موبایل</h3><div class="company">اسنپ · تهران</div><ul><li data-fa="تحلیل ورود کاربران، API، تبادل اطلاعات و نحوه ذخیره و استفاده از توکن‌ها." data-en="Analyzed authentication flows, APIs, data exchange and token storage/use.">تحلیل ورود کاربران، API، تبادل اطلاعات و نحوه ذخیره و استفاده از توکن‌ها.</li><li data-fa="شناسایی ضعف‌های احراز هویت و تهیه گزارش فنی." data-en="Identified authentication weaknesses and prepared technical reports.">شناسایی ضعف‌های احراز هویت و تهیه گزارش فنی.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۰ / 2021</div><div><h3 data-fa="کارشناس پشتیبانی و امنیت شبکه" data-en="Network Support & Security Specialist">کارشناس پشتیبانی و امنیت شبکه</h3><div class="company">شرکت ساینا · تهران</div><ul><li data-fa="Windows Server، Active Directory، DHCP و مجازی‌سازی با VMware ESXi." data-en="Worked with Windows Server, Active Directory, DHCP and VMware ESXi virtualization.">Windows Server، Active Directory، DHCP و مجازی‌سازی با VMware ESXi.</li><li data-fa="پیکربندی اولیه MikroTik، NAT، Firewall، VLAN و امن‌سازی ترافیک." data-en="Configured MikroTik, NAT, firewall, VLANs and basic traffic hardening.">پیکربندی اولیه MikroTik، NAT، Firewall، VLAN و امن‌سازی ترافیک.</li></ul></div></article><article class="job fade"><div class="year">۱۴۰۰ / 2021</div><div><h3 data-fa="امنیت موبایل" data-en="Mobile Security">امنیت موبایل</h3><div class="company">دلیجاپ · دلیجان</div><ul><li data-fa="ارزیابی امنیت API موبایل با تحلیل ترافیک و Frida و توسعه اسکریپت Python." data-en="Assessed mobile APIs using traffic analysis, Frida and Python scripting.">ارزیابی امنیت API موبایل با تحلیل ترافیک و Frida و توسعه اسکریپت Python.</li><li data-fa="بررسی کنترل دسترسی، اعتبارسنجی و مستندسازی یافته‌ها." data-en="Reviewed access control and validation and documented findings.">بررسی کنترل دسترسی، اعتبارسنجی و مستندسازی یافته‌ها.</li></ul></div></article></div></div></section>
-<section class="section" id="projects"><div class="container"><div class="section-head"><div><div class="section-kicker">04 / SELECTED WORK</div><h2 data-fa="پروژه‌ها و فعالیت متن‌باز" data-en="Selected Projects & Open Source">پروژه‌ها و فعالیت متن‌باز</h2></div><p class="section-intro" data-fa="بیش از ۱۵ پروژه شخصی و متن‌باز با تمرکز بر Kotlin، Android، ابزارهای کاربردی و امنیت." data-en="15+ personal and open-source projects focused on Kotlin, Android, utilities and security.">بیش از ۱۵ پروژه شخصی و متن‌باز با تمرکز بر Kotlin، Android، ابزارهای کاربردی و امنیت.</p></div><div class="projects"><article class="project fade"><div class="project-top"><h3>Open Source Portfolio</h3><span class="mono">15+</span></div><p data-fa="توسعه و نگهداری پروژه‌های فروشگاهی، مدیریت فایل، نقشه، آزمون، موسیقی، فوتبال و ابزارهای کاربردی؛ همراه با مستندسازی و انتشار در GitHub." data-en="Built and maintained apps for e-commerce, file management, maps, quizzes, music, football and utilities, with documentation and GitHub releases.">توسعه و نگهداری پروژه‌های فروشگاهی، مدیریت فایل، نقشه، آزمون، موسیقی، فوتبال و ابزارهای کاربردی؛ همراه با مستندسازی و انتشار در GitHub.</p><div class="tags"><span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">MVVM</span><span class="tag">Retrofit</span><span class="tag">Room</span></div></article><article class="project fade"><div class="project-top"><h3>Security Engineering Lab</h3><span class="mono">SEC</span></div><p data-fa="تمرکز بر تحلیل API، امنیت موبایل و وب، شبکه، ارزیابی آسیب‌پذیری، ابزارسازی Python و مستندسازی یافته‌های امنیتی." data-en="Hands-on work around API analysis, mobile/web security, networking, vulnerability assessment, Python tooling and security reporting.">تمرکز بر تحلیل API، امنیت موبایل و وب، شبکه، ارزیابی آسیب‌پذیری، ابزارسازی Python و مستندسازی یافته‌های امنیتی.</p><div class="tags"><span class="tag">Python</span><span class="tag">Frida</span><span class="tag">Nmap</span><span class="tag">OWASP</span></div><a class="lab-link" href="https://www.youtube.com/@Noobs_Code" target="_blank" rel="noopener"><span class="social-icon youtube-icon">▶</span><span data-fa="کانال یوتیوب من" data-en="My YouTube Channel">کانال یوتیوب من</span><span class="arrow">↗</span></a></article></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div><div class="section-kicker">05 / EDUCATION</div><h2 data-fa="تحصیلات و دوره‌ها" data-en="Education & Training">تحصیلات و دوره‌ها</h2></div></div><div class="education"><div class="edu fade"><h3 data-fa="کارشناسی کامپیوتر — نرم‌افزار" data-en="B.Sc. Computer Science / Software">کارشناسی کامپیوتر — نرم‌افزار</h3><p>آموزشکده فنی رجایی کاشان · ۱۴۰۱–۱۴۰۳</p><p data-fa="معدل: ۱۶" data-en="GPA: 16/20">معدل: ۱۶</p></div><div class="edu fade"><h3 data-fa="دوره‌های تخصصی" data-en="Professional Training">دوره‌های تخصصی</h3><p>Android Development · Android Security & Bug Bounty · Network+ · Security+ · A+ · VMware · MTCNA · CCNA · MCSA · LPIC-1 · Web Security</p></div></div></div></section>
-<section class="section" id="contact"><div class="container"><div class="contact fade"><div><h2 data-fa="بیایید چیزی حرفه‌ای بسازیم." data-en="Let’s build something great.">بیایید چیزی حرفه‌ای بسازیم.</h2><p data-fa="برای همکاری پروژه‌ای، توسعه نرم‌افزار، امنیت یا بررسی فنی در ارتباط باشید." data-en="Available for software development, security and technical project collaboration.">برای همکاری پروژه‌ای، توسعه نرم‌افزار، امنیت یا بررسی فنی در ارتباط باشید.</p></div><div class="contact-links"><a class="contact-item" href="mailto:amirhosseinghafari29@gmail.com"><span class="contact-icon">✉</span><span><small data-fa="ایمیل" data-en="Email">ایمیل</small><strong dir="ltr" class="mono">amirhosseinghafari29@gmail.com</strong></span></a><a class="contact-item phone-ltr" href="tel:+989934161983"><span class="contact-icon">☎</span><span><small data-fa="تلفن" data-en="Phone">تلفن</small><strong dir="ltr">+98 993 416 1983</strong></span></a><a class="contact-item" href="https://github.com/mr-coder20" target="_blank" rel="noopener"><span class="contact-icon">GH</span><span><small>GitHub</small><strong>mr-coder20</strong></span></a><a class="contact-item" href="https://t.me/a_god_3_6_9" target="_blank" rel="noopener"><span class="contact-icon">➤</span><span><small>Telegram</small><strong>@a_god_3_6_9</strong></span></a><a class="contact-item" href="https://www.youtube.com/@Noobs_Code" target="_blank" rel="noopener"><span class="contact-icon">▶</span><span><small>YouTube</small><strong>@Noobs_Code</strong></span></a></div></div></div></section></main>
-<footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><strong>AG.</strong><span data-fa="نرم‌افزار · امنیت · زیرساخت" data-en="Software · Security · Infrastructure">نرم‌افزار · امنیت · زیرساخت</span></div><div class="footer-bottom"><span>© 2026 Amirhossein Ghafari</span><span class="mono">SOFTWARE · SECURITY · INFRA</span></div></div></footer>
-<script>
-const body = document.body;
-const html = document.documentElement;
-const langBtn = document.getElementById('lang');
-const themeBtn = document.getElementById('theme');
-let lang = localStorage.getItem('cv-lang') || 'fa';
-let dark = localStorage.getItem('cv-theme') !== 'light';
-
-function setLangTexts(l){
-  document.querySelectorAll('[data-fa][data-en]').forEach(e=>e.textContent = e.dataset[l]);
-  langBtn.textContent = l === 'fa' ? 'EN' : 'FA';
-  document.title = l === 'fa' ? 'امیرحسین غفاری — مهندس نرم‌افزار و امنیت سایبری' : 'Amirhossein Ghafari — Software Engineer & Cybersecurity';
+:root{
+  --bg:#f7f8fa;
+  --bg-elev:#ffffff;
+  --bg-soft:#eef1f5;
+  --text:#111318;
+  --muted:#69707d;
+  --faint:#969da8;
+  --line:#dfe3e9;
+  --line-strong:#cbd1d9;
+  --accent:#6257ff;
+  --accent-2:#00a7e8;
+  --good:#159a68;
+  --danger:#b64c4c;
+  --max:1240px;
+  --gutter:clamp(18px,3vw,42px);
+  --radius:18px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --shadow:0 24px 80px rgba(18,24,35,.09);
+  --shadow-soft:0 12px 34px rgba(18,24,35,.06);
+  --header-h:72px;
 }
 
-function apply(animate = true){
-  html.lang = lang;
-  html.dir = lang === 'fa' ? 'rtl' : 'ltr';
-  body.classList.toggle('dark', dark);
+html.dark{
+  --bg:#08090c;
+  --bg-elev:#0e1015;
+  --bg-soft:#151820;
+  --text:#f2f4f7;
+  --muted:#9aa2ae;
+  --faint:#69717d;
+  --line:#242933;
+  --line-strong:#343b47;
+  --accent:#8d82ff;
+  --accent-2:#2dc5f5;
+  --good:#4bd99d;
+  --shadow:0 28px 90px rgba(0,0,0,.34);
+  --shadow-soft:0 14px 40px rgba(0,0,0,.2);
+}
 
-  // Language transition: prefer View Transitions API when available
-  if(animate && document.startViewTransition){
-    try{
-      document.startViewTransition(()=>{
-        setLangTexts(lang);
-      });
-    }catch(e){
-      setLangTexts(lang);
-    }
-  }else if(animate){
-    html.classList.add('lang-anim-out');
-    setTimeout(()=>{
-      setLangTexts(lang);
-      html.classList.remove('lang-anim-out');
-      html.classList.add('lang-anim-in');
-      setTimeout(()=>html.classList.remove('lang-anim-in'),420);
-    },180);
-  }else{
-    setLangTexts(lang);
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{
+  margin:0;
+  min-width:320px;
+  background:
+    radial-gradient(circle at 12% 8%,color-mix(in srgb,var(--accent) 7%,transparent),transparent 25rem),
+    radial-gradient(circle at 88% 22%,color-mix(in srgb,var(--accent-2) 6%,transparent),transparent 24rem),
+    var(--bg);
+  color:var(--text);
+  font-family:Vazirmatn,Inter,sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
+  transition:background-color .45s var(--ease),color .35s var(--ease);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.35;
+  background-image:
+    linear-gradient(to right,color-mix(in srgb,var(--line) 55%,transparent) 1px,transparent 1px),
+    linear-gradient(to bottom,color-mix(in srgb,var(--line) 45%,transparent) 1px,transparent 1px);
+  background-size:80px 80px;
+  mask-image:linear-gradient(to bottom,#000 0%,transparent 72%);
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:color-mix(in srgb,var(--accent) 25%,transparent);color:var(--text)}
+
+.container{width:min(var(--max),calc(100% - (var(--gutter) * 2)));margin-inline:auto}
+.mono{font-family:"JetBrains Mono",monospace;direction:ltr}
+.ltr{direction:ltr;unicode-bidi:plaintext}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.skip{
+  position:fixed;top:10px;inset-inline-start:10px;z-index:1000;
+  transform:translateY(-160%);padding:10px 14px;border-radius:10px;
+  background:var(--text);color:var(--bg);font-weight:800;
+}
+.skip:focus{transform:none}
+
+.progress{
+  position:fixed;top:0;left:0;right:0;height:2px;z-index:999;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  transform-origin:0 50%;transform:scaleX(0);
+}
+html[dir="rtl"] .progress{transform-origin:100% 50%}
+
+.site-header{
+  position:fixed;top:14px;left:0;right:0;z-index:100;
+  pointer-events:none;
+}
+.header-inner{
+  width:min(var(--max),calc(100% - (var(--gutter) * 2)));
+  min-height:54px;margin:auto;
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;
+  padding:7px;
+  border:1px solid color-mix(in srgb,var(--line) 88%,transparent);
+  border-radius:16px;
+  background:color-mix(in srgb,var(--bg-elev) 80%,transparent);
+  backdrop-filter:blur(22px) saturate(150%);
+  -webkit-backdrop-filter:blur(22px) saturate(150%);
+  box-shadow:0 10px 40px rgba(0,0,0,.07);
+  pointer-events:auto;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;padding:6px 10px;
+  font-weight:900;letter-spacing:-.05em;
+}
+.brand-mark{
+  width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  font:800 11px/1 Inter,sans-serif;letter-spacing:-.06em;
+}
+.brand-name{font-size:14px}
+.brand-name i{color:var(--accent);font-style:normal}
+
+.nav{
+  display:flex;justify-content:center;gap:2px;min-width:0;
+}
+.nav a{
+  position:relative;padding:9px 11px;border-radius:10px;
+  color:var(--muted);font-size:12px;font-weight:700;white-space:nowrap;
+  transition:color .2s,background .2s;
+}
+.nav a:hover,.nav a.active{color:var(--text);background:var(--bg-soft)}
+.nav a.active::after{
+  content:"";position:absolute;bottom:3px;left:50%;width:3px;height:3px;
+  border-radius:50%;background:var(--accent);transform:translateX(-50%);
+}
+.header-tools{display:flex;gap:5px}
+.icon-btn{
+  width:38px;height:38px;border:1px solid var(--line);border-radius:10px;
+  display:grid;place-items:center;background:var(--bg-soft);color:var(--text);
+  cursor:pointer;transition:transform .2s,border-color .2s,background .2s;
+}
+.icon-btn:hover{transform:translateY(-1px);border-color:var(--line-strong)}
+.icon-btn:active{transform:scale(.96)}
+
+.hero{padding:clamp(150px,18vw,230px) 0 105px;position:relative}
+.hero-layout{
+  display:grid;grid-template-columns:minmax(0,1.45fr) minmax(290px,.55fr);
+  gap:clamp(35px,7vw,110px);align-items:end;
+}
+.eyebrow{
+  display:flex;align-items:center;gap:9px;margin-bottom:24px;
+  color:var(--accent);font:700 11px/1 "JetBrains Mono",monospace;
+  letter-spacing:.04em;
+}
+.pulse{
+  width:7px;height:7px;border-radius:50%;background:var(--good);
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--good) 12%,transparent);
+}
+.hero h1{
+  max-width:900px;margin:0;
+  font-size:clamp(58px,10.2vw,150px);
+  line-height:1.02;letter-spacing:-.06em;
+  font-weight:900;
+}
+.hero h1 .gradient{
+  background:linear-gradient(100deg,var(--accent) 0%,var(--accent-2) 92%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-copy{
+  max-width:760px;margin:30px 0 0;
+  color:var(--muted);font-size:clamp(16px,1.7vw,20px);line-height:2;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.btn{
+  min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:0 17px;border:1px solid var(--line);border-radius:11px;
+  font-size:12px;font-weight:800;transition:transform .22s var(--ease),border-color .22s,background .22s;
+}
+.btn:hover{transform:translateY(-2px);border-color:var(--line-strong)}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn.ghost{background:var(--bg-elev)}
+
+.hero-aside{
+  border-inline-start:1px solid var(--line);
+  padding-inline-start:clamp(22px,3vw,42px);
+}
+.aside-label{color:var(--faint);font:600 10px "JetBrains Mono";letter-spacing:.08em}
+.aside-value{margin:9px 0 20px;font-size:18px;font-weight:800;line-height:1.7}
+.availability{
+  display:flex;align-items:center;gap:9px;padding-top:17px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:11px;
+}
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  margin-top:85px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.stat{padding:21px 18px;position:relative}
+.stat:not(:last-child){border-inline-end:1px solid var(--line)}
+.stat strong{display:block;font:700 clamp(25px,4vw,44px)/1 Inter,sans-serif;letter-spacing:-.07em}
+.stat span{display:block;margin-top:7px;color:var(--muted);font-size:11px}
+
+.marquee{
+  overflow:hidden;border-bottom:1px solid var(--line);
+  color:var(--faint);font:600 10px "JetBrains Mono";letter-spacing:.07em;
+}
+.marquee-track{
+  width:max-content;display:flex;gap:34px;padding:13px 0;
+  animation:marquee 32s linear infinite;
+}
+.marquee-track span::before{content:"✦";margin-inline-end:34px;color:var(--accent)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+html[dir="rtl"] .marquee-track{animation-name:marqueeRtl}
+@keyframes marqueeRtl{to{transform:translateX(50%)}}
+
+.section{padding:105px 0;border-bottom:1px solid var(--line)}
+.section-grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:clamp(35px,7vw,100px)}
+.section-meta{position:sticky;top:105px;align-self:start}
+.section-index{color:var(--accent);font:700 11px "JetBrains Mono"}
+.section-title{font-size:clamp(30px,4vw,50px);line-height:1.05;letter-spacing:-.055em;margin:9px 0 0}
+.section-note{margin-top:18px;color:var(--muted);font-size:12px;line-height:1.9}
+.section-content{min-width:0}
+
+.capabilities{display:grid;border-top:1px solid var(--line)}
+.capability{
+  display:grid;grid-template-columns:54px 1fr auto;gap:22px;align-items:start;
+  padding:27px 0;border-bottom:1px solid var(--line);
+  transition:padding .3s var(--ease),background .3s;
+}
+.capability:hover{padding-inline:18px;background:color-mix(in srgb,var(--bg-elev) 60%,transparent)}
+.capability-no{font:600 11px "JetBrains Mono";color:var(--accent);padding-top:5px}
+.capability h3{font-size:clamp(20px,2.3vw,30px);letter-spacing:-.04em;margin:0 0 7px}
+.capability p{max-width:700px;color:var(--muted);font-size:13px;line-height:1.9;margin:0}
+.capability-arrow{font-size:23px;color:var(--faint);transition:transform .25s,color .25s}
+.capability:hover .capability-arrow{color:var(--accent);transform:translateX(-4px)}
+
+.stack{
+  display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);
+}
+.stack-row{
+  min-height:145px;padding:22px 0;
+  border-bottom:1px solid var(--line);
+}
+.stack-row:nth-child(odd){padding-inline-end:30px;border-inline-end:1px solid var(--line)}
+.stack-row:nth-child(even){padding-inline-start:30px}
+.stack-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.stack-head strong{font-size:14px}
+.stack-code{color:var(--accent);font:600 10px "JetBrains Mono"}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  padding:6px 9px;border:1px solid var(--line);border-radius:7px;
+  color:var(--muted);background:var(--bg-soft);
+  font:500 10px "JetBrains Mono";direction:ltr;
+  transition:border-color .2s,color .2s,transform .2s;
+}
+.tag:hover{color:var(--text);border-color:var(--line-strong);transform:translateY(-1px)}
+
+.timeline{position:relative;border-top:1px solid var(--line)}
+.timeline::before{
+  content:"";position:absolute;top:0;bottom:0;inset-inline-start:115px;width:1px;background:var(--line);
+}
+.job{
+  position:relative;display:grid;grid-template-columns:90px minmax(0,1fr);
+  gap:51px;padding:29px 0;border-bottom:1px solid var(--line);
+}
+.job::before{
+  content:"";position:absolute;top:37px;inset-inline-start:111px;
+  width:9px;height:9px;border-radius:50%;background:var(--bg);
+  border:2px solid var(--accent);z-index:2;
+}
+.year{font:600 10px "JetBrains Mono";color:var(--accent);padding-top:4px}
+.job h3{margin:0;font-size:18px;letter-spacing:-.025em}
+.company{margin:5px 0 13px;color:var(--muted);font-size:11px}
+.job ul{margin:0;padding-inline-start:17px;color:var(--muted);font-size:12px;line-height:2}
+.job li{padding-inline-start:4px;margin:3px 0}
+
+.work-list{border-top:1px solid var(--line)}
+.work{
+  display:grid;grid-template-columns:70px minmax(0,1fr) 145px;gap:28px;
+  align-items:center;padding:27px 0;border-bottom:1px solid var(--line);
+  transition:padding .3s var(--ease),background .3s;
+}
+.work:hover{padding-inline:18px;background:color-mix(in srgb,var(--bg-elev) 55%,transparent)}
+.work-no{font:600 10px "JetBrains Mono";color:var(--accent)}
+.work-title{font-size:19px;font-weight:800;letter-spacing:-.035em}
+.work-desc{margin-top:5px;color:var(--muted);font-size:12px;line-height:1.8}
+.work-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:11px}
+.work-tags .tag{font-size:9px;padding:4px 7px}
+.work-link{
+  justify-self:end;display:flex;align-items:center;gap:8px;color:var(--muted);
+  font:600 10px "JetBrains Mono";transition:color .2s,transform .2s;
+}
+.work-link:hover{color:var(--accent);transform:translateX(-3px)}
+
+.education-list{border-top:1px solid var(--line)}
+.edu-row{
+  display:grid;grid-template-columns:105px 1fr auto;gap:30px;align-items:center;
+  padding:24px 0;border-bottom:1px solid var(--line);
+}
+.edu-year{font:600 10px "JetBrains Mono";color:var(--accent)}
+.edu-row h3{margin:0;font-size:16px}
+.edu-row p{margin:4px 0 0;color:var(--muted);font-size:11px}
+.edu-score{font:700 12px "JetBrains Mono";color:var(--muted)}
+
+.contact-section{padding:120px 0 80px}
+.contact-layout{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:end;
+}
+.contact-title{
+  margin:0;font-size:clamp(45px,7vw,92px);line-height:.92;
+  letter-spacing:-.075em;max-width:850px;
+}
+.contact-title em{
+  display:block;font-style:normal;color:var(--accent);
+}
+.contact-copy{max-width:650px;color:var(--muted);font-size:14px;line-height:2;margin:24px 0 0}
+.contact-rail{border-top:1px solid var(--line)}
+.contact-link{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:18px 0;border-bottom:1px solid var(--line);font-size:12px;
+  transition:padding .25s var(--ease),color .2s;
+}
+.contact-link:hover{padding-inline:12px;color:var(--accent)}
+.contact-left{display:flex;align-items:center;gap:12px;min-width:0}
+.contact-icon{
+  width:31px;height:31px;border:1px solid var(--line);border-radius:8px;
+  display:grid;place-items:center;font:700 9px "JetBrains Mono";color:var(--muted);
+}
+.contact-link strong{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.contact-arrow{color:var(--faint);font-size:17px}
+
+.footer{
+  padding:30px 0 42px;color:var(--muted);font-size:10px;
+}
+.footer-grid{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.footer-mark{font:900 18px Inter,sans-serif;letter-spacing:-.08em;color:var(--text)}
+.footer-mark i{font-style:normal;color:var(--accent)}
+.footer-code{font:600 9px "JetBrains Mono";letter-spacing:.06em}
+
+.reveal{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease);
+}
+.reveal.visible{opacity:1;transform:none}
+
+.cmd-overlay{
+  position:fixed;inset:0;z-index:500;display:none;
+  align-items:flex-start;justify-content:center;padding-top:14vh;
+  background:rgba(0,0,0,.42);backdrop-filter:blur(8px);
+}
+.cmd-overlay.open{display:flex}
+.cmd{
+  width:min(600px,calc(100% - 28px));overflow:hidden;
+  background:var(--bg-elev);border:1px solid var(--line-strong);
+  border-radius:16px;box-shadow:0 30px 100px rgba(0,0,0,.3);
+}
+.cmd-input{
+  width:100%;height:58px;border:0;border-bottom:1px solid var(--line);
+  outline:0;background:transparent;color:var(--text);padding:0 18px;
+  font:500 13px Vazirmatn,sans-serif;
+}
+.cmd-list{padding:7px;max-height:55vh;overflow:auto}
+.cmd-item{
+  display:flex;align-items:center;justify-content:space-between;
+  width:100%;padding:12px;border:0;border-radius:9px;background:transparent;
+  color:var(--text);cursor:pointer;text-align:inherit;font-size:12px;
+}
+.cmd-item:hover,.cmd-item:focus{background:var(--bg-soft);outline:0}
+.cmd-key{color:var(--faint);font:9px "JetBrains Mono"}
+
+.toast{
+  position:fixed;bottom:20px;left:50%;z-index:700;
+  transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  padding:10px 14px;border:1px solid var(--line);border-radius:10px;
+  background:var(--bg-elev);box-shadow:var(--shadow-soft);
+  font-size:11px;transition:opacity .25s,transform .25s;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+:focus-visible{
+  outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);
+  outline-offset:3px;
+}
+@supports selector(:focus-visible){
+  :focus:not(:focus-visible){outline:none}
+}
+@supports not (backdrop-filter:blur(1px)){
+  .header-inner{background:var(--bg-elev)}
+}
+@supports (animation-timeline:scroll()){
+  .progress{animation:scroll-progress linear both;animation-timeline:scroll(root)}
+  @keyframes scroll-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+}
+@supports selector(:has(*)){
+  .nav a.active{background:var(--bg-soft)}
+}
+@media(max-width:980px){
+  .nav a:nth-child(n+4){display:none}
+  .hero-layout{grid-template-columns:1fr}
+  .hero-aside{border-inline-start:0;border-top:1px solid var(--line);padding:22px 0 0}
+  .stats{margin-top:55px}
+  .section-grid{grid-template-columns:1fr}
+  .section-meta{position:static}
+  .section-note{max-width:650px}
+  .contact-layout{grid-template-columns:1fr;gap:55px}
+}
+@media(max-width:700px){
+  :root{--gutter:18px}
+  .header-inner{grid-template-columns:auto 1fr auto}
+  .brand-name{display:none}
+  .nav{justify-content:flex-start;overflow:auto;scrollbar-width:none}
+  .nav a{padding:9px 8px;font-size:10px}
+  .nav a:nth-child(n+4){display:none}
+  .hero{padding-top:135px;padding-bottom:70px}
+  .hero h1{font-size:clamp(56px,18vw,92px)}
+  .hero-copy{font-size:15px;line-height:1.9}
+  .stats{margin-top:48px}
+  .stat{padding:17px 10px}
+  .stat strong{font-size:27px}
+  .stat span{font-size:9px}
+  .section{padding:72px 0}
+  .capability{grid-template-columns:38px 1fr auto;gap:13px}
+  .capability:hover{padding-inline:0}
+  .stack{grid-template-columns:1fr}
+  .stack-row:nth-child(odd){padding-inline-end:0;border-inline-end:0}
+  .stack-row:nth-child(even){padding-inline-start:0}
+  .job{grid-template-columns:1fr;gap:8px;padding:24px 0}
+  .timeline::before{display:none}
+  .job::before{display:none}
+  .work{grid-template-columns:36px 1fr;gap:13px}
+  .work-link{grid-column:2;justify-self:start;margin-top:5px}
+  .edu-row{grid-template-columns:1fr auto;gap:8px 20px}
+  .edu-year{grid-column:1/-1}
+  .edu-score{grid-column:2;grid-row:2}
+  .contact-section{padding:85px 0 60px}
+  .contact-title{font-size:clamp(46px,15vw,76px)}
+  .footer-grid{display:block;line-height:2.2}
+  .footer-code{margin-top:8px}
+}
+@media(max-width:420px){
+  .header-tools .icon-btn:first-child{display:none}
+  .nav a{font-size:9px}
+  .hero-actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+  .reveal{opacity:1;transform:none}
+}
+
+/* =========================================================
+   CINEMATIC MOTION LAYER
+   ========================================================= */
+
+.ambient-bg{
+  position:fixed;inset:0;z-index:-3;overflow:hidden;pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--accent) 3%,transparent),transparent 42%),
+    var(--bg);
+}
+.ambient-bg::before{
+  content:"";position:absolute;inset:-30%;
+  background:
+    conic-gradient(from 180deg at 50% 50%,
+      transparent 0deg,
+      color-mix(in srgb,var(--accent) 4%,transparent) 38deg,
+      transparent 76deg,
+      color-mix(in srgb,var(--accent-2) 4%,transparent) 125deg,
+      transparent 170deg,
+      color-mix(in srgb,var(--accent) 3%,transparent) 230deg,
+      transparent 290deg);
+  filter:blur(35px);
+  animation:slowSpin 42s linear infinite;
+}
+.aurora{
+  position:absolute;border-radius:50%;filter:blur(80px);opacity:.14;
+  mix-blend-mode:screen;
+}
+.aurora-a{
+  width:42vw;height:42vw;top:-18vw;inset-inline-start:-12vw;
+  background:var(--accent);animation:auroraA 17s ease-in-out infinite alternate;
+}
+.aurora-b{
+  width:38vw;height:38vw;top:26vh;inset-inline-end:-14vw;
+  background:var(--accent-2);animation:auroraB 21s ease-in-out infinite alternate;
+}
+.aurora-c{
+  width:28vw;height:28vw;bottom:-12vw;left:38%;
+  background:#a34dff;animation:auroraC 19s ease-in-out infinite alternate;
+}
+.orb{
+  position:absolute;border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--accent) 24%,transparent);
+  box-shadow:inset 0 0 30px color-mix(in srgb,var(--accent) 5%,transparent),
+             0 0 55px color-mix(in srgb,var(--accent) 6%,transparent);
+  opacity:.6;
+}
+.orb::after{
+  content:"";position:absolute;inset:20%;border-radius:50%;
+  border:1px dashed color-mix(in srgb,var(--accent-2) 22%,transparent);
+  animation:slowSpin 15s linear infinite reverse;
+}
+.orb-a{width:180px;height:180px;top:21%;left:5%;animation:float1 13s ease-in-out infinite}
+.orb-b{width:110px;height:110px;top:62%;right:7%;animation:float2 11s ease-in-out infinite}
+.orb-c{width:65px;height:65px;top:35%;right:22%;animation:float3 9s ease-in-out infinite}
+.grid-glow{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(to right,color-mix(in srgb,var(--accent) 9%,transparent) 1px,transparent 1px),
+    linear-gradient(to bottom,color-mix(in srgb,var(--accent-2) 7%,transparent) 1px,transparent 1px);
+  background-size:120px 120px;
+  mask-image:radial-gradient(ellipse at center,#000 0%,transparent 67%);
+  opacity:.13;
+  animation:gridDrift 28s linear infinite;
+}
+.noise{
+  position:absolute;inset:-50%;
+  opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+  animation:noiseMove .35s steps(2) infinite;
+}
+.scanline{
+  position:absolute;left:0;right:0;height:1px;top:-2px;
+  background:linear-gradient(90deg,transparent,var(--accent),var(--accent-2),transparent);
+  opacity:.08;filter:blur(.5px);animation:scan 9s linear infinite;
+}
+.code-stream{
+  position:absolute;white-space:nowrap;color:var(--accent);opacity:.055;
+  font:600 9px "JetBrains Mono";letter-spacing:.12em;
+  writing-mode:vertical-rl;user-select:none;
+}
+.code-1{left:2%;top:18%;animation:codeFloat 18s ease-in-out infinite}
+.code-2{right:2%;top:28%;color:var(--accent-2);animation:codeFloat 23s ease-in-out infinite reverse}
+.code-3{right:15%;bottom:12%;animation:codeFloat 20s ease-in-out infinite}
+
+.cursor-glow{
+  position:fixed;width:260px;height:260px;left:0;top:0;z-index:-1;
+  pointer-events:none;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--accent) 7%,transparent) 0%,transparent 68%);
+  transform:translate(-50%,-50%);opacity:0;
+  transition:opacity .4s ease;
+}
+body.pointer-ready .cursor-glow{opacity:1}
+
+.hero{isolation:isolate;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;inset-inline-start:0;bottom:0;width:100%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--line),transparent);
+}
+.hero-visual{
+  position:absolute;inset:0;pointer-events:none;z-index:-1;
+}
+.hero-ring{
+  position:absolute;border:1px solid color-mix(in srgb,var(--accent) 13%,transparent);
+  border-radius:50%;left:50%;top:49%;transform:translate(-50%,-50%);
+  width:min(72vw,900px);aspect-ratio:1;
+}
+.ring-1{animation:ringPulse 8s ease-in-out infinite}
+.ring-2{width:min(55vw,690px);border-style:dashed;opacity:.65;animation:slowSpin 34s linear infinite}
+.ring-3{width:min(38vw,480px);border-color:color-mix(in srgb,var(--accent-2) 12%,transparent);animation:slowSpin 24s linear infinite reverse}
+.hero-ring::before,.hero-ring::after{
+  content:"";position:absolute;border-radius:50%;
+  width:6px;height:6px;background:var(--accent);box-shadow:0 0 18px var(--accent);
+}
+.hero-ring::before{top:18%;left:16%}
+.hero-ring::after{bottom:14%;right:21%;background:var(--accent-2);box-shadow:0 0 18px var(--accent-2)}
+.hero-cross{
+  position:absolute;width:15px;height:15px;opacity:.35;
+}
+.hero-cross::before,.hero-cross::after{content:"";position:absolute;background:var(--accent)}
+.hero-cross::before{width:100%;height:1px;top:7px}
+.hero-cross::after{width:1px;height:100%;left:7px}
+.cross-1{top:28%;left:17%;animation:blink 3s ease-in-out infinite}
+.cross-2{right:18%;bottom:25%;animation:blink 4s ease-in-out infinite 1s}
+.hero-diamond{
+  position:absolute;top:24%;right:29%;width:10px;height:10px;
+  border:1px solid var(--accent-2);transform:rotate(45deg);
+  animation:diamond 5s ease-in-out infinite;
+}
+.hero-orbit{
+  position:absolute;left:50%;top:49%;width:min(61vw,760px);aspect-ratio:1;
+  transform:translate(-50%,-50%);border:1px solid transparent;
+  border-top-color:color-mix(in srgb,var(--accent-2) 24%,transparent);
+  border-radius:50%;animation:slowSpin 17s linear infinite;
+}
+.hero-orbit span{
+  position:absolute;top:-3px;left:50%;width:6px;height:6px;border-radius:50%;
+  background:var(--accent-2);box-shadow:0 0 22px var(--accent-2);
+}
+
+.btn.primary{position:relative;overflow:hidden}
+.btn.primary::before{
+  content:"";position:absolute;inset:-2px;
+  background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.24) 45%,transparent 70%);
+  transform:translateX(-130%);transition:transform .7s var(--ease);
+}
+.btn.primary:hover::before{transform:translateX(130%)}
+
+.capability,.work,.edu-row,.stack-row,.contact-link{
+  position:relative;
+}
+.capability::before,.work::before,.edu-row::before,.stack-row::before,.contact-link::before{
+  content:"";position:absolute;inset-inline-start:0;bottom:-1px;width:0;height:1px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  transition:width .55s var(--ease);
+}
+.capability:hover::before,.work:hover::before,.edu-row:hover::before,.stack-row:hover::before,.contact-link:hover::before{width:100%}
+
+.stat strong{transition:transform .35s var(--ease)}
+.stat:hover strong{transform:translateY(-3px)}
+
+@keyframes slowSpin{to{transform:rotate(360deg)}}
+@keyframes auroraA{to{transform:translate(13vw,9vh) scale(1.14)}}
+@keyframes auroraB{to{transform:translate(-12vw,-8vh) scale(1.18)}}
+@keyframes auroraC{to{transform:translate(5vw,-8vh) scale(1.2)}}
+@keyframes float1{50%{transform:translate(25px,-30px) scale(1.06)}}
+@keyframes float2{50%{transform:translate(-18px,25px) scale(.92)}}
+@keyframes float3{50%{transform:translate(12px,-16px)}}
+@keyframes gridDrift{to{background-position:120px 120px}}
+@keyframes noiseMove{0%{transform:translate(0,0)}25%{transform:translate(2%, -1%)}50%{transform:translate(-1%,2%)}75%{transform:translate(1%,1%)}100%{transform:translate(0,0)}}
+@keyframes scan{to{top:100%}}
+@keyframes codeFloat{50%{transform:translateY(-22px);opacity:.09}}
+@keyframes ringPulse{50%{transform:translate(-50%,-50%) scale(1.035);opacity:.65}}
+@keyframes blink{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:.9;transform:scale(1.15)}}
+@keyframes diamond{50%{transform:rotate(225deg) scale(1.5)}}
+
+@media(max-width:700px){
+  .hero-ring{width:125vw}
+  .ring-2{width:95vw}
+  .ring-3{width:68vw}
+  .hero-orbit{width:108vw}
+  .orb-a{width:110px;height:110px;left:-40px}
+  .orb-b{width:75px;height:75px;right:-20px}
+  .code-stream{opacity:.035}
+  .grid-glow{background-size:80px 80px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ambient-bg *, .hero-visual *, .marquee-track{animation:none!important}
+  .cursor-glow{display:none}
+}
+@media(pointer:coarse){
+  .cursor-glow{display:none}
+}
+
+/* =========================================================
+   PREMIUM UX PATCH — stable hover, brighter contrast, mobile nav
+   ========================================================= */
+:root{
+  --bg:#f5f7fb;
+  --bg-elev:#ffffff;
+  --bg-soft:#edf1f7;
+  --text:#0b1020;
+  --muted:#4c5668;
+  --faint:#737e91;
+  --line:#cfd6e2;
+  --line-strong:#aeb8c9;
+  --accent:#5546ff;
+  --accent-2:#009bd8;
+  --good:#078d5b;
+  --shadow:0 28px 90px rgba(18,24,35,.12);
+  --shadow-soft:0 14px 42px rgba(18,24,35,.09);
+}
+html.dark{
+  --bg:#07090e;
+  --bg-elev:#0e121a;
+  --bg-soft:#151b26;
+  --text:#f7f9fc;
+  --muted:#aeb8c7;
+  --faint:#7d8797;
+  --line:#293140;
+  --line-strong:#414c5e;
+  --accent:#9388ff;
+  --accent-2:#32c7f6;
+  --good:#4ee0a2;
+}
+
+/* Never change box geometry on hover: no jumping rows. */
+.capability,.work,.contact-link{
+  transition:background .28s ease,box-shadow .28s ease,color .2s ease;
+}
+.capability:hover,.work:hover,.contact-link:hover{
+  padding-inline:0 !important;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 7%,transparent),transparent 72%);
+  box-shadow:inset 3px 0 0 var(--accent);
+}
+html[dir="rtl"] .capability:hover,html[dir="rtl"] .work:hover,html[dir="rtl"] .contact-link:hover{
+  background:linear-gradient(270deg,color-mix(in srgb,var(--accent) 7%,transparent),transparent 72%);
+  box-shadow:inset -3px 0 0 var(--accent);
+}
+.capability::before,.work::before,.edu-row::before,.stack-row::before,.contact-link::before{
+  width:100%;
+  transform:scaleX(0);
+  transform-origin:left center;
+}
+html[dir="rtl"] .capability::before,html[dir="rtl"] .work::before,html[dir="rtl"] .edu-row::before,html[dir="rtl"] .stack-row::before,html[dir="rtl"] .contact-link::before{
+  transform-origin:right center;
+}
+.capability:hover::before,.work:hover::before,.edu-row:hover::before,.stack-row:hover::before,.contact-link:hover::before{
+  width:100%;transform:scaleX(1);
+}
+
+/* Better light-mode legibility. */
+.nav a{color:var(--muted)}
+.nav a:hover,.nav a.active{color:var(--text)}
+.section-note,.hero-copy,.capability p,.work-desc,.job ul,.edu-row p,.contact-copy{color:var(--muted)}
+.icon-btn{
+  background:var(--bg-elev);
+  border-color:var(--line-strong);
+  box-shadow:0 4px 14px rgba(18,24,35,.05);
+}
+.icon-btn:hover{background:var(--bg-soft);border-color:var(--accent);color:var(--accent);box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 13%,transparent)}
+.btn.ghost{border-color:var(--line-strong);color:var(--text)}
+.btn.ghost:hover{background:var(--bg-soft);border-color:var(--accent)}
+
+/* Contact icons: actual recognizable SVG glyphs, not text abbreviations. */
+.contact-icon{
+  flex:0 0 38px;width:38px;height:38px;border-radius:11px;
+  border:1px solid color-mix(in srgb,var(--accent) 28%,var(--line));
+  background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 9%,var(--bg-elev)),var(--bg-elev));
+  color:var(--accent);
+  box-shadow:0 6px 18px color-mix(in srgb,var(--accent) 9%,transparent);
+}
+.contact-icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.contact-link:hover .contact-icon{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 9px 24px color-mix(in srgb,var(--accent) 25%,transparent)}
+.contact-link strong{font-size:12px}
+.contact-left{gap:13px}
+
+/* Mobile navigation */
+.menu-toggle{display:none;position:relative}
+.menu-toggle span{position:absolute;width:15px;height:1.5px;border-radius:2px;background:currentColor;transition:transform .25s ease,opacity .2s ease}
+.menu-toggle span:nth-child(1){transform:translateY(-5px)}
+.menu-toggle span:nth-child(3){transform:translateY(5px)}
+.menu-toggle.open span:nth-child(1){transform:rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:rotate(-45deg)}
+.mobile-menu{
+  position:fixed;top:78px;left:0;right:0;z-index:99;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px);
+  transition:opacity .24s ease,transform .24s ease,visibility .24s;
+}
+.mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+.mobile-menu-inner{
+  width:min(var(--max),calc(100% - (var(--gutter) * 2)));margin:auto;
+  padding:14px;border:1px solid var(--line-strong);border-radius:18px;
+  background:color-mix(in srgb,var(--bg-elev) 94%,transparent);
+  backdrop-filter:blur(22px) saturate(160%);
+  box-shadow:0 24px 70px rgba(0,0,0,.18);
+}
+.mobile-menu-head{display:flex;align-items:center;justify-content:space-between;padding:5px 7px 12px;border-bottom:1px solid var(--line);}
+.mobile-menu-kicker{font:700 9px "JetBrains Mono";letter-spacing:.1em;color:var(--faint)}
+.mobile-menu-status{display:flex;align-items:center;gap:7px;font-size:10px;color:var(--muted)}
+.mobile-menu-status i{width:6px;height:6px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px color-mix(in srgb,var(--good) 12%,transparent)}
+.mobile-nav{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding-top:8px}
+.mobile-nav a{display:flex;align-items:center;gap:10px;padding:13px 10px;border-radius:11px;color:var(--text);font-size:12px;font-weight:800;border:1px solid transparent}
+.mobile-nav a span{font:600 9px "JetBrains Mono";color:var(--accent)}
+.mobile-nav a:hover,.mobile-nav a:focus-visible{background:var(--bg-soft);border-color:var(--line);color:var(--accent)}
+
+@media(max-width:980px){
+  .nav a{font-size:11px;padding-inline:8px}
+  .header-inner{gap:10px}
+  .hero-layout{gap:35px}
+}
+@media(max-width:760px){
+  :root{--gutter:14px}
+  .site-header{top:8px}
+  .header-inner{min-height:52px;padding:6px;border-radius:15px}
+  .brand{padding:5px 7px}
+  .brand-name{display:none}
+  .nav{display:none}
+  .header-tools{margin-inline-start:auto}
+  .menu-toggle{display:grid}
+  .mobile-menu{top:68px}
+  .mobile-nav{grid-template-columns:1fr 1fr}
+  .hero{padding-top:118px}
+  .hero-aside{padding-top:20px}
+  .capability{grid-template-columns:32px minmax(0,1fr) auto;gap:10px}
+  .capability h3{font-size:19px}
+  .capability p{font-size:12px}
+  .work{grid-template-columns:30px minmax(0,1fr);gap:10px}
+  .contact-layout{gap:38px}
+  .contact-link{padding:14px 0}
+  .contact-link strong{font-size:11px}
+  .contact-icon{flex-basis:36px;width:36px;height:36px}
+}
+@media(max-width:430px){
+  .icon-btn{width:36px;height:36px}
+  .mobile-nav{grid-template-columns:1fr}
+  .mobile-nav a{padding:12px 10px}
+  .hero h1{font-size:clamp(52px,17vw,78px)}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:last-child{grid-column:1/-1;border-top:1px solid var(--line)}
+  .stat:not(:last-child){border-inline-end:1px solid var(--line)}
+  .stat:nth-child(2){border-inline-end:0}
+  .hero-actions .btn{width:100%}
+  .contact-left{gap:10px}
+  .contact-link strong{max-width:calc(100vw - 120px)}
+}
+@media(max-width:360px){
+  .header-tools{gap:3px}
+  .icon-btn{width:34px;height:34px}
+  .brand-mark{width:28px;height:28px}
+  .contact-link strong{font-size:10px}
+}
+
+
+/* =========================================================
+   LAYOUT STABILITY / TYPOGRAPHY STANDARDIZATION
+   Prevent visual collisions across every section and viewport.
+   ========================================================= */
+html{overflow-x:hidden}
+body{overflow-x:hidden;line-height:1.65}
+*,*::before,*::after{min-width:0}
+
+/* Never let entrance animation move one content row into another. */
+.reveal{
+  opacity:0;
+  transform:none;
+  transition:opacity .65s ease;
+}
+.reveal.visible{opacity:1;transform:none}
+
+/* Consistent text wrapping for Persian, English and mixed technical text. */
+.hero-copy,.section-note,.capability p,.work-desc,.job li,.edu-row p,.contact-copy,
+.capability h3,.work-title,.job h3,.edu-row h3,.aside-value,
+.nav a,.mobile-nav a,.contact-link strong,.stack-head strong{
+  overflow-wrap:anywhere;
+  word-break:normal;
+  hyphens:auto;
+}
+
+/* Sections use predictable vertical rhythm. */
+.section,
+.contact-section{overflow:clip}
+.section-grid{align-items:start}
+.section-content{width:100%;min-width:0}
+.section-meta{z-index:1}
+
+/* Capability rows: fixed geometry, generous breathing room. */
+.capability{
+  grid-template-columns:42px minmax(0,1fr) 32px;
+  gap:clamp(14px,2.2vw,24px);
+  padding:30px 0;
+  min-height:120px;
+  align-items:start;
+}
+.capability > div:nth-child(2){min-width:0}
+.capability h3{line-height:1.3;margin:0 0 10px}
+.capability p{line-height:1.95}
+.capability-arrow{align-self:center;line-height:1}
+
+/* Skill cards: equal, non-colliding columns. */
+.stack{align-items:stretch}
+.stack-row{
+  min-width:0;
+  min-height:0;
+  padding:28px 0;
+}
+.stack-row:nth-child(odd){padding-inline-end:clamp(20px,3vw,34px)}
+.stack-row:nth-child(even){padding-inline-start:clamp(20px,3vw,34px)}
+.stack-head{min-height:28px;margin-bottom:18px;align-items:flex-start}
+.stack-head strong{line-height:1.5}
+.tags{align-items:flex-start;row-gap:8px}
+.tag{white-space:normal;line-height:1.35}
+
+/* Experience timeline: columns never collapse into each other. */
+.timeline{min-width:0}
+.job{
+  grid-template-columns:minmax(82px,105px) minmax(0,1fr);
+  gap:clamp(28px,4vw,52px);
+  padding:32px 0;
+  min-width:0;
+}
+.job > div:last-child{min-width:0}
+.job h3{line-height:1.45;margin:0 0 2px}
+.company{line-height:1.7;margin:5px 0 14px}
+.job ul{margin:0;padding-inline-start:18px;line-height:2.05}
+.job li{margin:6px 0;padding-inline-start:5px}
+
+/* Selected work: action column gets its own safe width. */
+.work{
+  grid-template-columns:52px minmax(0,1fr) minmax(110px,145px);
+  gap:clamp(18px,3vw,30px);
+  align-items:start;
+  padding:30px 0;
+  min-width:0;
+}
+.work > div:nth-child(2){min-width:0}
+.work-title{line-height:1.4}
+.work-desc{line-height:1.95}
+.work-tags{row-gap:7px}
+.work-link{align-self:start;padding-top:3px;white-space:nowrap}
+
+/* Education: long training lists are allowed to wrap naturally. */
+.edu-row{
+  grid-template-columns:minmax(90px,115px) minmax(0,1fr) auto;
+  gap:clamp(18px,3vw,30px);
+  align-items:start;
+  padding:28px 0;
+}
+.edu-row h3{line-height:1.5}
+.edu-row p{line-height:1.9;overflow-wrap:anywhere}
+.edu-score{white-space:nowrap;padding-top:3px}
+
+/* Contact: no horizontal squeeze and no clipped identifiers. */
+.contact-layout{
+  grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);
+  align-items:start;
+}
+.contact-copy{line-height:2.05}
+.contact-link{
+  min-width:0;
+  padding:18px 0;
+  gap:14px;
+}
+.contact-left{min-width:0;flex:1 1 auto}
+.contact-left strong{min-width:0;max-width:100%;line-height:1.5}
+.contact-arrow{flex:0 0 auto}
+
+/* Header controls remain visible and never compete with navigation. */
+.header-inner{grid-template-columns:auto minmax(0,1fr) auto}
+.header-tools{flex:0 0 auto;align-items:center}
+.nav{min-width:0;overflow:hidden}
+.nav a{flex:0 0 auto}
+.icon-btn{flex:0 0 auto}
+
+/* Footer stays readable on narrow screens. */
+.footer-grid{min-width:0}
+.footer-grid > *{min-width:0}
+
+/* Tablet: turn dense multi-column content into clean single-flow blocks. */
+@media(max-width:980px){
+  .section-grid{grid-template-columns:1fr;gap:42px}
+  .section-meta{position:static}
+  .section-note{max-width:720px}
+  .hero-layout{grid-template-columns:minmax(0,1fr)}
+  .hero-aside{border-inline-start:0;border-top:1px solid var(--line);padding:24px 0 0}
+  .contact-layout{grid-template-columns:1fr;gap:48px}
+  .stack{grid-template-columns:1fr}
+  .stack-row:nth-child(odd),
+  .stack-row:nth-child(even){padding-inline:0;border-inline-end:0}
+  .stack-row + .stack-row{border-top:0}
+}
+
+@media(max-width:760px){
+  :root{--gutter:16px}
+  .hero{padding-top:118px;padding-bottom:72px}
+  .hero h1{line-height:1.05;letter-spacing:-.05em}
+  .hero-copy{font-size:15px;line-height:1.95;margin-top:24px}
+  .hero-actions{gap:10px;margin-top:24px}
+  .hero-actions .btn{min-height:46px}
+  .stats{margin-top:54px}
+
+  .section{padding:76px 0}
+  .section-grid{gap:34px}
+  .section-title{line-height:1.12}
+
+  .capability{
+    grid-template-columns:34px minmax(0,1fr) 24px;
+    gap:11px;
+    padding:25px 0;
+    min-height:0;
+  }
+  .capability h3{font-size:18px;line-height:1.4}
+  .capability p{font-size:12px;line-height:1.95}
+
+  .stack-row{padding:24px 0}
+  .stack-head{margin-bottom:14px}
+
+  .job{
+    grid-template-columns:1fr;
+    gap:9px;
+    padding:27px 0;
+  }
+  .timeline::before,.job::before{display:none}
+  .year{padding-top:0}
+  .job h3{font-size:17px}
+  .job ul{font-size:12px;padding-inline-start:17px}
+
+  .work{
+    grid-template-columns:32px minmax(0,1fr);
+    gap:11px;
+    padding:27px 0;
+  }
+  .work-link{
+    grid-column:2;
+    justify-self:start;
+    margin-top:8px;
+    padding-top:0;
   }
 
-  // Theme micro animation
-  body.classList.add('theme-anim');
-  setTimeout(()=>body.classList.remove('theme-anim'),520);
+  .edu-row{
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:8px 18px;
+    padding:25px 0;
+  }
+  .edu-year{grid-column:1/-1}
+  .edu-row h3{font-size:15px}
+  .edu-row p{font-size:11px;line-height:1.9}
+  .edu-score{grid-column:2;grid-row:2}
+
+  .contact-section{padding:82px 0 62px}
+  .contact-layout{gap:38px}
+  .contact-title{font-size:clamp(44px,14vw,72px);line-height:1}
+  .contact-copy{font-size:13px;line-height:2}
+  .contact-link{padding:15px 0}
 }
 
-langBtn.addEventListener('click',()=>{
-  lang = lang === 'fa' ? 'en' : 'fa';
-  localStorage.setItem('cv-lang', lang);
-  apply(true);
-});
+@media(max-width:430px){
+  .header-inner{gap:6px}
+  .header-tools{gap:4px}
+  .icon-btn{width:36px;height:36px}
+  .brand-mark{width:29px;height:29px}
 
-themeBtn.addEventListener('click',()=>{
-  dark = !dark;
-  localStorage.setItem('cv-theme', dark ? 'dark' : 'light');
-  apply(true);
-});
+  .stats{grid-template-columns:1fr}
+  .stat,.stat:nth-child(2){border-inline-end:0;border-top:1px solid var(--line)}
+  .stat:first-child{border-top:0}
+  .stat:last-child{grid-column:auto}
 
-// reveal observer
-const obs = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('show')),{threshold:.08});
-document.querySelectorAll('.fade').forEach(e=>obs.observe(e));
+  .capability{grid-template-columns:28px minmax(0,1fr) 20px;gap:9px}
+  .capability h3{font-size:17px}
+  .capability-arrow{font-size:18px}
 
-// respect reduced motion preference
-if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  document.documentElement.classList.add('reduce-motion');
+  .mobile-menu-inner{padding:12px}
+  .mobile-nav{grid-template-columns:1fr;gap:6px}
+  .mobile-nav a{min-height:44px}
+
+  .contact-left{gap:9px}
+  .contact-icon{flex-basis:35px;width:35px;height:35px}
+  .contact-link strong{font-size:10px;white-space:normal;overflow-wrap:anywhere}
+  .contact-arrow{font-size:15px}
 }
 
-// initial apply without animation to avoid the startup flicker
-apply(false);
-</script></body></html>
+@media(max-width:360px){
+  :root{--gutter:12px}
+  .icon-btn{width:34px;height:34px}
+  .brand-mark{width:27px;height:27px}
+  .hero h1{font-size:clamp(48px,16vw,68px)}
+  .section-title{font-size:30px}
+  .job ul{padding-inline-start:15px}
+}
+
+/* Touch devices should not simulate hover geometry changes. */
+@media(pointer:coarse){
+  .capability:hover,.work:hover,.contact-link:hover{
+    background:transparent;
+    box-shadow:none;
+  }
+}
+
+
+/* =========================================================
+   FINAL COLLISION-SAFE INTERACTION PATCH
+   ========================================================= */
+
+/* Timeline dot ONLY — never allow hover rules to stretch it into a line over the title. */
+.job::before,
+.job:hover::before{
+  content:"" !important;
+  position:absolute !important;
+  top:37px !important;
+  inset-inline-start:111px !important;
+  inset-inline-end:auto !important;
+  bottom:auto !important;
+  left:auto !important;
+  right:auto !important;
+  width:9px !important;
+  height:9px !important;
+  border-radius:50% !important;
+  background:var(--bg) !important;
+  border:2px solid var(--accent) !important;
+  box-shadow:none !important;
+  z-index:2 !important;
+  transform:none !important;
+  transition:none !important;
+  pointer-events:none !important;
+}
+/* No horizontal hover line on experience rows (was drawing across the title). */
+.job::after,
+.job:hover::after{
+  display:none !important;
+  content:none !important;
+  width:0 !important;
+  height:0 !important;
+  transform:none !important;
+  background:none !important;
+}
+.job:hover{
+  background:color-mix(in srgb,var(--accent) 4%,transparent);
+  box-shadow:none;
+}
+
+/* Capability number must never share the same physical edge with the
+   accent rail. Put the rail just outside the content instead. */
+.capability:hover{
+  box-shadow:none !important;
+}
+.capability::before{
+  inset-inline-start:-7px !important;
+  inset-inline-end:auto;
+  bottom:8px !important;
+  top:8px !important;
+  width:2px !important;
+  height:auto !important;
+  background:linear-gradient(180deg,var(--accent),var(--accent-2)) !important;
+  transform:scaleY(0) !important;
+  transform-origin:center bottom !important;
+  transition:transform .35s ease !important;
+}
+html[dir="rtl"] .capability::before{
+  inset-inline-start:auto !important;
+  inset-inline-end:-7px !important;
+  transform-origin:center bottom !important;
+}
+.capability:hover::before{transform:scaleY(1) !important}
+
+/* Other content rows get a clean underline below the content, never through it. */
+.work::before,.edu-row::before,.stack-row::before,.contact-link::before{
+  inset-inline-start:0 !important;
+  inset-inline-end:0 !important;
+  bottom:-1px !important;
+  top:auto !important;
+  width:auto !important;
+  height:2px !important;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2)) !important;
+  transform:scaleX(0) !important;
+  transform-origin:left center !important;
+  transition:transform .35s ease !important;
+}
+html[dir="rtl"] .work::before,
+html[dir="rtl"] .edu-row::before,
+html[dir="rtl"] .stack-row::before,
+html[dir="rtl"] .contact-link::before{transform-origin:right center !important}
+.work:hover::before,.edu-row:hover::before,.stack-row:hover::before,.contact-link:hover::before{
+  transform:scaleX(1) !important;
+}
+
+/* Hover must not alter layout dimensions anywhere. */
+.capability:hover,.work:hover,.job:hover,.edu-row:hover,.stack-row:hover,.contact-link:hover{
+  padding-inline:initial;
+}
+.capability,.work,.job,.edu-row,.stack-row,.contact-link{
+  box-sizing:border-box;
+  isolation:isolate;
+}
+
+/* Mobile language control is always available. */
+@media(max-width:760px){
+  .header-tools{display:flex;align-items:center;flex:0 0 auto}
+  #langBtn{display:grid !important;visibility:visible !important;opacity:1 !important}
+  #themeBtn{display:grid !important;visibility:visible !important;opacity:1 !important}
+  #menuBtn{display:grid !important;visibility:visible !important;opacity:1 !important}
+
+  /* Give the capability number its own stable column. */
+  .capability{grid-template-columns:36px minmax(0,1fr) 22px;}
+  .capability-no{position:relative;z-index:1;line-height:1.4;padding-top:2px}
+  .capability-arrow{position:relative;z-index:1}
+
+  /* Timeline is deliberately flat on mobile: date, title and bullets
+     flow vertically with no decorative line crossing the text. */
+  .job{grid-template-columns:1fr;gap:10px;padding:28px 0}
+  .job::before,.job::after{display:none}
+  .year{display:block;margin-bottom:2px}
+
+  /* Prevent technical strings from forcing horizontal overflow. */
+  .tag,.stack-code,.work-link,.year{max-width:100%;}
+  .work-link{white-space:normal;overflow-wrap:anywhere;}
+}
+
+@media(max-width:430px){
+  .header-tools{gap:4px}
+  #langBtn{display:grid !important;width:36px !important;height:36px !important;}
+  #themeBtn{display:grid !important;width:36px !important;height:36px !important;}
+  #menuBtn{display:grid !important;width:36px !important;height:36px !important;}
+  .capability{grid-template-columns:30px minmax(0,1fr) 18px;gap:10px;padding:23px 0}
+  .capability::before{inset-inline-end:-6px !important;inset-inline-start:auto !important}
+  html[dir="ltr"] .capability::before{inset-inline-start:-6px !important;inset-inline-end:auto !important}
+}
+
+@media(max-width:360px){
+  .header-inner{padding:5px}
+  .header-tools{gap:3px}
+  #langBtn,#themeBtn,#menuBtn{width:34px !important;height:34px !important}
+  .capability{grid-template-columns:28px minmax(0,1fr) 17px;gap:8px}
+}
+
+@media(pointer:coarse){
+  .capability::before,.work::before,.edu-row::before,.stack-row::before,.contact-link::before,
+  .job::after{transform:scale(0) !important;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="ambient-bg" aria-hidden="true">
+  <div class="aurora aurora-a"></div>
+  <div class="aurora aurora-b"></div>
+  <div class="aurora aurora-c"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="orb orb-c"></div>
+  <div class="noise"></div>
+  <div class="scanline"></div>
+  <div class="grid-glow"></div>
+  <div class="code-stream code-1">01001 · 10110 · 00101 · 11001</div>
+  <div class="code-stream code-2">KOTLIN / API / SECURITY / NETWORK</div>
+  <div class="code-stream code-3">0110 1001 1100 0011 1010</div>
+</div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<a class="skip" href="#main">پرش به محتوای اصلی</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Amirhossein Ghafari">
+      <span class="brand-mark">AG</span>
+      <span class="brand-name">Amirhossein <i>Ghafari</i></span>
+    </a>
+
+    <nav class="nav" aria-label="ناوبری اصلی">
+      <a href="#about" data-fa="معرفی" data-en="About">معرفی</a>
+      <a href="#skills" data-fa="مهارت‌ها" data-en="Stack">مهارت‌ها</a>
+      <a href="#experience" data-fa="سوابق" data-en="Experience">سوابق</a>
+      <a href="#projects" data-fa="پروژه‌ها" data-en="Work">پروژه‌ها</a>
+      <a href="#contact" data-fa="ارتباط" data-en="Contact">ارتباط</a>
+    </nav>
+
+    <div class="header-tools">
+      <button class="icon-btn" id="langBtn" type="button" aria-label="تغییر زبان" title="تغییر زبان">EN</button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="تغییر پوسته" title="تغییر پوسته">☼</button>
+      <button class="icon-btn menu-toggle" id="menuBtn" type="button" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobileMenu" title="منو">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-head">
+        <span class="mobile-menu-kicker">NAVIGATION</span>
+        <span class="mobile-menu-status"><i></i><span data-fa="آنلاین" data-en="Online">آنلاین</span></span>
+      </div>
+      <nav class="mobile-nav" aria-label="ناوبری موبایل">
+        <a href="#about" data-fa="معرفی" data-en="About"><span>01</span>معرفی</a>
+        <a href="#skills" data-fa="مهارت‌ها" data-en="Stack"><span>02</span>مهارت‌ها</a>
+        <a href="#experience" data-fa="سوابق" data-en="Experience"><span>03</span>سوابق</a>
+        <a href="#projects" data-fa="پروژه‌ها" data-en="Work"><span>04</span>پروژه‌ها</a>
+        <a href="#contact" data-fa="ارتباط" data-en="Contact"><span>05</span>ارتباط</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="hero" id="top">
+    <div class="container">
+
+<div class="hero-visual" aria-hidden="true">
+  <div class="hero-ring ring-1"></div>
+  <div class="hero-ring ring-2"></div>
+  <div class="hero-ring ring-3"></div>
+  <div class="hero-cross cross-1"></div>
+  <div class="hero-cross cross-2"></div>
+  <div class="hero-diamond"></div>
+  <div class="hero-orbit"><span></span></div>
+</div>
+      <div class="hero-layout">
+        <div class="reveal">
+          <div class="eyebrow">
+            <span class="pulse"></span>
+            <span data-fa="مهندس نرم‌افزار چندسکویی · امنیت سایبری" data-en="MULTIPLATFORM SOFTWARE ENGINEER · CYBERSECURITY">مهندس نرم‌افزار چندسکویی · امنیت سایبری</span>
+          </div>
+
+          <h1>
+            <span data-fa="امیرحسین" data-en="Amirhossein">امیرحسین</span><br>
+            <span class="gradient" data-fa="غفاری" data-en="Ghafari">غفاری</span>
+          </h1>
+
+          <p class="hero-copy"
+             data-fa="ساخت نرم‌افزار، امنیت و زیرساخت را به‌عنوان یک مسئله واحد می‌بینم؛ از معماری محصول و تجربه کاربری تا API، شبکه و لایه‌های عملیاتی."
+             data-en="I treat software, security and infrastructure as one engineering problem — from product architecture and UX to APIs, networks and operations.">
+            ساخت نرم‌افزار، امنیت و زیرساخت را به‌عنوان یک مسئله واحد می‌بینم؛ از معماری محصول و تجربه کاربری تا API، شبکه و لایه‌های عملیاتی.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact" data-fa="شروع یک همکاری ↗" data-en="Start a collaboration ↗">شروع یک همکاری ↗</a>
+            <a class="btn ghost" href="#projects" data-fa="مشاهده پروژه‌ها ↓" data-en="Explore selected work ↓">مشاهده پروژه‌ها ↓</a>
+          </div>
+        </div>
+
+        <aside class="hero-aside reveal">
+          <div class="aside-label">CURRENT FOCUS</div>
+          <div class="aside-value" data-fa="نرم‌افزار چندسکویی<br>امنیت کاربردی<br>شبکه و زیرساخت" data-en="Multiplatform software<br>Applied security<br>Network & infrastructure">
+            نرم‌افزار چندسکویی<br>امنیت کاربردی<br>شبکه و زیرساخت
+          </div>
+          <div class="availability">
+            <span class="pulse"></span>
+            <span data-fa="آماده همکاری پروژه‌ای" data-en="Available for project-based work">آماده همکاری پروژه‌ای</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="stats reveal" aria-label="خلاصه فعالیت">
+        <div class="stat"><strong>15+</strong><span data-fa="پروژه شخصی و متن‌باز" data-en="Personal & open-source projects">پروژه شخصی و متن‌باز</span></div>
+        <div class="stat"><strong>03</strong><span data-fa="حوزه اصلی فعالیت" data-en="Core disciplines">حوزه اصلی فعالیت</span></div>
+        <div class="stat"><strong>01</strong><span data-fa="رویکرد: مهندسی یکپارچه" data-en="Integrated engineering approach">رویکرد: مهندسی یکپارچه</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>SOFTWARE ENGINEERING</span><span>CYBERSECURITY</span><span>NETWORK</span><span>INFRASTRUCTURE</span><span>KOTLIN</span><span>PYTHON</span><span>API SECURITY</span><span>DEVOPS</span>
+      <span>SOFTWARE ENGINEERING</span><span>CYBERSECURITY</span><span>NETWORK</span><span>INFRASTRUCTURE</span><span>KOTLIN</span><span>PYTHON</span><span>API SECURITY</span><span>DEVOPS</span>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="container section-grid">
+      <div class="section-meta reveal">
+        <div class="section-index">01 / PROFILE</div>
+        <h2 class="section-title" data-fa="توانمندی‌ها" data-en="Capabilities">توانمندی‌ها</h2>
+        <p class="section-note" data-fa="به‌جای انباشت کارت‌ها، توانمندی‌ها به‌صورت یک روایت خطی و قابل اسکن ارائه شده‌اند." data-en="A scan-friendly editorial list replaces the usual stack of cards.">به‌جای انباشت کارت‌ها، توانمندی‌ها به‌صورت یک روایت خطی و قابل اسکن ارائه شده‌اند.</p>
+      </div>
+
+      <div class="section-content capabilities">
+        <article class="capability reveal">
+          <div class="capability-no">01</div>
+          <div>
+            <h3 data-fa="توسعه چندسکویی" data-en="Multiplatform Development">توسعه چندسکویی</h3>
+            <p data-fa="Kotlin، Java، Jetpack Compose و Compose Multiplatform با تمرکز بر معماری، API، ذخیره‌سازی محلی، عملکرد و تجربه کاربری." data-en="Kotlin, Java, Jetpack Compose and Compose Multiplatform with focus on architecture, APIs, local storage, performance and UX.">Kotlin، Java، Jetpack Compose و Compose Multiplatform با تمرکز بر معماری، API، ذخیره‌سازی محلی، عملکرد و تجربه کاربری.</p>
+          </div>
+          <div class="capability-arrow">↙</div>
+        </article>
+
+        <article class="capability reveal">
+          <div class="capability-no">02</div>
+          <div>
+            <h3 data-fa="امنیت کاربردی" data-en="Applied Cybersecurity">امنیت کاربردی</h3>
+            <p data-fa="امنیت موبایل، وب و API، تحلیل ترافیک، ارزیابی آسیب‌پذیری، Frida، Nmap، گزارش فنی و پیشنهاد اصلاحی در محدوده مجاز." data-en="Mobile, web and API security, traffic analysis, vulnerability assessment, Frida, Nmap, technical reporting and authorized remediation.">امنیت موبایل، وب و API، تحلیل ترافیک، ارزیابی آسیب‌پذیری، Frida، Nmap، گزارش فنی و پیشنهاد اصلاحی در محدوده مجاز.</p>
+          </div>
+          <div class="capability-arrow">↙</div>
+        </article>
+
+        <article class="capability reveal">
+          <div class="capability-no">03</div>
+          <div>
+            <h3 data-fa="شبکه و زیرساخت" data-en="Network & Infrastructure">شبکه و زیرساخت</h3>
+            <p data-fa="Linux، Windows Server، VMware، MikroTik، Docker، TCP/IP، DNS، DHCP، VLAN، NAT، Firewall و مفاهیم عملیات امنیتی." data-en="Linux, Windows Server, VMware, MikroTik, Docker, TCP/IP, DNS, DHCP, VLAN, NAT, Firewall and security operations concepts.">Linux، Windows Server، VMware، MikroTik، Docker، TCP/IP، DNS، DHCP، VLAN، NAT، Firewall و مفاهیم عملیات امنیتی.</p>
+          </div>
+          <div class="capability-arrow">↙</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container section-grid">
+      <div class="section-meta reveal">
+        <div class="section-index">02 / STACK</div>
+        <h2 class="section-title" data-fa="پشته فنی" data-en="Technical Stack">پشته فنی</h2>
+        <p class="section-note" data-fa="ابزارها بر اساس نقش مهندسی گروه‌بندی شده‌اند؛ نه به شکل یک دیوار بی‌پایان از لوگو و کارت." data-en="Tools are grouped by engineering role instead of becoming an endless wall of logos.">ابزارها بر اساس نقش مهندسی گروه‌بندی شده‌اند؛ نه به شکل یک دیوار بی‌پایان از لوگو و کارت.</p>
+      </div>
+
+      <div class="section-content stack">
+        <div class="stack-row reveal">
+          <div class="stack-head"><strong data-fa="مهندسی نرم‌افزار" data-en="Software Engineering">مهندسی نرم‌افزار</strong><span class="stack-code">CORE</span></div>
+          <div class="tags">
+            <span class="tag">Kotlin</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Jetpack Compose</span><span class="tag">Compose Multiplatform</span><span class="tag">MVVM</span><span class="tag">REST API</span><span class="tag">Retrofit</span><span class="tag">Room</span><span class="tag">Coroutines / Flow</span><span class="tag">Firebase</span><span class="tag">Git / GitLab</span>
+          </div>
+        </div>
+        <div class="stack-row reveal">
+          <div class="stack-head"><strong data-fa="امنیت سایبری" data-en="Cybersecurity">امنیت سایبری</strong><span class="stack-code">SEC</span></div>
+          <div class="tags">
+            <span class="tag">OWASP Mobile Top 10</span><span class="tag">API Security</span><span class="tag">Web Security</span><span class="tag">Bug Bounty</span><span class="tag">Frida</span><span class="tag">Nmap</span><span class="tag">Traffic Analysis</span><span class="tag">Vulnerability Assessment</span><span class="tag">Security Reporting</span><span class="tag">SOC Tier 1</span>
+          </div>
+        </div>
+        <div class="stack-row reveal">
+          <div class="stack-head"><strong data-fa="شبکه و سرور" data-en="Network & Server">شبکه و سرور</strong><span class="stack-code">NET</span></div>
+          <div class="tags">
+            <span class="tag">TCP/IP</span><span class="tag">DNS / DHCP</span><span class="tag">VLAN</span><span class="tag">NAT</span><span class="tag">Firewall</span><span class="tag">MikroTik</span><span class="tag">Cisco</span><span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">Linux</span><span class="tag">VMware ESXi</span>
+          </div>
+        </div>
+        <div class="stack-row reveal">
+          <div class="stack-head"><strong data-fa="DevOps و عملیات" data-en="DevOps & Operations">DevOps و عملیات</strong><span class="stack-code">OPS</span></div>
+          <div class="tags">
+            <span class="tag">Docker</span><span class="tag">Containerization</span><span class="tag">Git</span><span class="tag">Linux CLI</span><span class="tag">Monitoring</span><span class="tag">Logging</span><span class="tag">Release Management</span><span class="tag">Technical Documentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="container section-grid">
+      <div class="section-meta reveal">
+        <div class="section-index">03 / EXPERIENCE</div>
+        <h2 class="section-title" data-fa="مسیر حرفه‌ای" data-en="Experience">مسیر حرفه‌ای</h2>
+        <p class="section-note" data-fa="سوابق به شکل خط زمانی مینیمال طراحی شده تا تاریخ، نقش و خروجی در یک نگاه خوانده شوند." data-en="A minimal timeline keeps dates, roles and outcomes readable at a glance.">سوابق به شکل خط زمانی مینیمال طراحی شده تا تاریخ، نقش و خروجی در یک نگاه خوانده شوند.</p>
+      </div>
+
+      <div class="section-content timeline">
+        <article class="job reveal">
+          <div class="year">۱۴۰۴ / 2025</div><div>
+            <h3 data-fa="توسعه‌دهنده اندروید و همکار امنیتی" data-en="Android Developer & Security Collaborator">توسعه‌دهنده اندروید و همکار امنیتی</h3>
+            <div class="company">فراگلد · شیراز</div>
+            <ul><li data-fa="توسعه و بهینه‌سازی اپلیکیشن سبک مبتنی بر WebView با Kotlin و مدیریت Session." data-en="Developed and optimized a lightweight Kotlin WebView application with session handling.">توسعه و بهینه‌سازی اپلیکیشن سبک مبتنی بر WebView با Kotlin و مدیریت Session.</li><li data-fa="همکاری در بررسی امنیت WordPress و زیرساخت و ارائه پیشنهادهای اصلاحی." data-en="Reviewed WordPress security and infrastructure and provided remediation recommendations.">همکاری در بررسی امنیت WordPress و زیرساخت و ارائه پیشنهادهای اصلاحی.</li></ul>
+          </div>
+        </article>
+        <article class="job reveal">
+          <div class="year">۱۴۰۳ / 2024</div><div>
+            <h3 data-fa="برنامه‌نویس" data-en="Software Developer">برنامه‌نویس</h3>
+            <div class="company">رایان‌پرداز · کرج</div>
+            <ul><li data-fa="توسعه اپلیکیشن Kotlin برای ردیابی موقعیت ویزیتورها و ارسال لحظه‌ای داده به سرور." data-en="Built a Kotlin application for visitor location tracking and real-time server transmission.">توسعه اپلیکیشن Kotlin برای ردیابی موقعیت ویزیتورها و ارسال لحظه‌ای داده به سرور.</li><li data-fa="کار با Location Services، Foreground Service، API و بهینه‌سازی باتری و عملکرد." data-en="Worked with Location Services, Foreground Services, APIs, battery and performance optimization.">کار با Location Services، Foreground Service، API و بهینه‌سازی باتری و عملکرد.</li></ul>
+          </div>
+        </article>
+        <article class="job reveal">
+          <div class="year">۱۴۰۳ / 2024</div><div>
+            <h3 data-fa="امنیت شبکه" data-en="Network Security">امنیت شبکه</h3>
+            <div class="company">فرش سیزان · کاشان</div>
+            <ul><li data-fa="ارزیابی امنیتی سرورها و سرویس‌های Windows و شناسایی پورت‌ها و سرویس‌های فعال با Nmap." data-en="Assessed Windows servers/services and enumerated active ports and services with Nmap.">ارزیابی امنیتی سرورها و سرویس‌های Windows و شناسایی پورت‌ها و سرویس‌های فعال با Nmap.</li><li data-fa="تحلیل پیکربندی، مستندسازی آسیب‌پذیری‌ها و ارائه پیشنهادهای اصلاحی در چارچوب مجاز." data-en="Analyzed configurations, documented vulnerabilities and proposed remediation within authorized scope.">تحلیل پیکربندی، مستندسازی آسیب‌پذیری‌ها و ارائه پیشنهادهای اصلاحی در چارچوب مجاز.</li></ul>
+          </div>
+        </article>
+        <article class="job reveal">
+          <div class="year">۱۴۰۲ / 2023</div><div>
+            <h3 data-fa="پژوهشگر امنیت موبایل" data-en="Mobile Security Researcher">پژوهشگر امنیت موبایل</h3>
+            <div class="company">اسنپ · تهران</div>
+            <ul><li data-fa="تحلیل ورود کاربران، API، تبادل اطلاعات و نحوه ذخیره و استفاده از توکن‌ها." data-en="Analyzed authentication flows, APIs, data exchange and token storage/use.">تحلیل ورود کاربران، API، تبادل اطلاعات و نحوه ذخیره و استفاده از توکن‌ها.</li><li data-fa="شناسایی ضعف‌های احراز هویت و تهیه گزارش فنی." data-en="Identified authentication weaknesses and prepared technical reports.">شناسایی ضعف‌های احراز هویت و تهیه گزارش فنی.</li></ul>
+          </div>
+        </article>
+        <article class="job reveal">
+          <div class="year">۱۴۰۰ / 2021</div><div>
+            <h3 data-fa="کارشناس پشتیبانی و امنیت شبکه" data-en="Network Support & Security Specialist">کارشناس پشتیبانی و امنیت شبکه</h3>
+            <div class="company">شرکت ساینا · تهران</div>
+            <ul><li data-fa="Windows Server، Active Directory، DHCP و مجازی‌سازی با VMware ESXi." data-en="Worked with Windows Server, Active Directory, DHCP and VMware ESXi virtualization.">Windows Server، Active Directory، DHCP و مجازی‌سازی با VMware ESXi.</li><li data-fa="پیکربندی اولیه MikroTik، NAT، Firewall، VLAN و امن‌سازی ترافیک." data-en="Configured MikroTik, NAT, firewall, VLANs and basic traffic hardening.">پیکربندی اولیه MikroTik، NAT، Firewall، VLAN و امن‌سازی ترافیک.</li></ul>
+          </div>
+        </article>
+        <article class="job reveal">
+          <div class="year">۱۴۰۰ / 2021</div><div>
+            <h3 data-fa="امنیت موبایل" data-en="Mobile Security">امنیت موبایل</h3>
+            <div class="company">دلیجاپ · دلیجان</div>
+            <ul><li data-fa="ارزیابی امنیت API موبایل با تحلیل ترافیک و Frida و توسعه اسکریپت Python." data-en="Assessed mobile APIs using traffic analysis, Frida and Python scripting.">ارزیابی امنیت API موبایل با تحلیل ترافیک و Frida و توسعه اسکریپت Python.</li><li data-fa="بررسی کنترل دسترسی، اعتبارسنجی و مستندسازی یافته‌ها." data-en="Reviewed access control and validation and documented findings.">بررسی کنترل دسترسی، اعتبارسنجی و مستندسازی یافته‌ها.</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container section-grid">
+      <div class="section-meta reveal">
+        <div class="section-index">04 / SELECTED WORK</div>
+        <h2 class="section-title" data-fa="کارهای منتخب" data-en="Selected Work">کارهای منتخب</h2>
+        <p class="section-note" data-fa="پروژه‌ها به شکل فهرست تحریریه‌ای نمایش داده می‌شوند تا محتوا مهم‌تر از قاب‌های تزئینی باشد." data-en="Editorial rows keep the work itself more important than decorative containers.">پروژه‌ها به شکل فهرست تحریریه‌ای نمایش داده می‌شوند تا محتوا مهم‌تر از قاب‌های تزئینی باشد.</p>
+      </div>
+
+      <div class="section-content work-list">
+        <article class="work reveal">
+          <div class="work-no">01</div>
+          <div>
+            <div class="work-title">Open Source Portfolio</div>
+            <div class="work-desc" data-fa="توسعه و نگهداری پروژه‌های فروشگاهی، مدیریت فایل، نقشه، آزمون، موسیقی، فوتبال و ابزارهای کاربردی؛ همراه با مستندسازی و انتشار در GitHub." data-en="Apps for e-commerce, file management, maps, quizzes, music, football and utilities, with documentation and GitHub releases.">توسعه و نگهداری پروژه‌های فروشگاهی، مدیریت فایل، نقشه، آزمون، موسیقی، فوتبال و ابزارهای کاربردی؛ همراه با مستندسازی و انتشار در GitHub.</div>
+            <div class="work-tags"><span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">MVVM</span><span class="tag">Retrofit</span><span class="tag">Room</span></div>
+          </div>
+          <a class="work-link" href="https://github.com/mr-coder20" target="_blank" rel="noopener" aria-label="GitHub">GITHUB ↗</a>
+        </article>
+
+        <article class="work reveal">
+          <div class="work-no">02</div>
+          <div>
+            <div class="work-title">Security Engineering Lab</div>
+            <div class="work-desc" data-fa="تمرکز بر تحلیل API، امنیت موبایل و وب، شبکه، ارزیابی آسیب‌پذیری، ابزارسازی Python و مستندسازی یافته‌های امنیتی." data-en="Hands-on work around API analysis, mobile/web security, networking, vulnerability assessment, Python tooling and security reporting.">تمرکز بر تحلیل API، امنیت موبایل و وب، شبکه، ارزیابی آسیب‌پذیری، ابزارسازی Python و مستندسازی یافته‌های امنیتی.</div>
+            <div class="work-tags"><span class="tag">Python</span><span class="tag">Frida</span><span class="tag">Nmap</span><span class="tag">OWASP</span></div>
+          </div>
+          <a class="work-link" href="https://www.youtube.com/@Noobs_Code" target="_blank" rel="noopener" aria-label="YouTube">YOUTUBE ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container section-grid">
+      <div class="section-meta reveal">
+        <div class="section-index">05 / EDUCATION</div>
+        <h2 class="section-title" data-fa="تحصیلات و دوره‌ها" data-en="Education & Training">تحصیلات و دوره‌ها</h2>
+      </div>
+
+      <div class="section-content education-list">
+        <article class="edu-row reveal">
+          <div class="edu-year">۱۴۰۱ — ۱۴۰۳</div>
+          <div><h3 data-fa="کارشناسی کامپیوتر — نرم‌افزار" data-en="B.Sc. Computer Science / Software">کارشناسی کامپیوتر — نرم‌افزار</h3><p>آموزشکده فنی رجایی کاشان</p></div>
+          <div class="edu-score">GPA 16</div>
+        </article>
+        <article class="edu-row reveal">
+          <div class="edu-year">TRAINING</div>
+          <div><h3 data-fa="دوره‌های تخصصی" data-en="Professional Training">دوره‌های تخصصی</h3><p>Android Development · Android Security & Bug Bounty · Network+ · Security+ · A+ · VMware · MTCNA · CCNA · MCSA · LPIC-1 · Web Security</p></div>
+          <div class="edu-score">01—</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-layout">
+      <div class="reveal">
+        <h2 class="contact-title" data-fa="بیایید چیزی<br><em>حرفه‌ای بسازیم.</em>" data-en="Let’s build<br><em>something great.</em>">بیایید چیزی<br><em>حرفه‌ای بسازیم.</em></h2>
+        <p class="contact-copy" data-fa="برای همکاری پروژه‌ای، توسعه نرم‌افزار، امنیت یا بررسی فنی در ارتباط باشید." data-en="For software development, security work, technical reviews or project-based collaboration, get in touch.">برای همکاری پروژه‌ای، توسعه نرم‌افزار، امنیت یا بررسی فنی در ارتباط باشید.</p>
+      </div>
+
+      <div class="contact-rail reveal">
+        <a class="contact-link" href="mailto:amirhosseinghafari29@gmail.com">
+          <span class="contact-left"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 6.5h17v11h-17z"/><path d="m4 7 8 6 8-6"/></svg></span><strong class="mono">amirhosseinghafari29@gmail.com</strong></span><span class="contact-arrow">↗</span>
+        </a>
+        <a class="contact-link" href="tel:+989934161983">
+          <span class="contact-left"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.8 10 6.6 7.9 9.1c1.1 2.4 2.7 4 5.1 5.1l2.5-2.1 2.8 2.8c.5.5.5 1.3 0 1.8l-1.2 1.2c-.7.7-1.7 1-2.7.7-3.4-.9-6.1-2.5-8.1-4.5s-3.6-4.7-4.5-8.1c-.3-1 .1-2 .7-2.7l1.2-1.2c.4-.5 1.2-.5 1.7 0Z"/></svg></span><strong class="mono">+98 993 416 1983</strong></span><span class="contact-arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://github.com/mr-coder20" target="_blank" rel="noopener">
+          <span class="contact-left"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.2 19.2c-3.2 1-3.2-1.4-4.5-1.8M12 21v-3.2c0-1 .1-1.5-.5-2 2.9-.3 5.9-1.4 5.9-6.1 0-1.2-.4-2.2-1-3 .1-.3.4-1.5-.1-3.1 0 0-1-.3-3.2 1.2a10.7 10.7 0 0 0-5.8 0C5.1 1.3 4.1 1.6 4.1 1.6c-.5 1.6-.2 2.8-.1 3.1-.6.8-1 1.8-1 3 0 4.7 3 5.8 5.9 6.1-.6.5-.6 1.1-.6 2V21"/></svg></span><strong>github.com/mr-coder20</strong></span><span class="contact-arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://t.me/a_god_3_6_9" target="_blank" rel="noopener">
+          <span class="contact-left"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m21 4-3 16-6.2-4.3-3.4 3.3.5-5.1L18 7.1 8.2 13l-4.1-1.6L21 4Z"/><path d="m11.8 15.7 2.8-2.8"/></svg></span><strong>@a_god_3_6_9</strong></span><span class="contact-arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://www.youtube.com/@Noobs_Code" target="_blank" rel="noopener">
+          <span class="contact-left"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 8.1a2.8 2.8 0 0 0-2-2C17.2 5.6 12 5.6 12 5.6s-5.2 0-7 .5a2.8 2.8 0 0 0-2 2C2.5 9.9 2.5 12 2.5 12s0 2.1.5 3.9a2.8 2.8 0 0 0 2 2c1.8.5 7 .5 7 .5s5.2 0 7-.5a2.8 2.8 0 0 0 2-2c.5-1.8.5-3.9.5-3.9s0-2.1-.5-3.9Z"/><path d="m10 9.2 5 2.8-5 2.8z"/></svg></span><strong>@Noobs_Code</strong></span><span class="contact-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-mark">AG<span><i>.</i></span></div>
+    <div data-fa="نرم‌افزار · امنیت · زیرساخت" data-en="Software · Security · Infrastructure">نرم‌افزار · امنیت · زیرساخت</div>
+    <div class="footer-code">© <span id="year"></span> AMIRHOSSEIN GHAFARI</div>
+  </div>
+</footer>
+
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const body = document.body;
+  const langBtn = document.getElementById('langBtn');
+  const themeBtn = document.getElementById('themeBtn');
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  let lang = localStorage.getItem('ag-lang') || 'fa';
+  let theme = localStorage.getItem('ag-theme');
+  if(!theme){
+    theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  const textNodes = () => document.querySelectorAll('[data-fa][data-en]');
+
+  function applyLang(animate = true){
+    const update = () => {
+      root.lang = lang;
+      root.dir = lang === 'fa' ? 'rtl' : 'ltr';
+      textNodes().forEach(el => {
+        const value = el.dataset[lang];
+        if(value !== undefined) el.innerHTML = value;
+      });
+      langBtn.textContent = lang === 'fa' ? 'EN' : 'FA';
+      document.title = lang === 'fa'
+        ? 'امیرحسین غفاری — مهندس نرم‌افزار و امنیت سایبری'
+        : 'Amirhossein Ghafari — Software Engineer & Cybersecurity';
+      document.querySelector('.skip').textContent = lang === 'fa' ? 'پرش به محتوای اصلی' : 'Skip to main content';
+      const commandInput = document.querySelector('.cmd-input');
+      if(commandInput) commandInput.placeholder = lang === 'fa' ? 'جستجو یا اجرای فرمان…' : 'Search or run a command…';
+    };
+
+    if(animate && document.startViewTransition){
+      document.startViewTransition(update);
+    }else{
+      update();
+    }
+  }
+
+  function applyTheme(){
+    root.classList.toggle('dark', theme === 'dark');
+    themeBtn.textContent = theme === 'dark' ? '☀' : '☾';
+    themeBtn.setAttribute('aria-label', theme === 'dark' ? 'فعال کردن حالت روشن' : 'فعال کردن حالت تاریک');
+    metaTheme();
+  }
+
+  function metaTheme(){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'dark' ? '#08090c' : '#f7f8fa');
+  }
+
+  function setTheme(){
+    theme = theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('ag-theme', theme);
+    applyTheme();
+  }
+
+  function setLang(){
+    lang = lang === 'fa' ? 'en' : 'fa';
+    localStorage.setItem('ag-lang', lang);
+    applyLang();
+  }
+
+  langBtn.addEventListener('click', setLang);
+  themeBtn.addEventListener('click', setTheme);
+
+  function closeMobileMenu(){
+    if(!menuBtn || !mobileMenu) return;
+    menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden','true');
+  }
+  function toggleMobileMenu(){
+    if(!menuBtn || !mobileMenu) return;
+    const open = !mobileMenu.classList.contains('open');
+    menuBtn.classList.toggle('open',open);
+    menuBtn.setAttribute('aria-expanded',String(open));
+    mobileMenu.classList.toggle('open',open);
+    mobileMenu.setAttribute('aria-hidden',String(!open));
+  }
+  menuBtn?.addEventListener('click',toggleMobileMenu);
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click',closeMobileMenu));
+  addEventListener('keydown', e => { if(e.key === 'Escape') closeMobileMenu(); });
+  addEventListener('resize', () => { if(innerWidth > 760) closeMobileMenu(); }, {passive:true});
+
+  /* View transition polish */
+  const vtStyle = document.createElement('style');
+  vtStyle.textContent = '::view-transition-old(root),::view-transition-new(root){animation-duration:.35s}';
+  document.head.appendChild(vtStyle);
+
+  /* Scroll reveal */
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.08, rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* Active section navigation */
+  const navLinks = [...document.querySelectorAll('.nav a')];
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+      }
+    });
+  }, {rootMargin:'-35% 0px -55% 0px', threshold:0});
+  sections.forEach(s => sectionObserver.observe(s));
+
+  /* Scroll progress fallback */
+  const progress = document.querySelector('.progress');
+  function updateProgress(){
+    const max = document.documentElement.scrollHeight - innerHeight;
+    if(max > 0 && !CSS.supports('animation-timeline:scroll()')){
+      const ratio = scrollY / max;
+      progress.style.transform = `scaleX(${Math.max(0,Math.min(1,ratio))})`;
+    }
+  }
+  addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  /* Small interaction feedback */
+
+
+  const cursorGlow = document.getElementById('cursorGlow');
+  if(cursorGlow && matchMedia('(pointer:fine)').matches){
+    body.classList.add('pointer-ready');
+    let cx = innerWidth / 2, cy = innerHeight / 2, tx = cx, ty = cy;
+    addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; });
+    function glowLoop(){
+      cx += (tx-cx)*.09; cy += (ty-cy)*.09;
+      cursorGlow.style.left = cx + 'px';
+      cursorGlow.style.top = cy + 'px';
+      requestAnimationFrame(glowLoop);
+    }
+    glowLoop();
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  applyTheme();
+  applyLang(false);
+})();
+</script>
+
+<style id="final-no-hover-lines">
+/* FINAL UX CLEANUP — hover must never draw lines over content. */
+.job::after,.job:hover::after{
+  display:none !important;content:none !important;transform:none !important;background:none !important;
+}
+.job::before,.job:hover::before{
+  width:9px !important;height:9px !important;border-radius:50% !important;
+  top:37px !important;inset-inline-start:111px !important;bottom:auto !important;
+  transform:none !important;
+}
+.job:hover{
+  background:color-mix(in srgb,var(--accent) 4%,transparent) !important;
+  box-shadow:none !important;
+}
+.work::before,.work:hover::before,
+.contact-link::before,.contact-link:hover::before{
+  display:none !important;content:none !important;transform:none !important;background:none !important;
+}
+.work:hover,.contact-link:hover{
+  background:color-mix(in srgb,var(--accent) 4%,transparent) !important;
+  box-shadow:none !important;
+}
+.contact-link:hover .contact-icon{
+  box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 18%,transparent) !important;
+}
+@media (pointer: coarse){
+  .job:hover,.work:hover,.contact-link:hover{
+    background:transparent !important;box-shadow:none !important;
+  }
+}
+</style>
+
+</body>
+</html>
