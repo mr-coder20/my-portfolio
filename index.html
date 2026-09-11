@@ -1688,17 +1688,18 @@ html[dir="rtl"] .contact-link::before{transform-origin:right center !important}
 
 
   const cursorGlow = document.getElementById('cursorGlow');
-  if(cursorGlow && matchMedia('(pointer:fine)').matches){
+  if(cursorGlow && matchMedia('(pointer:fine) and (min-width: 1024px)').matches){
     body.classList.add('pointer-ready');
-    let cx = innerWidth / 2, cy = innerHeight / 2, tx = cx, ty = cy;
-    addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; });
-    function glowLoop(){
-      cx += (tx-cx)*.09; cy += (ty-cy)*.09;
-      cursorGlow.style.left = cx + 'px';
-      cursorGlow.style.top = cy + 'px';
-      requestAnimationFrame(glowLoop);
-    }
-    glowLoop();
+    let glowTick = 0;
+    addEventListener('pointermove', e => {
+      if(glowTick) return;
+      glowTick = requestAnimationFrame(() => {
+        cursorGlow.style.transform = `translate3d(${e.clientX - 130}px,${e.clientY - 130}px,0)`;
+        glowTick = 0;
+      });
+    }, {passive:true});
+  } else if(cursorGlow){
+    cursorGlow.remove();
   }
 
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -1737,6 +1738,256 @@ html[dir="rtl"] .contact-link::before{transform-origin:right center !important}
   .job:hover,.work:hover,.contact-link:hover{
     background:transparent !important;box-shadow:none !important;
   }
+}
+</style>
+
+
+<style id="windows-scroll-fix">
+/* Stable document scrolling: keep the root page as the only vertical scroller. */
+html{
+  width:100%;
+  min-width:0;
+  height:auto;
+  min-height:100%;
+  overflow-x:hidden;
+  overflow-y:auto !important;
+  overscroll-behavior-y:auto !important;
+  -webkit-overflow-scrolling:touch;
+}
+body{
+  width:100%;
+  min-width:0;
+  height:auto !important;
+  min-height:100vh;
+  min-height:100dvh;
+  margin:0;
+  overflow-x:hidden;
+  overflow-y:visible !important;
+  overscroll-behavior-y:auto !important;
+  touch-action:pan-y;
+}
+/* Fixed decorative layers must never become an accidental input/scroll layer. */
+.ambient-bg,.cursor-glow,.scanline,.code-stream,.grid-glow,.progress{
+  pointer-events:none !important;
+}
+/* Avoid browser-specific viewport/containment bugs on the main page. */
+.section,.contact-section,.footer{
+  content-visibility:visible !important;
+  contain:none !important;
+}
+</style>
+<style id="responsive-performance-patch">
+/* =========================================================
+   RESPONSIVE + PERFORMANCE PATCH
+   Mobile-first safeguards for Chrome / Edge / Firefox / Safari
+   ========================================================= */
+
+/* Stable viewport sizing and safer text rendering */
+html{
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  overflow-x:hidden;
+}
+body{
+  width:100%;
+  min-width:0;
+  min-height:100vh;
+  min-height:100dvh;
+  overscroll-behavior-y:none;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img,svg,video,canvas{max-width:100%;height:auto}
+button,a{-webkit-tap-highlight-color:transparent}
+
+/* Avoid expensive paint work while sections are off-screen. */
+@supports (content-visibility:auto){
+  .section,.contact-section,.footer{
+    content-visibility:auto;
+    contain-intrinsic-size:1px 900px;
+  }
+}
+
+/* Keep the visual atmosphere but stop constant full-screen repaints. */
+.noise{display:none !important}
+.scanline,.code-stream{animation:none !important}
+.ambient-bg::before,.aurora,.orb,.orb::after,.grid-glow,
+.hero-ring,.hero-orbit,.hero-cross,.hero-diamond{
+  animation:none !important;
+}
+.ambient-bg::before{filter:blur(22px)}
+.aurora{filter:blur(48px);opacity:.09}
+.marquee-track{animation-duration:55s}
+
+/* Cursor glow: compositor-only transform, never left/top repainting. */
+.cursor-glow{
+  left:0 !important;
+  top:0 !important;
+  transform:translate3d(-9999px,-9999px,0);
+  will-change:transform;
+  contain:paint;
+}
+
+/* Header blur is one of the most expensive effects on Safari/mobile. */
+.header-inner,.mobile-menu-inner{
+  -webkit-backdrop-filter:blur(10px) saturate(125%);
+  backdrop-filter:blur(10px) saturate(125%);
+}
+
+/* Safe layout defaults */
+.container,.header-inner,.mobile-menu-inner{max-width:100%}
+.hero-layout,.section-grid,.contact-layout,.work,.job,.edu-row,.capability{min-width:0}
+.hero h1,.contact-title{overflow-wrap:normal;word-break:normal}
+.hero-copy,.section-note,.work-desc,.capability p,.contact-copy{max-width:100%}
+
+/* Tablet and mobile */
+@media (max-width: 900px){
+  :root{--gutter:clamp(14px,4vw,24px)}
+  .site-header{top:max(8px,env(safe-area-inset-top))}
+  .header-inner{
+    width:calc(100% - (var(--gutter) * 2));
+    grid-template-columns:auto 1fr auto;
+  }
+  .nav{display:none !important}
+  .menu-toggle{display:grid !important}
+  .mobile-menu{top:calc(68px + env(safe-area-inset-top))}
+
+  .hero{
+    padding-top:calc(112px + env(safe-area-inset-top));
+    padding-bottom:64px;
+  }
+  .hero-layout,.section-grid,.contact-layout,.stack{grid-template-columns:1fr !important}
+  .hero-layout{gap:28px}
+  .hero-aside{
+    border-inline-start:0;
+    border-top:1px solid var(--line);
+    padding:20px 0 0;
+  }
+  .section-meta{position:static !important}
+  .section{padding:68px 0}
+  .section-grid{gap:28px}
+  .contact-layout{gap:34px}
+
+  .stack-row:nth-child(odd),.stack-row:nth-child(even){
+    padding-inline:0 !important;
+    border-inline-end:0 !important;
+  }
+  .timeline::before,.job::before{display:none !important}
+  .job{grid-template-columns:1fr !important;gap:8px}
+  .work{grid-template-columns:30px minmax(0,1fr) !important;gap:10px}
+  .work-link{grid-column:2;justify-self:start;white-space:normal}
+  .edu-row{grid-template-columns:minmax(0,1fr) auto !important}
+  .edu-year{grid-column:1/-1}
+
+  /* Mobile GPU/power path */
+  body::before,.ambient-bg::before,.grid-glow,.scanline,.code-stream,.cursor-glow,
+  .orb,.hero-visual{display:none !important}
+  .aurora{filter:none !important;opacity:.055}
+  .header-inner,.mobile-menu-inner{
+    -webkit-backdrop-filter:none !important;
+    backdrop-filter:none !important;
+    background:var(--bg-elev) !important;
+  }
+  .reveal{opacity:1 !important;transition:none !important}
+}
+
+@media (max-width: 600px){
+  :root{--gutter:14px}
+  .header-inner{gap:5px;padding:5px}
+  .brand{padding:4px 5px}
+  .brand-mark{width:30px;height:30px}
+  .header-tools{gap:3px}
+  .icon-btn{width:36px;height:36px}
+
+  .hero{padding-top:104px;padding-bottom:52px}
+  .eyebrow{margin-bottom:16px;font-size:10px}
+  .hero h1{
+    font-size:clamp(42px,15vw,70px) !important;
+    line-height:1.08;
+    letter-spacing:-.045em;
+  }
+  .hero-copy{margin-top:20px;font-size:14px;line-height:1.9}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:9px}
+  .hero-actions .btn{width:100%;min-height:46px}
+
+  .stats{grid-template-columns:1fr !important;margin-top:40px}
+  .stat{border-inline-end:0 !important;border-top:1px solid var(--line);padding:15px 4px}
+  .stat:first-child{border-top:0}
+  .stat strong{font-size:26px}
+
+  .section{padding:58px 0}
+  .section-title{font-size:clamp(28px,10vw,38px);line-height:1.16}
+  .section-note{font-size:11.5px}
+
+  .capability{
+    grid-template-columns:27px minmax(0,1fr) !important;
+    gap:10px;
+    padding:22px 0;
+  }
+  .capability-arrow{display:none}
+  .capability h3{font-size:17px}
+  .capability p{font-size:11.5px;line-height:1.85}
+
+  .stack-row{padding:20px 0}
+  .stack-head{gap:8px;flex-wrap:wrap}
+  .tags{gap:6px}
+  .tag{font-size:9px;padding:5px 7px}
+
+  .job{padding:22px 0}
+  .job h3{font-size:16px}
+  .job ul{font-size:11.5px;line-height:1.9;padding-inline-start:16px}
+
+  .work{padding:22px 0}
+  .work-title{font-size:17px}
+  .work-desc{font-size:11.5px}
+
+  .edu-row{padding:22px 0;gap:7px 12px}
+  .edu-row h3{font-size:14px}
+  .edu-score{font-size:10px}
+
+  .contact-section{padding:64px 0 42px}
+  .contact-title{font-size:clamp(38px,14vw,60px) !important;line-height:1.06;letter-spacing:-.055em}
+  .contact-copy{font-size:12.5px}
+  .contact-link{padding:13px 0}
+  .contact-left strong{font-size:10px;white-space:normal !important;overflow-wrap:anywhere}
+  .contact-icon{width:34px;height:34px;flex-basis:34px}
+
+  .mobile-menu-inner{max-height:calc(100dvh - 86px);overflow:auto;-webkit-overflow-scrolling:touch}
+  .mobile-nav{grid-template-columns:1fr !important}
+  .mobile-nav a{min-height:44px}
+
+  .footer{padding-bottom:calc(32px + env(safe-area-inset-bottom))}
+}
+
+@media (max-width: 360px){
+  :root{--gutter:10px}
+  .icon-btn{width:33px;height:33px}
+  .brand-mark{width:27px;height:27px}
+  .hero h1{font-size:clamp(39px,14vw,56px) !important}
+}
+
+/* Touch devices should have no hover-only visual work. */
+@media (hover:none), (pointer:coarse){
+  .btn:hover,.icon-btn:hover,.tag:hover,.work-link:hover,.contact-link:hover,
+  .capability:hover,.work:hover,.stat:hover strong{
+    transform:none !important;
+    box-shadow:none !important;
+  }
+  .marquee-track{animation:none !important}
+}
+
+/* Accessibility and low-power preference */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto !important}
+  *,*::before,*::after{
+    animation:none !important;
+    transition:none !important;
+  }
+}
+
+/* Fallback when backdrop-filter is not available */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .header-inner,.mobile-menu-inner{background:var(--bg-elev) !important}
 }
 </style>
 
